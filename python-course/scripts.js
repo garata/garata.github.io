@@ -70,6 +70,10 @@ function highlightNavigation() {
 		if (/py-clicked/i.test($navigationLink[0].className || '')) {
             // remove .py-clicked class from anchor link
 			$navigationLink[0].className = '';
+			// remove .py-active class from all the links
+			for (i = 0; i < $navigationLinks.length; i++) {
+				$navigationLinks[i].parentNode.className = '';
+			}
 			// add .py-active class to the clicked link
 			$navigationLink[0].parentNode.className += (' py-active');
 			return;

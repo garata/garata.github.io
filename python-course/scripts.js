@@ -12,11 +12,9 @@ for (var i = $sections.length - 1; i >= 0; i--) {
 	console.log(($link[0]));
     if ($link[0]) {
         $link[0].onclick = function(event) {
-			console.log('py-clicked');
             for (var $id in sectionIdTonavigationLink) {
-                console.log($id, sectionIdTonavigationLink[$id]);
                 if (sectionIdTonavigationLink.hasOwnProperty($id)) {
-                    sectionIdTonavigationLink[$id].className = '';
+                    sectionIdTonavigationLink[$id][0] && sectionIdTonavigationLink[$id][0].className = '';
                 }
             }
             event.target.className = (event.target.className || '').concat(' py-clicked');

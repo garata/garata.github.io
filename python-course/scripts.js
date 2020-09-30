@@ -13,8 +13,10 @@ for (var i = $sections.length - 1; i >= 0; i--) {
     if ($link[0]) {
         $link[0].onclick = function(event) {
 			console.log('py-clicked');
-            for (var j = 0; j < sectionIdTonavigationLink.length; j++)
-                sectionIdTonavigationLink[j].className = '';
+            for (var $id in sectionIdTonavigationLink) {
+                if (sectionIdTonavigationLink.hasOwnProperty($id))
+                    sectionIdTonavigationLink[$id].className = '';
+            }
             event.target.className = (event.target.className || '').concat(' py-clicked');
         };
 	}

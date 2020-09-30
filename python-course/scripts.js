@@ -65,7 +65,7 @@ function highlightNavigation() {
 	// get the current vertical position of the scroll bar
 	var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-	// remove .py-active class from all the links
+	// remove (preventively) .py-active class from all the links
 	for (var i = 0; i < $navigationLinks.length; i++) {
 		removeActiveClass($navigationLinks[i]);
 	}
@@ -80,7 +80,8 @@ function highlightNavigation() {
 		// get the corresponding navigation link
 		var $navigationLink = sectionIdTonavigationLink[id];
 
-		if (/py-clicked/i.test($navigationLink[0].className || '')) {
+		if (typeof $navigationLink[0] !== 'undefined' &&
+			/py-clicked/i.test($navigationLink[0].className || '')) {
             // remove .py-clicked class from anchor link
 			$navigationLink[0].className = '';
 			// add .py-active class to the clicked link
@@ -111,10 +112,10 @@ function highlightNavigation() {
 					addActiveClass($navigationLink[0]);
 				}
 			} else {
-					// remove .py-active class from all the links
-					for (i = 0; i < $navigationLinks.length; i++) {
-						removeActiveClass($navigationLinks[i]);
-					}
+				// remove .py-active class from all the links
+				for (i = 0; i < $navigationLinks.length; i++) {
+					removeActiveClass($navigationLinks[i]);
+				}
 			}
 			// we have found our section, so we return false to exit the each loop
 			return false;

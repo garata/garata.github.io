@@ -55,7 +55,7 @@ function highlightNavigation() {
         console.log(scrollPosition, sectionTop);
 
 	   // if the user has scrolled over the top of the section  
-		if (scrollPosition >= sectionTop - 190 + 1) {
+		if (scrollPosition >= sectionTop - 190 + 30) {
 			// get the section id
 			var id = currentSection.id;
 			// get the corresponding navigation link

@@ -72,6 +72,7 @@ function highlightNavigation() {
 			$navigationLink[0].className = '';
 			// remove .py-active class from all the links
 			for (i = 0; i < $navigationLinks.length; i++) {
+				console.log($navigationLinks[i]);
 				$navigationLinks[i].parentNode.className = '';
 			}
 			// add .py-active class to the clicked link

@@ -57,8 +57,13 @@ function highlightNavigation() {
 	// get the current vertical position of the scroll bar
 	var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
+	// remove .py-active class from all the links
+	for (var i = 0; i < $navigationLinks.length; i++) {
+		$navigationLinks[i].parentNode.className = '';
+	}
+
 	// iterate the sections
-	for (var i = $sections.length-1; i >= 0; i--) {
+	for (var i = $sections.length - 1; i >= 0; i--) {
 		var currentSection = $sections[i];
 		// get the position of the section
 		var sectionTop = getOffset(currentSection).top;
@@ -70,21 +75,18 @@ function highlightNavigation() {
 		if (/py-clicked/i.test($navigationLink[0].className || '')) {
             // remove .py-clicked class from anchor link
 			$navigationLink[0].className = '';
-			// remove .py-active class from all the links
-			for (i = 0; i < $navigationLinks.length; i++) {
-				$navigationLinks[i].parentNode.className = '';
-			}
 			// add .py-active class to the clicked link
 			$navigationLink[0].parentNode.className += (' py-active');
 			// return false to exit the each loop
 			return false;
         } else {
+            var j = $navigationLinks.length - 1;
 			if ((window.innerHeight + scrollPosition) >= document.body.scrollHeight) {
-				for (i = 0, l = $navigationLinks.length; i < l; i++) {
-					$navigationLinks[i].parentNode.className += (i < l - 1 ?  '': ' py-active');
-				}
+				$navigationLinks[j].parentNode.className += (' py-active');
 				// return false to exit the each loop
 				return false;
+			} else {
+				$navigationLinks[j].parentNode.className += $navigationLinks[j].parentNode.className.replace(/ py-active/, '');
 			}
 		}
 		

@@ -7,7 +7,7 @@ var $sections = document.getElementsByTagName('section');
 var sectionIdTonavigationLink = {};
 for (var i = $sections.length-1; i >= 0; i--) {
 	var id = $sections[i].id;
-	sectionIdTonavigationLink[id] = document.querySelectorAll('nav > ul > li > a[href=\\#' + id + ']') || null;
+	sectionIdTonavigationLink[id] = document.querySelectorAll('ul.py-nav > li > a[href=\\#' + id + ']') || null;
 }
 
 // throttle function, enforces a minimum time interval
@@ -59,18 +59,18 @@ function highlightNavigation() {
 			var $navigationLink = sectionIdTonavigationLink[id];
 			// if the link is not active
 			if (typeof $navigationLink[0] !== 'undefined') {
-				if (!$navigationLink[0].classList.contains('active')) {
+				if (!$navigationLink[0].classList.contains('py-active')) {
 					// remove .active class from all the links
 					for (i = 0; i < $navigationLinks.length; i++) {
-						$navigationLinks[i].className = $navigationLinks[i].className.replace(/ active/, '');
+						$navigationLinks[i].className = $navigationLinks[i].className.replace(/ py-active/, '');
 					}
 					// add .active class to the current link
-					$navigationLink[0].className += (' active');
+					$navigationLink[0].className += (' py-active');
 				}
 			} else {
 					// remove .active class from all the links
 					for (i = 0; i < $navigationLinks.length; i++) {
-						$navigationLinks[i].className = $navigationLinks[i].className.replace(/ active/, '');
+						$navigationLinks[i].className = $navigationLinks[i].className.replace(/ py-active/, '');
 					}
 			}	
 			// we have found our section, so we return false to exit the each loop

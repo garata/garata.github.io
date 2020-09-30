@@ -15,7 +15,7 @@
               <ul class="py-nav py-nav-default doc-nav">
                 <li class="py-active"><a href="#py0.1">Monty Python heritage</a></li>
                 <li class="py-active"><a href="#py0.2">Newby minimal requirements</a></li>
-                <li class="py-active"><a href="#py0.1">Monty Python heritage</a></li>
+                <li class="py-active"><a href="#py0.3">Installing Python 3 on Linux</a></li>
                 <li class="py-active"><a href="#py0.1">Monty Python heritage</a></li>
                 <li class="py-active"><a href="#py0.1">Monty Python heritage</a></li>
                 <li class="py-active"><a href="#py0.1">Monty Python heritage</a></li>
@@ -88,10 +88,38 @@
                 <p>The bare minimum requirements for this course are two pieces of software: A text editor in which you can write the program and a compiler or interpreter that can translate this program to the computer.</p>
                 <ul>
                   <li>A complete list of code editor where we can write programs in Python language can be found here <a href="https://wiki.python.org/moin/IntegratedDevelopmentEnvironments">IntegratedDevelopmentEnvironments - Python WiKi</a></li>
-                  <li>A Python 3 compiler or interpreter that can translate sources text to the language of the computer is the best way to go. Python has two major lines the version 2.x
-				  and the version 3.x, but withou further ado the latter should always be used if possible. A good piece of skill for a daily Python programmer is the ability d to be able
+                  <li>A Python 3 compiler or interpreter that can translate sources text to the language of the computer is the best way to go. In fact, Python has two major lines the version 2.x
+				  and the version 3.x, but withou further ado the latter should always be used if possible. A good piece of skill for a daily Python programmer is the ability to be able
 				  to recognize that the code was originally written for Python 2 and you need to be able to make the adjustments.</li>
                 </ul>
+                <h2 id="py0.3">Installing Python 3 on Linux</h2>
+                <p>On Linux you usually have Python 2 installed in /usr/bin/python and Python 3 installed in /usr/bin/python3. Depending on your distribution you can use yum or apt-get
+				package manager to update your Linux distribution.</p>
+                <div class="language-bash highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code># check where python3 executable is located</code></pre>
+					<pre class="highlight"><code>which python3</code></pre>
+                    <pre class="highlight"><code># python3 debian style installation</code></pre>
+					<pre class="highlight"><code>sudo apt-get install python3</code></pre>
+                    <pre class="highlight"><code># python3 redhat style installation</code></pre>
+					<pre class="highlight"><code>sudo yum install python3</code></pre>
+					</div>
+                </div>
+                <div class="language-html highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight">
+                      <code><span class="nt">&lt;head&gt;</span>
+                      <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/css/main.css"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span> <span class="na">type=</span><span class="s">"image/png"</span> <span class="na">href=</span><span class="s">"/assets/img/favicon.png"</span> <span class="nt">&gt;</span>
+                      <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/js/main.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+                        <span class="nt">&lt;/head&gt;</span>
+                       </code>
+    			   </pre>
+                  </div>
+                </div>
                 <figure data-py-lightbox="animation: slide">
                   <a class="py-inline" href="img/success.png" data-caption="Image in lightbox">
                     <img src="img/success.png" alt="Alt for image">
@@ -125,24 +153,6 @@
                 <p>Nulla non sollicitudin. Morbi sit amet laoreet ipsum, vel pretium mi. Morbi varius, tellus in accumsan
                   blandit, elit ligula eleifend velit, luctus mattis ante nulla condimentum nulla. Etiam vestibulum risus vel
                   arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit.</p>
-                <h2 id="example-of-code-block">Example Of Code Block</h2>
-                <p>In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus
-                  turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-                <div class="language-html highlighter-rouge">
-                  <div class="highlight">
-                    <pre class="highlight">
-                      <code><span class="nt">&lt;head&gt;</span>
-                      <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/css/main.css"</span><span class="nt">&gt;</span>
-                      <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span> <span class="na">type=</span><span class="s">"image/png"</span> <span class="na">href=</span><span class="s">"/assets/img/favicon.png"</span> <span class="nt">&gt;</span>
-                      <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/js/main.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-                        <span class="nt">&lt;/head&gt;</span>
-                       </code>
-    			   </pre>
-                  </div>
-                </div>
                 <h2 id="text-and-quote">Text and Quote</h2>
                 <p>Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra
                 turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna turpis.</p>

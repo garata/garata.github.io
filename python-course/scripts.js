@@ -5,7 +5,7 @@ var $sections = document.getElementsByTagName('section');
 
 // map each section id to their corresponding navigation link
 var sectionIdTonavigationLink = {};
-for (var i = $sections.length-1; i >= 0; i--) {
+for (var i = $sections.length - 1; i >= 0; i--) {
 	var id = $sections[i].id;
     var selector = 'ul.py-nav > li > a[href="#' + id + '"]';
 	sectionIdTonavigationLink[id] = document.querySelectorAll(selector) || null;
@@ -58,23 +58,20 @@ function highlightNavigation() {
 			var id = currentSection.id;
 			// get the corresponding navigation link
 			var $navigationLink = sectionIdTonavigationLink[id];
-
-			    console.log(id, $navigationLink);
-
 			// if the link is not active
 			if (typeof $navigationLink[0] !== 'undefined') {
-				if (!$navigationLink[0].classList.contains('py-active')) {
+				if (!$navigationLink[0].parentNode.classList.contains('py-active')) {
 					// remove .active class from all the links
 					for (i = 0; i < $navigationLinks.length; i++) {
-						$navigationLinks[i].className = $navigationLinks[i].className.replace(/ py-active/, '');
+						$navigationLinks[i].parentNode.className = $navigationLinks[i].parentNode.className.replace(/ py-active/, '');
 					}
 					// add .active class to the current link
-					$navigationLink[0].className += (' py-active');
+					$navigationLink[0].parentNode.className += (' py-active');
 				}
 			} else {
 					// remove .active class from all the links
 					for (i = 0; i < $navigationLinks.length; i++) {
-						$navigationLinks[i].className = $navigationLinks[i].className.replace(/ py-active/, '');
+						$navigationLinks[i].parentNode.className = $navigationLinks[i].parentNode.className.replace(/ py-active/, '');
 					}
 			}	
 			// we have found our section, so we return false to exit the each loop

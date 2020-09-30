@@ -489,8 +489,8 @@ blockquote footer::before {
 pre {
   font: 0.875rem / 1.65 Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   color: #05b98b;
-  -moz-tab-size: 4;
-  tab-size: 4;
+  -moz-tab-size: 2;
+  tab-size: 2;
   /* 1 */
   overflow: auto;
   padding: 10px;

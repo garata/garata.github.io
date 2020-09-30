@@ -88,6 +88,8 @@ function highlightNavigation() {
 			}
 		}
 		
+		console.log(scrollPosition, sectionTop);
+		
 		// if the user has scrolled over the top of the section  
 		if (scrollPosition >= sectionTop - 190 + 30) {
 			// if the link is not active

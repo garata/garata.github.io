@@ -27,6 +27,7 @@
                 <li><a href="#py1.2">Python program indentation</a></li>
                 <li><a href="#py1.3">HelloWorld example</a></li>
                 <li><a href="#py1.4">Python program Literals and Value Types</a></li>
+                <li><a href="#py1.5">Python program Variables</a></li>
               </ul>
             </div>
           </div>
@@ -181,15 +182,40 @@
                 </section>
                 <section id="py1.4">
                   <h2>Python program Literals and Value Types</h2>
+				  <p>Python basically offers type checking as runtime feature. </p>
                   <div data-datacamp-exercise data-lang="python">
 					<code data-type="sample-code">
 					print( type(123) ) # int
 					print( type(3.14) ) # float
 					print( type("Hello World") ) # str
 					print( type(None) ) # NoneType
-					print( type(True) ) # bool, does accept False as well
+					print( type(True) ) # bool, accepts False as well
 					print( type([]) ) # list
 					print( type({}) ) # dict
+					print( type(3.14) ) # floating point (2**53 binary floating-point)
+					</code>
+				  </div>
+                </section>
+                <section id="py1.4">
+                  <h2>Python program Variables</h2>
+				  <p>Python has five standard Data Types: Numbers, Strings, Lists, Tuples, and Dictionaries. The Python type system dynamically initilize the Data Type on its initialization.</p>
+				  <p>Within the Numbers data type there are subtypes: int, long, float, and complex.</p>
+                  <div class="language-html highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight">
+                        <code>
+							<span class="nt">int</span> -> <span class="na">whole numbers (integers)</span>
+							<span class="nt">long</span> -> <span class="na">really big integers</span>
+							<span class="nt">float</span> -> <span class="na">decimal numbers</span>
+							<span class="nt">complex</span> -> <span class="na">complex numbers</span>
+                        </code>
+    			      </pre>
+                    </div>
+                  </div>
+                  <div data-datacamp-exercise data-lang="python">
+					<code data-type="sample-code">
+					strVar = 'String Constant' # single or double quotes declare `string` data type
+					numVar = 0
 					</code>
 				  </div>
                 </section>

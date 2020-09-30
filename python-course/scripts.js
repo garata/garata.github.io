@@ -12,6 +12,7 @@ for (var i = $sections.length - 1; i >= 0; i--) {
 	console.log(($link[0]));
     if ($link[0]) {
         $link[0].onclick = function(event) {
+			event.stopPropagation();
             for (var $id in sectionIdTonavigationLink) {
                 if (sectionIdTonavigationLink.hasOwnProperty($id) && sectionIdTonavigationLink[$id][0]) {
                     sectionIdTonavigationLink[$id][0].className = '';

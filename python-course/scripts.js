@@ -67,10 +67,6 @@ function highlightNavigation() {
 		// get the corresponding navigation link
 		var $navigationLink = sectionIdTonavigationLink[id];
 
-        if ((window.innerHeight + scrollPosition) >= document.body.scrollHeight) {
-			console.log("$navigationLinks",$navigationLinks);
-		}
-
 		if (/py-clicked/i.test($navigationLink[0].className || '')) {
             // remove .py-clicked class from anchor link
 			$navigationLink[0].className = '';
@@ -80,8 +76,15 @@ function highlightNavigation() {
 			}
 			// add .py-active class to the clicked link
 			$navigationLink[0].parentNode.className += (' py-active');
-			return;
-        }
+			// return false to exit the each loop
+			return false;
+        } else {
+			if ((window.innerHeight + scrollPosition) >= document.body.scrollHeight) {
+				$navigationLinks[$navigationLinks.length - 1][0].parentNode.className += (' py-active');
+				// return false to exit the each loop
+				return false;
+			}
+		}
 		
 		// if the user has scrolled over the top of the section  
 		if (scrollPosition >= sectionTop - 190 + 30) {

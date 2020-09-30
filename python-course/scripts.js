@@ -59,7 +59,7 @@ function highlightNavigation() {
 
 	// remove .py-active class from all the links
 	for (var i = 0; i < $navigationLinks.length; i++) {
-		$navigationLinks[i].parentNode.className = '';
+		$navigationLinks[i].parentNode.className = $navigationLinks[i].parentNode.className.replace(/ py-active/, '');
 	}
 
 	// iterate the sections
@@ -86,7 +86,7 @@ function highlightNavigation() {
 				// return false to exit the each loop
 				return false;
 			} else {
-				$navigationLinks[j].parentNode.className += $navigationLinks[j].parentNode.className.replace(/ py-active/, '');
+				$navigationLinks[j].parentNode.className = $navigationLinks[j].parentNode.className.replace(/ py-active/, '');
 			}
 		}
 		

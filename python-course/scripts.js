@@ -62,16 +62,21 @@ function highlightNavigation() {
 		var currentSection = $sections[i];
 		// get the position of the section
 		var sectionTop = getOffset(currentSection).top;
+		// get the section id
+		var id = currentSection.id;
+		// get the corresponding navigation link
+		var $navigationLink = sectionIdTonavigationLink[id];
 
-	   // if the user has scrolled over the top of the section  
+		if (/py-clicked/i.test($navigationLink[0].className || '')) {
+            // remove .py-clicked class from anchor link
+			$navigationLink[0].className = '';
+			// add .py-active class to the clicked link
+			$navigationLink[0].parentNode.className += (' py-active');
+			return;
+        }
+
+		// if the user has scrolled over the top of the section  
 		if (scrollPosition >= sectionTop - 190 + 30) {
-			// get the section id
-			var id = currentSection.id;
-			// get the corresponding navigation link
-			var $navigationLink = sectionIdTonavigationLink[id];
-
-        console.log($navigationLink[0]);
-
 			// if the link is not active
 			if (typeof $navigationLink[0] !== 'undefined') {
 				if (!$navigationLink[0].parentNode.classList.contains('py-active')) {

@@ -54,12 +54,20 @@ function getOffset( el ) {
 }
 
 function highlightNavigation() {
+	var addActiveClass = function(node) {
+		node.parentNode.className += (' py-active');
+	};
+
+	var removeActiveClass = function(node) {
+		node.parentNode.className = node.parentNode.className.replace(/ py-active/, '');
+	};
+	
 	// get the current vertical position of the scroll bar
 	var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
 	// remove .py-active class from all the links
 	for (var i = 0; i < $navigationLinks.length; i++) {
-		$navigationLinks[i].parentNode.className = $navigationLinks[i].parentNode.className.replace(/ py-active/, '');
+		removeActiveClass($navigationLinks[i]);
 	}
 
 	// iterate the sections
@@ -86,12 +94,10 @@ function highlightNavigation() {
 				// return false to exit the each loop
 				return false;
 			} else {
-				$navigationLinks[j].parentNode.className = $navigationLinks[j].parentNode.className.replace(/ py-active/, '');
+				removeActiveClass($navigationLinks[j]);
 			}
 		}
-		
-		console.log(scrollPosition, sectionTop);
-		
+				
 		// if the user has scrolled over the top of the section  
 		if (scrollPosition >= sectionTop - 190 + 30) {
 			// if the link is not active
@@ -99,15 +105,15 @@ function highlightNavigation() {
 				if (!$navigationLink[0].parentNode.classList.contains('py-active')) {
 					// remove .py-active class from all the links
 					for (i = 0; i < $navigationLinks.length; i++) {
-						$navigationLinks[i].parentNode.className = $navigationLinks[i].parentNode.className.replace(/ py-active/, '');
+						removeActiveClass($navigationLinks[i]);
 					}
 					// add .py-active class to the current link
-					$navigationLink[0].parentNode.className += (' py-active');
+					addActiveClass($navigationLink[0]);
 				}
 			} else {
 					// remove .py-active class from all the links
 					for (i = 0; i < $navigationLinks.length; i++) {
-						$navigationLinks[i].parentNode.className = $navigationLinks[i].parentNode.className.replace(/ py-active/, '');
+						removeActiveClass($navigationLinks[i]);
 					}
 			}
 			// we have found our section, so we return false to exit the each loop

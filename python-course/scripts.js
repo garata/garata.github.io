@@ -8,11 +8,10 @@ var sectionIdTonavigationLink = {};
 for (var i = $sections.length - 1; i >= 0; i--) {
 	var id = $sections[i].id;
     var selector = 'ul.py-nav > li > a[href="#' + id + '"]';
-	sectionIdTonavigationLink[id] = document.querySelectorAll(selector) || null;
-    if (sectionIdTonavigationLink[id]) {
-        sectionIdTonavigationLink[id].click = function(event) {
-            var $target = event.target;
-            $target.className = $target.className.replace(/ py-clicked/, '').concat(' py-clicked');
+	var $link = sectionIdTonavigationLink[id] = document.querySelectorAll(selector) || null;
+    if ($link) {
+        $link.click = function(event) {
+            $link.className = $link.className.replace(/ py-clicked/, '').concat(' py-clicked');
         };
 	}
 }

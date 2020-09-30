@@ -8,7 +8,6 @@ var sectionIdTonavigationLink = {};
 for (var i = $sections.length-1; i >= 0; i--) {
 	var id = $sections[i].id;
     var selector = 'ul.py-nav > li > a[href="#' + id + '"]';
-    console.log(selector);
 	sectionIdTonavigationLink[id] = document.querySelectorAll(selector) || null;
 }
 
@@ -59,6 +58,9 @@ function highlightNavigation() {
 			var id = currentSection.id;
 			// get the corresponding navigation link
 			var $navigationLink = sectionIdTonavigationLink[id];
+
+			    console.log(id, $navigationLink);
+
 			// if the link is not active
 			if (typeof $navigationLink[0] !== 'undefined') {
 				if (!$navigationLink[0].classList.contains('py-active')) {

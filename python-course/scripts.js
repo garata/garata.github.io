@@ -81,7 +81,7 @@ function highlightNavigation() {
         } else {
 			if ((window.innerHeight + scrollPosition) >= document.body.scrollHeight) {
 				for (i = 0, l = $navigationLinks.length; i < l; i++) {
-					$navigationLinks[i].parentNode.className += (i < l - 1 ? '' : ' py-active');
+					$navigationLinks[i].parentNode.className += (i < l - 1 ? ' py-active' : '');
 				}
 				// return false to exit the each loop
 				return false;

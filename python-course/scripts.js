@@ -9,6 +9,12 @@ for (var i = $sections.length - 1; i >= 0; i--) {
 	var id = $sections[i].id;
     var selector = 'ul.py-nav > li > a[href="#' + id + '"]';
 	sectionIdTonavigationLink[id] = document.querySelectorAll(selector) || null;
+    if (sectionIdTonavigationLink[id]) {
+        sectionIdTonavigationLink[id].click = function(event) {
+            var $target = event.target;
+            $target.className = $target.className.replace(/ py-clicked/, '').concat(' py-clicked');
+        };
+	}
 }
 
 // throttle function, enforces a minimum time interval
@@ -63,19 +69,19 @@ function highlightNavigation() {
 			// if the link is not active
 			if (typeof $navigationLink[0] !== 'undefined') {
 				if (!$navigationLink[0].parentNode.classList.contains('py-active')) {
-					// remove .active class from all the links
+					// remove .py-active class from all the links
 					for (i = 0; i < $navigationLinks.length; i++) {
 						$navigationLinks[i].parentNode.className = $navigationLinks[i].parentNode.className.replace(/ py-active/, '');
 					}
-					// add .active class to the current link
+					// add .py-active class to the current link
 					$navigationLink[0].parentNode.className += (' py-active');
 				}
 			} else {
-					// remove .active class from all the links
+					// remove .py-active class from all the links
 					for (i = 0; i < $navigationLinks.length; i++) {
 						$navigationLinks[i].parentNode.className = $navigationLinks[i].parentNode.className.replace(/ py-active/, '');
 					}
-			}	
+			}
 			// we have found our section, so we return false to exit the each loop
 			return false;
 		}

@@ -9,9 +9,9 @@ for (var i = $sections.length - 1; i >= 0; i--) {
 	var id = $sections[i].id;
     var selector = 'ul.py-nav > li > a[href="#' + id + '"]';
 	var $link = sectionIdTonavigationLink[id] = document.querySelectorAll(selector) || null;
-    if ($link) {
-        $link.click = function(event) {
-            $link.className = $link.className.replace(/ py-clicked/, '').concat(' py-clicked');
+    if ($link[0]) {
+        $link[0].click = function(event) {
+            $link[0].className = $link[0].className.replace(/ py-clicked/, '').concat(' py-clicked');
         };
 	}
 }

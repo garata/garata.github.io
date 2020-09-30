@@ -13,7 +13,9 @@ for (var i = $sections.length - 1; i >= 0; i--) {
     if ($link[0]) {
         $link[0].onclick = function(event) {
 			console.log('py-clicked');
-            $link[0].className = ($link[0].className || '').replace(/ py-clicked/, '').concat(' py-clicked');
+            for (var j = 0; j < sectionIdTonavigationLink.length; j++)
+                sectionIdTonavigationLink[j].className = '';
+            event.target.className = (event.target.className || '').concat(' py-clicked');
         };
 	}
 }

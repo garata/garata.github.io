@@ -9,7 +9,6 @@ for (var i = $sections.length - 1; i >= 0; i--) {
 	var id = $sections[i].id;
     var selector = 'ul.py-nav > li > a[href="#' + id + '"]';
 	var $link = sectionIdTonavigationLink[id] = document.querySelectorAll(selector) || null;
-	console.log(($link[0]));
     if ($link[0]) {
         $link[0].onclick = function(event) {
 			event.stopPropagation();
@@ -64,14 +63,15 @@ function highlightNavigation() {
 		// get the position of the section
 		var sectionTop = getOffset(currentSection).top;
 
-        console.log(scrollPosition, sectionTop);
-
 	   // if the user has scrolled over the top of the section  
 		if (scrollPosition >= sectionTop - 190 + 30) {
 			// get the section id
 			var id = currentSection.id;
 			// get the corresponding navigation link
 			var $navigationLink = sectionIdTonavigationLink[id];
+
+        console.log($navigationLink[0]);
+
 			// if the link is not active
 			if (typeof $navigationLink[0] !== 'undefined') {
 				if (!$navigationLink[0].parentNode.classList.contains('py-active')) {

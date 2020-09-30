@@ -54,8 +54,12 @@ function getOffset( el ) {
 }
 
 function highlightNavigation() {
+	var hasActiveClass = function(node) {
+		return -1 < node.parentNode.className.indexOf('py-active');
+	};
+
 	var addActiveClass = function(node) {
-		node.parentNode.className += (' py-active');
+		node.parentNode.className += ' py-active';
 	};
 
 	var removeActiveClass = function(node) {
@@ -91,7 +95,7 @@ function highlightNavigation() {
         } else {
             var j = $navigationLinks.length - 1;
 			if ((window.innerHeight + scrollPosition) >= document.body.scrollHeight) {
-				$navigationLinks[j].parentNode.className += (' py-active');
+				addActiveClass($navigationLinks[j]);
 				// return false to exit the each loop
 				return false;
 			} else {

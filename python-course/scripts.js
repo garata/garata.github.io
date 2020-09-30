@@ -7,7 +7,7 @@ var $sections = document.getElementsByTagName('section');
 var sectionIdTonavigationLink = {};
 for (var i = $sections.length-1; i >= 0; i--) {
 	var id = $sections[i].id;
-	sectionIdTonavigationLink[id] = document.querySelectorAll('ul.py-nav > li > a[href=\\#' + id + ']') || null;
+	sectionIdTonavigationLink[id] = document.querySelectorAll('ul.py-nav > li > a[href=#' + id + ']') || null;
 }
 
 // throttle function, enforces a minimum time interval

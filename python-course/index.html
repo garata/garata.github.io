@@ -29,6 +29,7 @@
                 <li><a href="#py1.4">Literals and Value Types</a></li>
                 <li><a href="#py1.5">Variables</a></li>
                 <li><a href="#py1.6">String concatenation</a></li>
+				py1.6
               </ul>
             </div>
           </div>
@@ -186,18 +187,26 @@
 				  <p>Python basically offers type checking through type build in function. </p>
                   <div data-datacamp-exercise data-lang="python">
 					<code data-type="sample-code">
-					print( type(123) ) # int
-					print( type(3.14) ) # float
-					print( type("Hello World") ) # str
-					print( type(None) ) # NoneType
-					print( type(True) ) # bool, accepts False as well
-					print( type([]) ) # list
-					print( type({}) ) # dict
-					print( type(3.14) ) # floating point (2**53 binary floating-point)
+					# int
+					print( type(123) )
+					# float
+					print( type(3.14) )
+					# str
+					print( type("Hello World") )
+					# NoneType
+					print( type(None) )
+					# bool, `True` accepts `False` as well
+					print( type(True) )
+					# list
+					print( type([]) )
+					# dict
+					print( type({}) )
+					# floating point (2**53 binary floating-point)
+					print( type(3.14) )
 					</code>
 				  </div>
                 </section>
-                <section id="py1.4">
+                <section id="py1.5">
                   <h2>Variables</h2>
 				  <p>Python has five standard Data Types: Numbers, Strings, Lists, Tuples, and Dictionaries. The Python type system dynamically initilize the Data Type on its initialization.</p>
 				  <p>Within the Numbers data type there are subtypes: int, long, float, and complex.
@@ -210,7 +219,7 @@
 					</p>
                   <div data-datacamp-exercise data-lang="python">
 					<code data-type="sample-code">
-					# single or double quotes declare `string` data type
+					# single or double quotes declare string data type
 					s = 'String Constant'
 					# to define one or more number variables use assignment syntax
 					a = 0
@@ -218,7 +227,7 @@
 					</code>
 				  </div>
                 </section>
-                <section id="py1.5">
+                <section id="py1.6">
                   <h2>Strings concatenation</h2>
                   <div data-datacamp-exercise data-lang="python">
 					<code data-type="sample-code">
@@ -228,6 +237,15 @@
 					s1 = "1"
 					s2 = "2"
 					print("s1+s2=" + str(s1+s2))
+					</code>
+				  </div>
+                </section>
+                <section id="py1.7">
+                  <h2>Strings multiplication</h2>
+                  <div data-datacamp-exercise data-lang="python">
+					<p>As core language feature, mimicking what PERL language has to offers, Python language has string multiplication offered at your disposal too.</p>
+					<code data-type="sample-code">
+					print(2*"string")
 					</code>
 				  </div>
                 </section>

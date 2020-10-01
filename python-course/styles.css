@@ -12754,7 +12754,7 @@ pre.highlight {
     position: sticky;
     top: 0;
     width: 100%;
-    padding: 2.5em 1em;
+    padding: 2.5em 0;
     background: red;
     z-index: 10000;
     box-shadow: 0 0.4em 0.4em #ccc;

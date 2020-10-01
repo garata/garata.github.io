@@ -7,7 +7,7 @@
   </head>
   <body>
     <svg width="45px" height="45px">
-	  <symbol id="py-logo"  viewBox="0 0 256 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" class="">
+	  <symbol id="py-logo" viewBox="0 0 256 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" class="">
 	    <defs>
 		  <linearGradient x1="12.9593594%" y1="12.0393928%" x2="79.6388325%" y2="78.2008538%" id="linearGradient-1">
           <stop stop-color="#387EB8" offset="0%"></stop>
@@ -183,159 +183,159 @@
             <h1 class="py-article-title">Python Programming Baby Steps</h1>
             <p class="py-text-lead py-text-muted">This section consolidate self taught Python developers basis</p>
             <div class="py-article-meta py-margin-top py-margin-medium-bottom py-flex py-flex-middle">
-            <svg width="45px" height="45px" style="margin: 0.33rem"><use xlink:href="#py-logo"></use></svg>
-            <div>
-            Written by
-            <span>Giorgio Arata</span><br>
-            Last update on <time datetime="2020-10-01">October 1 of 2020</time>
-            </div>
+              <svg width="45px" height="45px" style="margin: 0.33rem"><use xlink:href="#py-logo"></use></svg>
+              <div>
+                Written by
+                <span>Giorgio Arata</span><br>
+                Last update on <time datetime="2020-10-01">October 1 of 2020</time>
+              </div>
             </div>
             <div class="article-content link-primary">
-            <section id="py1.1">
-            <h2>How to insert comments</h2>
-            <p>Python programmer does use two kinds of comment relying on the fact that comments are not run by the Python interpreter, and are used to remarks important concept for humans.
-            As said, there are two types of comments: <b>block</b> and <b>single line</b>. A <b>block comment</b> is stated with triple quotes, either single or double, and closed with the same quotes.</p>
-            </section>
-            <section id="py1.2">
-            <h2>Python programs indentation</h2>
-            <p>Python uses indentations rather than curly brackets, <b>{}</b>. But differently from others language, to signify blocks of code no semi colons are needed to signify the end of a line. Python standard recommends: 4 spaces on every level.</p>
-            <div class="language-bash highlighter-rouge">
-            <div class="highlight">
-            <pre class="highlight"><code># Remeber that parentheses after print() instruction are required in Python 3</code></pre>
-            <pre class="highlight"><code>print("Hello World")</code></pre>
-            </div>
-            </div>
-            </section>
-            <section id="py1.3">
-            <h2>HelloWorld example</h2>
-            <div data-datacamp-exercise data-lang="python">
-            <code data-type="sample-code">
-            print("Hello World")
-            </code>
-            </div>
-            </section>
-            <section id="py1.4">
-            <h2>Literals and Value Types</h2>
-            <p>Python basically offers type checking through type build in function. </p>
-            <div data-datacamp-exercise data-lang="python">
-            <code data-type="sample-code">
-            # int
-            print( type(123) )
-            # float
-            print( type(3.14) )
-            # str
-            print( type("Hello World") )
-            # NoneType
-            print( type(None) )
-            # bool, `True` accepts `False` as well
-            print( type(True) )
-            # list
-            print( type([]) )
-            # dict
-            print( type({}) )
-            # floating point (2**53 binary floating-point)
-            print( type(3.14) )
-            </code>
-            </div>
-            </section>
-            <section id="py1.5">
-            <h2>Variables</h2>
-            <p>Python has five standard Data Types: Numbers, Strings, Lists, Tuples, and Dictionaries. The Python type system dynamically initilize the Data Type on its initialization.</p>
-            <p>Within the Numbers data type there are subtypes: int, long, float, and complex.
-            <ul>
-            <li>int -> whole numbers (integers)</li>
-            <li>long -> really big integers</li>
-            <li>float -> decimal numbers</li>
-            <li>complex -> complex numbers</li>
-            </ul>
-            </p>
-            <div data-datacamp-exercise data-lang="python">
-            <code data-type="sample-code">
-            # single or double quotes declare string data type
-            s = 'String Constant'
-            # to define one or more number variables use assignment syntax
-            a = 0
-            b, c = 3, 4
-            </code>
-            </div>
-            </section>
-            <section id="py1.6">
-            <h2>Strings concatenation</h2>
-            <div data-datacamp-exercise data-lang="python">
-            <code data-type="sample-code">
-            x = 1
-            y = 2
-            print("x+y=" + str(x+y))
-            s1 = "1"
-            s2 = "2"
-            print("s1+s2=" + str(s1+s2))
-            </code>
-            </div>
-            </section>
-            <section id="py1.7">
-            <h2>Strings multiplication</h2>
-            <p>As core language feature, mimicking what PERL language has to offers, Python language has string multiplication offered at your disposal too.</p>
-            <div data-datacamp-exercise data-lang="python">					
-            <code data-type="sample-code">
-            print(2*"string")
-            </code>
-            </div>
-            </section>
-            <section id="py1.8">
-            <h2>Python main function</h2>
-            <p>The Python interpreter does not make assumptions about predefined function name entry point, it executes scripts starting at the top of the file and for such reason
-            Python programmers adopt convention naming and special variables. Thus in Python scripts, it happens to see <b>main</b> function definition and a conditional statement.
-            Assuming that the script is executed on command line you can use the <code>if __name__ == "__main__"</code> idiom to determine the execution context and conditionally run </b>main()</b> only when <b>__name__</b> is equal to <b>"__main__"</b>.
-            Simply put the <code>main()</code> function should reimain slim containing calls to others functions and minimum to no special logic you can delegate to other functions and modules. Python uses indentation for blocks instead of curly braces, and it uses the colon <code>:</code> to start a block.
-            </p>
-            <div data-datacamp-exercise data-lang="python">					
-            <code data-type="sample-code">
-            def main():
-                print("Hello World!")
-            if __name__ == "__main__":
-                main()
-            </code>
-            </div>
-            </section>
-            <section id="py1.9">
-            <h2>Python pieces of code</h2>
-            <p>Python interpreter differentiates among three type of pieces of code. Thus, <b>__name__</b> idiom takes on different values depending on how you executed your Python file.</p>
-            <ul>
-            <li><b>File:</b> Typically, a Python file is any file that contains code. Most Python files have the extension <b>.py</b>.</li>
-            <li><b>Script:</b> A Python script is a file that you intend to execute from the command line to accomplish a task. "__main__" when the file is executed from the command line or with python -m (to execute a package's <b>__main__.py</b> file)</li>
-            <li><b>Module:</b> A Python module is a file that you intend to import from within another module or a script, or from the interactive interpreter. "__main__" when the module is imported contains name of the module</li>
-            </ul>
-            </section>
-            <section id="py1.10">
-              <h2>Math module</h2>
-              <p>Python language offers a built-in standard module that you can use for mathematical tasks, which gives you access to the underlying C library functions.
-              Anyway this module does not support <b>complex</b> datatypes. The <a href="https://docs.python.org/3.0/library/cmath.html">cmath module</a> is for the <b>complex</b> counterpart.</p>
-              <div data-datacamp-exercise data-lang="python">					
+              <section id="py1.1">
+                <h2>How to insert comments</h2>
+                <p>Python programmer does use two kinds of comment relying on the fact that comments are not run by the Python interpreter, and are used to remarks important concept for humans.
+                As said, there are two types of comments: <b>block</b> and <b>single line</b>. A <b>block comment</b> is stated with triple quotes, either single or double, and closed with the same quotes.</p>
+              </section>
+              <section id="py1.2">
+                <h2>Python programs indentation</h2>
+                <p>Python uses indentations rather than curly brackets, <b>{}</b>. But differently from others language, to signify blocks of code no semi colons are needed to signify the end of a line. Python standard recommends: 4 spaces on every level.</p>
+                <div class="language-bash highlighter-rouge">
+                <div class="highlight">
+                <pre class="highlight"><code># Remeber that parentheses after print() instruction are required in Python 3</code></pre>
+                <pre class="highlight"><code>print("Hello World")</code></pre>
+                </div>
+                </div>
+              </section>
+              <section id="py1.3">
+                <h2>HelloWorld example</h2>
+                <div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+print("Hello World")
+                </code>
+                </div>
+              </section>
+              <section id="py1.4">
+                <h2>Literals and Value Types</h2>
+                <p>Python basically offers type checking through type build in function. </p>
+                <div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+# int
+print( type(123) )
+# float
+print( type(3.14) )
+# str
+print( type("Hello World") )
+# NoneType
+print( type(None) )
+# bool, `True` accepts `False` as well
+print( type(True) )
+# list
+print( type([]) )
+# dict
+print( type({}) )
+# floating point (2**53 binary floating-point)
+print( type(3.14) )
+                </code>
+                </div>
+              </section>
+              <section id="py1.5">
+                <h2>Variables</h2>
+                <p>Python has five standard Data Types: Numbers, Strings, Lists, Tuples, and Dictionaries. The Python type system dynamically initilize the Data Type on its initialization.</p>
+                <p>Within the Numbers data type there are subtypes: int, long, float, and complex.
+                <ul>
+                <li>int -> whole numbers (integers)</li>
+                <li>long -> really big integers</li>
+                <li>float -> decimal numbers</li>
+                <li>complex -> complex numbers</li>
+                </ul>
+                </p>
+                <div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+# single or double quotes declare string data type
+s = 'String Constant'
+# to define one or more number variables use assignment syntax
+a = 0
+b, c = 3, 4
+                </code>
+                </div>
+              </section>
+              <section id="py1.6">
+              <h2>Strings concatenation</h2>
+              <div data-datacamp-exercise data-lang="python">
               <code data-type="sample-code">
-              import math
-              radius = 3
-              print("The area of the circle is ", radius * radius * math.pi)
-              print("The circumference of the circle is ", 2 * radius * math.pi) 
+x = 1
+y = 2
+print("x+y=" + str(x+y))
+s1 = "1"
+s2 = "2"
+print("s1+s2=" + str(s1+s2))
               </code>
               </div>
-            </section>
-            <section id="py1.11">
-              <h2>Sys module</h2>
-              <p>Oftenly, when you develop command line Python programs, you need basic <a href="https://docs.python.org/2/library/sys.html">System-specific parameters and functions</a>.</p>
-              <div data-datacamp-exercise data-lang="python">					
-              <code data-type="sample-code">
-              import sys
-              print( sys.executable )
-              print( sys.platform )
-              print( sys.argv[0] ) 
-              print( sys.version_info.major ) 
-              </code>
-              </div>
-            </section>
-            <section id="py1.12">
-              <h2>Handling user input</h2>
-              <div data-datacamp-exercise data-lang="python">					
-              <code data-type="sample-code">
+              </section>
+              <section id="py1.7">
+                <h2>Strings multiplication</h2>
+                <p>As core language feature, mimicking what PERL language has to offers, Python language has string multiplication offered at your disposal too.</p>
+                <div data-datacamp-exercise data-lang="python">					
+                <code data-type="sample-code">
+print(2*"string")
+                </code>
+                </div>
+              </section>
+              <section id="py1.8">
+                <h2>Python main function</h2>
+                <p>The Python interpreter does not make assumptions about predefined function name entry point, it executes scripts starting at the top of the file and for such reason
+                Python programmers adopt convention naming and special variables. Thus in Python scripts, it happens to see <b>main</b> function definition and a conditional statement.
+                Assuming that the script is executed on command line you can use the <code>if __name__ == "__main__"</code> idiom to determine the execution context and conditionally run </b>main()</b> only when <b>__name__</b> is equal to <b>"__main__"</b>.
+                Simply put the <code>main()</code> function should reimain slim containing calls to others functions and minimum to no special logic you can delegate to other functions and modules. Python uses indentation for blocks instead of curly braces, and it uses the colon <code>:</code> to start a block.
+                </p>
+                <div data-datacamp-exercise data-lang="python">					
+                <code data-type="sample-code">
+def main():
+	print("Hello World!")
+if __name__ == "__main__":
+	main()
+                </code>
+                </div>
+              </section>
+              <section id="py1.9">
+                <h2>Python pieces of code</h2>
+                <p>Python interpreter differentiates among three type of pieces of code. Thus, <b>__name__</b> idiom takes on different values depending on how you executed your Python file.</p>
+                <ul>
+                <li><b>File:</b> Typically, a Python file is any file that contains code. Most Python files have the extension <b>.py</b>.</li>
+                <li><b>Script:</b> A Python script is a file that you intend to execute from the command line to accomplish a task. "__main__" when the file is executed from the command line or with python -m (to execute a package's <b>__main__.py</b> file)</li>
+                <li><b>Module:</b> A Python module is a file that you intend to import from within another module or a script, or from the interactive interpreter. "__main__" when the module is imported contains name of the module</li>
+                </ul>
+              </section>
+              <section id="py1.10">
+                <h2>Math module</h2>
+                <p>Python language offers a built-in standard module that you can use for mathematical tasks, which gives you access to the underlying C library functions.
+                Anyway this module does not support <b>complex</b> datatypes. The <a href="https://docs.python.org/3.0/library/cmath.html">cmath module</a> is for the <b>complex</b> counterpart.</p>
+                <div data-datacamp-exercise data-lang="python">					
+                <code data-type="sample-code">
+import math
+radius = 3
+print("The area of the circle is ", radius * radius * math.pi)
+print("The circumference of the circle is ", 2 * radius * math.pi) 
+                </code>
+                </div>
+              </section>
+              <section id="py1.11">
+                <h2>Sys module</h2>
+                <p>Oftenly, when you develop command line Python programs, you need basic <a href="https://docs.python.org/2/library/sys.html">System-specific parameters and functions</a>.</p>
+                <div data-datacamp-exercise data-lang="python">					
+                <code data-type="sample-code">
+import sys
+print( sys.executable )
+print( sys.platform )
+print( sys.argv[0] ) 
+print( sys.version_info.major ) 
+                </code>
+                </div>
+              </section>
+              <section id="py1.12">
+                <h2>Handling user input</h2>
+                <div data-datacamp-exercise data-lang="python">					
+                <code data-type="sample-code">
 def main():
     try:
         a = int(input("Enter the first input : ") or "1")
@@ -344,12 +344,12 @@ def main():
     except EOFError:
         print("This console is that it does not support input")
 main()
-              </code>
-              </div>
-            </section>
+                </code>
+                </div>
+                </section>
             </div>
           </article>
-            </div>
+          </div>
         </div>
       </div>
     </div>

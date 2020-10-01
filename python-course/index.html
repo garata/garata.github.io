@@ -30,6 +30,7 @@
                 <li><a href="#py1.5">Variables</a></li>
                 <li><a href="#py1.6">String concatenation</a></li>
                 <li><a href="#py1.7">String multiplication</a></li>
+                <li><a href="#py1.8">Math module</a></li>
               </ul>
             </div>
           </div>
@@ -242,10 +243,23 @@
                 </section>
                 <section id="py1.7">
                   <h2>Strings multiplication</h2>
-                  <div data-datacamp-exercise data-lang="python">
-					<p>As core language feature, mimicking what PERL language has to offers, Python language has string multiplication offered at your disposal too.</p>
+				  <p>As core language feature, mimicking what PERL language has to offers, Python language has string multiplication offered at your disposal too.</p>
+                  <div data-datacamp-exercise data-lang="python">					
 					<code data-type="sample-code">
 					print(2*"string")
+					</code>
+				  </div>
+                </section>
+                <section id="py1.8">
+                  <h2>Math module</h2>
+				  <p>Python language offers a built-in standard module that you can use for mathematical tasks, which gives you access to the underlying C library functions.
+				  Anyway this module does not support <b>complex</b> datatypes. The <a href="https://docs.python.org/3.0/library/cmath.html">cmath module</a> is for the <b>complex</b> counterpart.</p>
+                  <div data-datacamp-exercise data-lang="python">					
+					<code data-type="sample-code">
+					import math
+					radius = 3
+					print("The area of the circle is ", radius * radius * math.pi)
+					print("The circumference of the circle is ", 2 * radius * math.pi) 
 					</code>
 				  </div>
                 </section>

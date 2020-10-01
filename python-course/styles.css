@@ -12754,7 +12754,7 @@ pre.highlight {
     position: sticky;
     top: 0;
     width: 100%;
-    height: 5em;
+    height: 6em;
     background: red;
     z-index: 10000;
     box-shadow: 0 0.4em 0.4em #ccc;
@@ -12770,5 +12770,5 @@ pre.highlight {
 }
 
 .top-navigation.slide-down {
-    max-height: 5em;
+    max-height: 6em;
 }

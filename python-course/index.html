@@ -2,418 +2,417 @@
 <html lang="en-US">
   <head>
     <link rel="stylesheet" media="all" href="./styles.css">
-	<script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"/>
+    <script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"></script>
 	<title>Python Course for Newby</title>
   </head>
   <body>
-	<svg width="45px" height="45px">
-	  <symbol id="py-logo" viewBox="0 0 256 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" class="">
-		<defs>
-		  <linearGradient x1="12.9593594%" y1="12.0393928%" x2="79.6388325%" y2="78.2008538%" id="linearGradient-1">
-			<stop stop-color="#387EB8" offset="0%"/>
-			<stop stop-color="#366994" offset="100%"/>
-		  </linearGradient>
-		  <linearGradient x1="19.127525%" y1="20.5791813%" x2="90.7415328%" y2="88.4290372%" id="linearGradient-2">
-			<stop stop-color="#FFE052" offset="0%"/>
-			<stop stop-color="#FFC331" offset="100%"/>
-		  </linearGradient>
-		</defs>
-		<g>
-		  <path d="M126.915866,0.0722755491 C62.0835831,0.0722801733 66.1321288,28.1874648 66.1321288,28.1874648 L66.2044043,57.3145115 L128.072276,57.3145115 L128.072276,66.0598532 L41.6307171,66.0598532 C41.6307171,66.0598532 0.144551098,61.3549438 0.144551098,126.771315 C0.144546474,192.187673 36.3546019,189.867871 36.3546019,189.867871 L57.9649915,189.867871 L57.9649915,159.51214 C57.9649915,159.51214 56.8001363,123.302089 93.5968379,123.302089 L154.95878,123.302089 C154.95878,123.302089 189.434218,123.859386 189.434218,89.9830604 L189.434218,33.9695088 C189.434218,33.9695041 194.668541,0.0722755491 126.915866,0.0722755491 L126.915866,0.0722755491 L126.915866,0.0722755491 Z M92.8018069,19.6589497 C98.9572068,19.6589452 103.932242,24.6339846 103.932242,30.7893845 C103.932246,36.9447844 98.9572068,41.9198193 92.8018069,41.9198193 C86.646407,41.9198239 81.6713721,36.9447844 81.6713721,30.7893845 C81.6713674,24.6339846 86.646407,19.6589497 92.8018069,19.6589497 L92.8018069,19.6589497 L92.8018069,19.6589497 Z" fill="url(#linearGradient-1)"/>
-		  <path d="M128.757101,254.126271 C193.589403,254.126271 189.540839,226.011081 189.540839,226.011081 L189.468564,196.884035 L127.600692,196.884035 L127.600692,188.138693 L214.042251,188.138693 C214.042251,188.138693 255.528417,192.843589 255.528417,127.427208 C255.52844,62.0108566 219.318366,64.3306589 219.318366,64.3306589 L197.707976,64.3306589 L197.707976,94.6863832 C197.707976,94.6863832 198.87285,130.896434 162.07613,130.896434 L100.714182,130.896434 C100.714182,130.896434 66.238745,130.339138 66.238745,164.215486 L66.238745,220.229038 C66.238745,220.229038 61.0044225,254.126271 128.757101,254.126271 L128.757101,254.126271 L128.757101,254.126271 Z M162.87116,234.539597 C156.715759,234.539597 151.740726,229.564564 151.740726,223.409162 C151.740726,217.253759 156.715759,212.278727 162.87116,212.278727 C169.026563,212.278727 174.001595,217.253759 174.001595,223.409162 C174.001618,229.564564 169.026563,234.539597 162.87116,234.539597 L162.87116,234.539597 L162.87116,234.539597 Z" fill="url(#linearGradient-2)"/>
-		</g>
-	  </symbol>
-	</svg>
-	<div class="py-section">
-	  <div class="py-container">
-		<div class="py-grid-large py-grid" data-py-grid="">
-		  <div class="sidebar-fixed-width py-visible@m py-first-column">
-			<div class="sidebar-docs py-margin-top py-position-fixed">
-			  <h5>Python Newby Rants</h5>
-			  <ul class="py-nav py-nav-default doc-nav">
-				<li>
-				  <a href="#py0.1">Monty Python heritage</a>
-				</li>
-				<li>
-				  <a href="#py0.2">Newby minimal requirements</a>
-				</li>
-				<li>
-				  <a href="#py0.3">Installing Python 3 on Linux</a>
-				</li>
-				<li>
-				  <a href="#py0.4">Installing Python 3 on Apple Mac OSX</a>
-				</li>
-				<li>
-				  <a href="#py0.5">Installing Python 3 on Microsoft Windows</a>
-				</li>
-				<li>
-				  <a href="#py0.6">Python Program Types</a>
-				</li>
-				<li>
-				  <a href="#py0.7">Which is my Python version?</a>
-				</li>
-			  </ul>
-			  <h5>Python Programming Baby Steps</h5>
-			  <ul class="py-nav py-nav-default doc-nav">
-				<li>
-				  <a href="#py1.1">How to insert comments</a>
-				</li>
-				<li>
-				  <a href="#py1.2">Python program indentation</a>
-				</li>
-				<li>
-				  <a href="#py1.3">HelloWorld example</a>
-				</li>
-				<li>
-				  <a href="#py1.4">Literals and Value Types</a>
-				</li>
-				<li>
-				  <a href="#py1.5">Variables</a>
-				</li>
-				<li>
-				  <a href="#py1.6">String concatenation</a>
-				</li>
-				<li>
-				  <a href="#py1.7">String multiplication</a>
-				</li>
-				<li>
-				  <a href="#py1.8">Python main function</a>
-				</li>
-				<li>
-				  <a href="#py1.9">Python pieces of code</a>
-				</li>
-				<li>
-				  <a href="#py1.10">Math module</a>
-				</li>
-				<li>
-				  <a href="#py1.11">Sys module</a>
-				</li>
-			  </ul>
-			</div>
-		  </div>
-		  <div class="py-width-1-1 py-width-expand@m">
+    <div class="py-section">
+      <div class="py-container">
+        <div class="py-grid-large py-grid" data-py-grid="">
+          <div class="sidebar-fixed-width py-visible@m py-first-column">
+            <div class="sidebar-docs py-margin-top py-position-fixed">
+              <h5>Python Newby Rants</h5>
+              <ul class="py-nav py-nav-default doc-nav">
+                <li><a href="#py0.1">Monty Python heritage</a></li>
+                <li><a href="#py0.2">Newby minimal requirements</a></li>
+                <li><a href="#py0.3">Installing Python 3 on Linux</a></li>
+                <li><a href="#py0.4">Installing Python 3 on Apple Mac OSX</a></li>
+                <li><a href="#py0.5">Installing Python 3 on Microsoft Windows</a></li>
+                <li><a href="#py0.6">Python Program Types</a></li>
+                <li><a href="#py0.7">Which is my Python version?</a></li>
+              </ul>
+              <h5>Python Programming Baby Steps</h5>
+              <ul class="py-nav py-nav-default doc-nav">
+                <li><a href="#py1.1">How to insert comments</a></li>
+                <li><a href="#py1.2">Python program indentation</a></li>
+                <li><a href="#py1.3">HelloWorld example</a></li>
+                <li><a href="#py1.4">Literals and Value Types</a></li>
+                <li><a href="#py1.5">Variables</a></li>
+                <li><a href="#py1.6">String concatenation</a></li>
+                <li><a href="#py1.7">String multiplication</a></li>
+                <li><a href="#py1.8">Python main function</a></li>
+                <li><a href="#py1.9">Python pieces of code</a></li>
+                <li><a href="#py1.10">Math module</a></li>
+                <li><a href="#py1.11">Sys module</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="py-width-1-1 py-width-expand@m">
+            <article class="py-article">
+              <h1 class="py-article-title">Python Newby Rants</h1>
+              <p class="py-text-lead py-text-muted">This section covers the setup and options available for Python language first timers</p>
+              <div class="py-article-meta py-margin-top py-margin-medium-bottom py-flex py-flex-middle">
+                <svg width="45px" height="45px" viewBox="0 0 256 255" style="margin: 0.33rem" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                  <defs>
+                    <linearGradient x1="12.9593594%" y1="12.0393928%" x2="79.6388325%" y2="78.2008538%" id="linearGradient-1">
+                      <stop stop-color="#387EB8" offset="0%"></stop>
+                      <stop stop-color="#366994" offset="100%"></stop>
+                    </linearGradient>
+                    <linearGradient x1="19.127525%" y1="20.5791813%" x2="90.7415328%" y2="88.4290372%" id="linearGradient-2">
+                      <stop stop-color="#FFE052" offset="0%"></stop>
+                      <stop stop-color="#FFC331" offset="100%"></stop>
+                    </linearGradient>
+                  </defs>
+                  <g>
+                    <path d="M126.915866,0.0722755491 C62.0835831,0.0722801733 66.1321288,28.1874648 66.1321288,28.1874648 L66.2044043,57.3145115 L128.072276,57.3145115 L128.072276,66.0598532 L41.6307171,66.0598532 C41.6307171,66.0598532 0.144551098,61.3549438 0.144551098,126.771315 C0.144546474,192.187673 36.3546019,189.867871 36.3546019,189.867871 L57.9649915,189.867871 L57.9649915,159.51214 C57.9649915,159.51214 56.8001363,123.302089 93.5968379,123.302089 L154.95878,123.302089 C154.95878,123.302089 189.434218,123.859386 189.434218,89.9830604 L189.434218,33.9695088 C189.434218,33.9695041 194.668541,0.0722755491 126.915866,0.0722755491 L126.915866,0.0722755491 L126.915866,0.0722755491 Z M92.8018069,19.6589497 C98.9572068,19.6589452 103.932242,24.6339846 103.932242,30.7893845 C103.932246,36.9447844 98.9572068,41.9198193 92.8018069,41.9198193 C86.646407,41.9198239 81.6713721,36.9447844 81.6713721,30.7893845 C81.6713674,24.6339846 86.646407,19.6589497 92.8018069,19.6589497 L92.8018069,19.6589497 L92.8018069,19.6589497 Z" fill="url(#linearGradient-1)"></path>
+                    <path d="M128.757101,254.126271 C193.589403,254.126271 189.540839,226.011081 189.540839,226.011081 L189.468564,196.884035 L127.600692,196.884035 L127.600692,188.138693 L214.042251,188.138693 C214.042251,188.138693 255.528417,192.843589 255.528417,127.427208 C255.52844,62.0108566 219.318366,64.3306589 219.318366,64.3306589 L197.707976,64.3306589 L197.707976,94.6863832 C197.707976,94.6863832 198.87285,130.896434 162.07613,130.896434 L100.714182,130.896434 C100.714182,130.896434 66.238745,130.339138 66.238745,164.215486 L66.238745,220.229038 C66.238745,220.229038 61.0044225,254.126271 128.757101,254.126271 L128.757101,254.126271 L128.757101,254.126271 Z M162.87116,234.539597 C156.715759,234.539597 151.740726,229.564564 151.740726,223.409162 C151.740726,217.253759 156.715759,212.278727 162.87116,212.278727 C169.026563,212.278727 174.001595,217.253759 174.001595,223.409162 C174.001618,229.564564 169.026563,234.539597 162.87116,234.539597 L162.87116,234.539597 L162.87116,234.539597 Z" fill="url(#linearGradient-2)"></path>
+                  </g>
+                </svg>
+                <div>
+                  Written by
+                  <span>Giorgio Arata</span><br>
+                  Last update on <time datetime="2020-09-30">September 30 of 2020</time>
+                </div>
+              </div>
+              <div class="article-content link-primary">
+                <section id="py0.1">
+                  <h2>Monty Python heritage</h2>
+                  <p>A part from referring to to the very famous british comedy group, when people say they Python in relation to programming they either mean the Python programming language
+                  or they mean the tool that can translate some text (code) written in the Python programming language to the language a computer can actually understand. On Microsoft
+                  Windows this is the <b>python.exe</b> you need to install. On Linux/Mac it is usally called <b>python</b> or <b>python3</b>. CPython is the tool that translates
+				  a programming language for the computer is eiter called a compiler or an interpreter.
+                  </p>
+                </section>
+                <section id="py0.2">
+                  <h2>Newby minimal requirements</h2>
+                  <p>The bare minimum requirements for this course are two pieces of software: A text editor in which you can write the program and a compiler or interpreter that can translate this program to the computer.</p>
+				  <p>Basically you can use any text editor to write Python code, but, in order to obtain a good syntax highlighting, the IDE program should provide intellisense as well and, in most
+                  cases, they should be able to understand what kind of objects are instantiated in source code showing the available methods and their parameters.
+				  Even better, they provide powerful debuggers.</p>
+                  <ul>
+                    <li>A complete list of code editor where we can write programs in Python language can be found here <a href="https://wiki.python.org/moin/IntegratedDevelopmentEnvironments">IntegratedDevelopmentEnvironments - Python WiKi</a></li>
+                    <li>A Python 3 compiler or interpreter that can translate sources text to the language of the computer is the best way to go. In fact, Python has two major lines the version 2.x
+				    and the version 3.x, but withou further ado the latter should always be used if possible. A good piece of skill for a daily Python programmer is the ability to be able
+				    to recognize that the code was originally written for Python 2 and you need to be able to make the adjustments.</li>
+                  </ul>
+                </section>
+                <section id="py0.3">
+                  <h2>Installing Python 3 on Linux</h2>
+                  <p>On Linux you usually have Python 2 installed in /usr/bin/python and Python 3 installed in /usr/bin/python3. Depending on your distribution you can use yum or apt-get
+				  package manager to update your Linux distribution.</p>
+                  <div class="language-bash highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>which python3 # check where python3 executable is located</code></pre>
+                    </div>
+                  </div>
+                  <div class="language-bash highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>sudo apt-get install python3 # python3 linux debian style installation</code></pre>
+                    </div>
+                  </div>
+                  <div class="language-bash highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>sudo yum install python3 # python3 linux redhat style installation</code></pre>
+                    </div>
+                  </div>
+                </section>
+                <section id="py0.4">
+                  <h2>Installing Python 3 on Apple Mac OSX</h2>
+                  <p>On Mac OSX to check if Python 2 is installed in <b>/usr/bin/python</b> and Python 3 is installed in <b>/usr/bin/python3</b></p>
+                  <div class="language-bash highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>which python2 # check where python2 executable is located</code></pre>
+                    </div>
+                  </div>
+                  <div class="language-bash highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>which python3 # check where python3 executable is located</code></pre>
+                    </div>
+                  </div>
+                </section>
+                <section id="py0.5">
+                  <h2>Installing Python 3 on Microsoft Windows</h2>
+				  <p>Microsoft Windows system generally does not offer pre-installed Python, but this situation may be easily fixed using an up to date <b>MSI</b> installer took from
+                  <a href="https://docs.python.org/3/using/windows.html">Using Python on Windows</a> official Python documentation page. Nowaday, Microsoft offers another interesting
+				  approach named as <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux"><b>Windows Subsystem for Linux</b></a>.</p>
+                </section>
+                <section id="py0.6">
+                  <h2>Python Program Types</h2>
+				  <p>Python programmer does make a blurring distinction among scripts and programs and, in most cases, is able to develop different kind of applications as listed below.</p>
+                  <ul>
+                    <li>Desktop application</li>
+                    <li>Mobile applications</li>
+                    <li>Embedded applications</li>
+                    <li>Embedded applications</li>
+                    <li>Web applications</li>
+				    <li>Command line applications</li>
+                  </ul>
+                </section>
+                <section id="py0.7">
+                  <h2>Which Python version is installed on my system?</h2>
+				  <p>When you starts to use Python from command line or shell, in order to check the version number installed on system, we should pass the appropriate flag to its executale.</p>
+                  <div class="language-bash highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>python -V</code></pre>
+                    </div>
+                  </div>
+                  <div class="language-bash highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>python --version</code></pre>
+                    </div>
+                  </div>
+                  <div class="language-bash highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>man python # first stop for a detailed Python features explanation</code></pre>
+                    </div>
+                  </div>
+                  <div class="language-bash highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>python -c "print 1956" # Guido van Rossum year of birth</code></pre>
+                    </div>
+                  </div>
+                </section>
+				<!--
+                <div class="language-html highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight">
+                      <code><span class="nt">&lt;head&gt;</span>
+                      <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/css/main.css"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span> <span class="na">type=</span><span class="s">"image/png"</span> <span class="na">href=</span><span class="s">"/assets/img/favicon.png"</span> <span class="nt">&gt;</span>
+                      <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/js/main.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+                        <span class="nt">&lt;/head&gt;</span>
+                       </code>
+    			   </pre>
+                  </div>
+                </div>
+                <figure data-py-lightbox="animation: slide">
+                  <a class="py-inline" href="img/success.png" data-caption="Image in lightbox">
+                    <img src="img/success.png" alt="Alt for image">
+                    <div class="py-position-center">
+                      <span data-py-overlay-icon="" class="py-icon py-overlay-icon"><svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" data-svg="overlay-icon"><rect x="19" y="0" width="1" height="40"></rect><rect x="0" y="19" width="40" height="1"></rect></svg></span>
+                    </div>
+                  </a>
+                  <figcaption data-py-grid="" class="py-flex-right py-grid py-grid-stack"><span class="py-width-auto py-first-column">Image in lightbox</span></figcaption>
+                </figure>
+                <p>The been have from pros a to opinion, a between of make feedback quite like a man frame. Hiding of 
+                  a ask the english the alone, was didn't my a use. Of the for but may to behind on may so let in 
+                  wasn't allows a her his century and interaction <a href="#">some link</a> to a website.</p>
+                <p>Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam,
+                  ac posuere leo dapibus id. Cras fringilla convallis elit, at eleifend mi interam.</p>
+                <p>Nulla non sollicitudin. Morbi sit amet laoreet ipsum, vel pretium mi. Morbi varius, tellus in accumsan
+                  blandit, elit ligula eleifend velit, luctus mattis ante nulla condimentum nulla. Etiam vestibulum risus vel
+                  arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit.</p>
+                <h2 id="text-and-quote">Text and Quote</h2>
+                <p>Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra
+                turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna turpis.</p>
+                <blockquote>
+                  <p>Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit.
+                    Cras a dui imperdiet</p>
+                </blockquote>
+                <p>In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus
+                  turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                <p>Etiam in fermentum mi. Sed et tempor felis, eu aliquet nisi. Nam eget ullamcorper arcu. Nunc porttitor nisl a
+                  dolor blandit, eget consequat sem maximus. Phasellus lacinia quam porta orci malesuada, vel tincidunt.</p>              
+                <div class="share py-text-center py-margin-medium-top">
+                  <a class="py-link-muted" href="#" rel="nofollow" target="_blank" title="Share on Twitter"><span data-py-icon="icon: twitter; ratio: 1.2" class="py-icon"><svg width="24" height="24" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="twitter"><path d="M19,4.74 C18.339,5.029 17.626,5.229 16.881,5.32 C17.644,4.86 18.227,4.139 18.503,3.28 C17.79,3.7 17.001,4.009 16.159,4.17 C15.485,3.45 14.526,3 13.464,3 C11.423,3 9.771,4.66 9.771,6.7 C9.771,6.99 9.804,7.269 9.868,7.539 C6.795,7.38 4.076,5.919 2.254,3.679 C1.936,4.219 1.754,4.86 1.754,5.539 C1.754,6.82 2.405,7.95 3.397,8.61 C2.79,8.589 2.22,8.429 1.723,8.149 L1.723,8.189 C1.723,9.978 2.997,11.478 4.686,11.82 C4.376,11.899 4.049,11.939 3.713,11.939 C3.475,11.939 3.245,11.919 3.018,11.88 C3.49,13.349 4.852,14.419 6.469,14.449 C5.205,15.429 3.612,16.019 1.882,16.019 C1.583,16.019 1.29,16.009 1,15.969 C2.635,17.019 4.576,17.629 6.662,17.629 C13.454,17.629 17.17,12 17.17,7.129 C17.17,6.969 17.166,6.809 17.157,6.649 C17.879,6.129 18.504,5.478 19,4.74"></path></svg></span></a>
+                  <a class="py-link-muted py-margin-small-left" href="#" rel="nofollow" target="_blank" title="Share on Facebook"><span data-py-icon="icon: facebook; ratio: 1.2" class="py-icon"><svg width="24" height="24" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="facebook"><path d="M11,10h2.6l0.4-3H11V5.3c0-0.9,0.2-1.5,1.5-1.5H14V1.1c-0.3,0-1-0.1-2.1-0.1C9.6,1,8,2.4,8,5v2H5.5v3H8v8h3V10z"></path></svg></span></a>
+                </div>
+              </div>
+			  -->
+			  <!--
+              <hr class="py-margin-medium">
+              <div class="py-margin-large-top paginate-post">
+                <div class="py-child-width-expand@s py-grid-large py-grid" data-py-grid="">
+                  <div class="py-first-column">
+                  </div>
+                  <div>
+                    <h5>Basic theme setup</h5>
+                    <div class="py-text-right"><a class="remove-underline hvr-forward" href="doc.html">Next →</a></div>
+                  </div>
+                </div>
+              </div>
+			  -->
+              <div class="py-margin-large-top">
+                <h3>Related Docs</h3>
+                <ul class="py-list link-secondary">
+                  <li><a href="doc.html">Creating a changelog</a></li>
+                  <li><a href="doc.html">Contact form</a></li>
+                  <li><a href="doc.html">Creating docs posts</a></li>
+                  <li><a href="doc.html">Footer options</a></li>
+                </ul>
+              </div>
+            </article>
 			<article class="py-article">
-			  <h1 class="py-article-title">Python Newby Rants</h1>
-			  <p class="py-text-lead py-text-muted">This section covers the setup and options available for Python language first timers</p>
-			  <div class="py-article-meta py-margin-top py-margin-medium-bottom py-flex py-flex-middle">
-				<svg width="45px" height="45px" style="margin: 0.33rem">
-				  <use xlink:href="#py-logo"/>
-				</svg>
-				<div>
-				  Written by
-				  <span>Giorgio Arata</span>
-				  <br>
-					Last update on <time datetime="2020-09-30">September 30 of 2020</time>
+              <h1 class="py-article-title">Python Programming Baby Steps</h1>
+              <p class="py-text-lead py-text-muted">This section consolidate self taught Python developers basis</p>
+              <div class="py-article-meta py-margin-top py-margin-medium-bottom py-flex py-flex-middle">
+                <svg width="45px" height="45px">
+				<symbol id="py-logo"  viewBox="0 0 256 255" style="margin: 0.33rem" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" class="">
+                  <defs>
+                    <linearGradient x1="12.9593594%" y1="12.0393928%" x2="79.6388325%" y2="78.2008538%" id="linearGradient-1">
+                      <stop stop-color="#387EB8" offset="0%"></stop>
+                      <stop stop-color="#366994" offset="100%"></stop>
+                    </linearGradient>
+                    <linearGradient x1="19.127525%" y1="20.5791813%" x2="90.7415328%" y2="88.4290372%" id="linearGradient-2">
+                      <stop stop-color="#FFE052" offset="0%"></stop>
+                      <stop stop-color="#FFC331" offset="100%"></stop>
+                    </linearGradient>
+                  </defs>
+                  <g>
+                    <path d="M126.915866,0.0722755491 C62.0835831,0.0722801733 66.1321288,28.1874648 66.1321288,28.1874648 L66.2044043,57.3145115 L128.072276,57.3145115 L128.072276,66.0598532 L41.6307171,66.0598532 C41.6307171,66.0598532 0.144551098,61.3549438 0.144551098,126.771315 C0.144546474,192.187673 36.3546019,189.867871 36.3546019,189.867871 L57.9649915,189.867871 L57.9649915,159.51214 C57.9649915,159.51214 56.8001363,123.302089 93.5968379,123.302089 L154.95878,123.302089 C154.95878,123.302089 189.434218,123.859386 189.434218,89.9830604 L189.434218,33.9695088 C189.434218,33.9695041 194.668541,0.0722755491 126.915866,0.0722755491 L126.915866,0.0722755491 L126.915866,0.0722755491 Z M92.8018069,19.6589497 C98.9572068,19.6589452 103.932242,24.6339846 103.932242,30.7893845 C103.932246,36.9447844 98.9572068,41.9198193 92.8018069,41.9198193 C86.646407,41.9198239 81.6713721,36.9447844 81.6713721,30.7893845 C81.6713674,24.6339846 86.646407,19.6589497 92.8018069,19.6589497 L92.8018069,19.6589497 L92.8018069,19.6589497 Z" fill="url(#linearGradient-1)"></path>
+                    <path d="M128.757101,254.126271 C193.589403,254.126271 189.540839,226.011081 189.540839,226.011081 L189.468564,196.884035 L127.600692,196.884035 L127.600692,188.138693 L214.042251,188.138693 C214.042251,188.138693 255.528417,192.843589 255.528417,127.427208 C255.52844,62.0108566 219.318366,64.3306589 219.318366,64.3306589 L197.707976,64.3306589 L197.707976,94.6863832 C197.707976,94.6863832 198.87285,130.896434 162.07613,130.896434 L100.714182,130.896434 C100.714182,130.896434 66.238745,130.339138 66.238745,164.215486 L66.238745,220.229038 C66.238745,220.229038 61.0044225,254.126271 128.757101,254.126271 L128.757101,254.126271 L128.757101,254.126271 Z M162.87116,234.539597 C156.715759,234.539597 151.740726,229.564564 151.740726,223.409162 C151.740726,217.253759 156.715759,212.278727 162.87116,212.278727 C169.026563,212.278727 174.001595,217.253759 174.001595,223.409162 C174.001618,229.564564 169.026563,234.539597 162.87116,234.539597 L162.87116,234.539597 L162.87116,234.539597 Z" fill="url(#linearGradient-2)"></path>
+                  </g>
+				  </symbol>
+                </svg>
+                <div>
+                  Written by
+                  <span>Giorgio Arata</span><br>
+                  Last update on <time datetime="2020-10-01">October 1 of 2020</time>
+                </div>
+              </div>
+              <div class="article-content link-primary">
+                <section id="py1.1">
+                  <h2>How to insert comments</h2>
+				  <p>Python programmer does use two kinds of comment relying on the fact that comments are not run by the Python interpreter, and are used to remarks important concept for humans.
+					As said, there are two types of comments: <b>block</b> and <b>single line</b>. A <b>block comment</b> is stated with triple quotes, either single or double, and closed with the same
+					quotes.</p>
+                </section>
+                <section id="py1.2">
+                  <h2>Python programs indentation</h2>
+				  <p>Python uses indentations rather than curly brackets, <b>{}</b>. But differently from others language, to signify blocks of code no semi colons are needed to signify the end of a line. Python standard recommends: 4 spaces on every level.</p>
+                  <div class="language-bash highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code># Remeber that parentheses after print() instruction are required in Python 3</code></pre>
+                      <pre class="highlight"><code>print("Hello World")</code></pre>
+                    </div>
+                  </div>
+                </section>
+                <section id="py1.3">
+                  <h2>HelloWorld example</h2>
+                  <div data-datacamp-exercise data-lang="python">
+					<code data-type="sample-code">
+					print("Hello World")
+					</code>
 				  </div>
-				</div>
-				<div class="article-content link-primary">
-				  <section id="py0.1">
-					<h2>Monty Python heritage</h2>
-					<p>A part from referring to to the very famous british comedy group, when people say they Python in relation to programming they either mean the Python programming language
-					  or they mean the tool that can translate some text (code) written in the Python programming language to the language a computer can actually understand. On Microsoft
-					  Windows this is the <b>python.exe</b> you need to install. On Linux/Mac it is usally called <b>python</b> or <b>python3</b>. CPython is the tool that translates
-					  a programming language for the computer is eiter called a compiler or an interpreter.
-					</p>
-				  </section>
-				  <section id="py0.2">
-					<h2>Newby minimal requirements</h2>
-					<p>The bare minimum requirements for this course are two pieces of software: A text editor in which you can write the program and a compiler or interpreter that can translate this program to the computer.</p>
-					<p>Basically you can use any text editor to write Python code, but, in order to obtain a good syntax highlighting, the IDE program should provide intellisense as well and, in most
-					  cases, they should be able to understand what kind of objects are instantiated in source code showing the available methods and their parameters.
-					  Even better, they provide powerful debuggers.</p>
-					<ul>
-					  <li>A complete list of code editor where we can write programs in Python language can be found here <a href="https://wiki.python.org/moin/IntegratedDevelopmentEnvironments">IntegratedDevelopmentEnvironments - Python WiKi</a>
-					  </li>
-					  <li>A Python 3 compiler or interpreter that can translate sources text to the language of the computer is the best way to go. In fact, Python has two major lines the version 2.x
-						and the version 3.x, but withou further ado the latter should always be used if possible. A good piece of skill for a daily Python programmer is the ability to be able
-						to recognize that the code was originally written for Python 2 and you need to be able to make the adjustments.</li>
-					</ul>
-				  </section>
-				  <section id="py0.3">
-					<h2>Installing Python 3 on Linux</h2>
-					<p>On Linux you usually have Python 2 installed in /usr/bin/python and Python 3 installed in /usr/bin/python3. Depending on your distribution you can use yum or apt-get
-					  package manager to update your Linux distribution.</p>
-					<div class="language-bash highlighter-rouge">
-					  <div class="highlight">
-						<pre class="highlight">
-						  <code>which python3 # check where python3 executable is located</code>
-						</pre>
-					  </div>
-					</div>
-					<div class="language-bash highlighter-rouge">
-					  <div class="highlight">
-						<pre class="highlight">
-						  <code>sudo apt-get install python3 # python3 linux debian style installation</code>
-						</pre>
-					  </div>
-					</div>
-					<div class="language-bash highlighter-rouge">
-					  <div class="highlight">
-						<pre class="highlight">
-						  <code>sudo yum install python3 # python3 linux redhat style installation</code>
-						</pre>
-					  </div>
-					</div>
-				  </section>
-				  <section id="py0.4">
-					<h2>Installing Python 3 on Apple Mac OSX</h2>
-					<p>On Mac OSX to check if Python 2 is installed in <b>/usr/bin/python</b> and Python 3 is installed in <b>/usr/bin/python3</b>
-					</p>
-					<div class="language-bash highlighter-rouge">
-					  <div class="highlight">
-						<pre class="highlight">
-						  <code>which python2 # check where python2 executable is located</code>
-						</pre>
-					  </div>
-					</div>
-					<div class="language-bash highlighter-rouge">
-					  <div class="highlight">
-						<pre class="highlight">
-						  <code>which python3 # check where python3 executable is located</code>
-						</pre>
-					  </div>
-					</div>
-				  </section>
-				  <section id="py0.5">
-					<h2>Installing Python 3 on Microsoft Windows</h2>
-					<p>Microsoft Windows system generally does not offer pre-installed Python, but this situation may be easily fixed using an up to date <b>MSI</b> installer took from
-					  <a href="https://docs.python.org/3/using/windows.html">Using Python on Windows</a> official Python documentation page. Nowaday, Microsoft offers another interesting
-					  approach named as <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">
-						<b>Windows Subsystem for Linux</b>
-					  </a>.</p>
-				  </section>
-				  <section id="py0.6">
-					<h2>Python Program Types</h2>
-					<p>Python programmer does make a blurring distinction among scripts and programs and, in most cases, is able to develop different kind of applications as listed below.</p>
-					<ul>
-					  <li>Desktop application</li>
-					  <li>Mobile applications</li>
-					  <li>Embedded applications</li>
-					  <li>Embedded applications</li>
-					  <li>Web applications</li>
-					  <li>Command line applications</li>
-					</ul>
-				  </section>
-				  <section id="py0.7">
-					<h2>Which Python version is installed on my system?</h2>
-					<p>When you starts to use Python from command line or shell, in order to check the version number installed on system, we should pass the appropriate flag to its executale.</p>
-					<div class="language-bash highlighter-rouge">
-					  <div class="highlight">
-						<pre class="highlight">
-						  <code>python -V</code>
-						</pre>
-					  </div>
-					</div>
-					<div class="language-bash highlighter-rouge">
-					  <div class="highlight">
-						<pre class="highlight">
-						  <code>python --version</code>
-						</pre>
-					  </div>
-					</div>
-					<div class="language-bash highlighter-rouge">
-					  <div class="highlight">
-						<pre class="highlight">
-						  <code>man python # first stop for a detailed Python features explanation</code>
-						</pre>
-					  </div>
-					</div>
-					<div class="language-bash highlighter-rouge">
-					  <div class="highlight">
-						<pre class="highlight">
-						  <code>python -c "print 1956" # Guido van Rossum year of birth</code>
-						</pre>
-					  </div>
-					</div>
-				  </section>
-				  <div class="py-margin-large-top">
-					<h3>Related Docs</h3>
-					<ul class="py-list link-secondary">
-					  <li>
-						<a href="doc.html">Creating a changelog</a>
-					  </li>
-					  <li>
-						<a href="doc.html">Contact form</a>
-					  </li>
-					  <li>
-						<a href="doc.html">Creating docs posts</a>
-					  </li>
-					  <li>
-						<a href="doc.html">Footer options</a>
-					  </li>
-					</ul>
+                </section>
+                <section id="py1.4">
+                  <h2>Literals and Value Types</h2>
+				  <p>Python basically offers type checking through type build in function. </p>
+                  <div data-datacamp-exercise data-lang="python">
+					<code data-type="sample-code">
+					# int
+					print( type(123) )
+					# float
+					print( type(3.14) )
+					# str
+					print( type("Hello World") )
+					# NoneType
+					print( type(None) )
+					# bool, `True` accepts `False` as well
+					print( type(True) )
+					# list
+					print( type([]) )
+					# dict
+					print( type({}) )
+					# floating point (2**53 binary floating-point)
+					print( type(3.14) )
+					</code>
 				  </div>
-				</article>
-				<article class="py-article">
-				  <h1 class="py-article-title">Python Programming Baby Steps</h1>
-				  <p class="py-text-lead py-text-muted">This section consolidate self taught Python developers basis</p>
-				  <div class="py-article-meta py-margin-top py-margin-medium-bottom py-flex py-flex-middle">
-					<svg width="45px" height="45px" style="margin: 0.33rem">
-					  <use xlink:href="#py-logo"/>
-					</svg>
-					<div>
-					  Written by
-					  <span>Giorgio Arata</span>
-					  <br>
-						Last update on <time datetime="2020-10-01">October 1 of 2020</time>
-					  </div>
-					</div>
-					<div class="article-content link-primary">
-					  <section id="py1.1">
-						<h2>How to insert comments</h2>
-						<p>Python programmer does use two kinds of comment relying on the fact that comments are not run by the Python interpreter, and are used to remarks important concept for humans.
-						  As said, there are two types of comments: <b>block</b> and <b>single line</b>. A <b>block comment</b> is stated with triple quotes, either single or double, and closed with the same
-						  quotes.</p>
-					  </section>
-					  <section id="py1.2">
-						<h2>Python programs indentation</h2>
-						<p>Python uses indentations rather than curly brackets, <b>{}</b>. But differently from others language, to signify blocks of code no semi colons are needed to signify the end of a line. Python standard recommends: 4 spaces on every level.</p>
-						<div class="language-bash highlighter-rouge">
-						  <div class="highlight">
-							<pre class="highlight">
-							  <code># Remeber that parentheses after print() instruction are required in Python 3</code>
-							</pre>
-							<pre class="highlight">
-							  <code>print("Hello World")</code>
-							</pre>
-						  </div>
-						</div>
-					  </section>
-					  <section id="py1.3">
-						<h2>HelloWorld example</h2>
-						<div data-datacamp-exercise data-lang="python">
-						  <code data-type="sample-code">
-							print("Hello World")
-						  </code>
-						</div>
-					  </section>
-					  <section id="py1.4">
-						<h2>Literals and Value Types</h2>
-						<p>Python basically offers type checking through type build in function. </p>
-						<div data-datacamp-exercise data-lang="python">
-						  <code data-type="sample-code">
-							# int
-							print( type(123) )
-							# float
-							print( type(3.14) )
-							# str
-							print( type("Hello World") )
-							# NoneType
-							print( type(None) )
-							# bool, `True` accepts `False` as well
-							print( type(True) )
-							# list
-							print( type([]) )
-							# dict
-							print( type({}) )
-							# floating point (2**53 binary floating-point)
-							print( type(3.14) )
-						  </code>
-						</div>
-					  </section>
-					  <section id="py1.5">
-						<h2>Variables</h2>
-						<p>Python has five standard Data Types: Numbers, Strings, Lists, Tuples, and Dictionaries. The Python type system dynamically initilize the Data Type on its initialization.</p>
-						<p>Within the Numbers data type there are subtypes: int, long, float, and complex.
-						  <ul>
-							<li>int -> whole numbers (integers)</li>
-							<li>long -> really big integers</li>
-							<li>float -> decimal numbers</li>
-							<li>complex -> complex numbers</li>
-						  </ul>
-						</p>
-						<div data-datacamp-exercise data-lang="python">
-						  <code data-type="sample-code">
-							# single or double quotes declare string data type
-							s = 'String Constant'
-							# to define one or more number variables use assignment syntax
-							a = 0
-							b, c = 3, 4
-						  </code>
-						</div>
-					  </section>
-					  <section id="py1.6">
-						<h2>Strings concatenation</h2>
-						<div data-datacamp-exercise data-lang="python">
-						  <code data-type="sample-code">
-							x = 1
-							y = 2
-							print("x+y=" + str(x+y))
-							s1 = "1"
-							s2 = "2"
-							print("s1+s2=" + str(s1+s2))
-						  </code>
-						</div>
-					  </section>
-					  <section id="py1.7">
-						<h2>Strings multiplication</h2>
-						<p>As core language feature, mimicking what PERL language has to offers, Python language has string multiplication offered at your disposal too.</p>
-						<div data-datacamp-exercise data-lang="python">
-						  <code data-type="sample-code">
-							print(2*"string")
-						  </code>
-						</div>
-					  </section>
-					  <section id="py1.8">
-						<h2>Python main function</h2>
-						<p>The Python interpreter does not make assumptions about predefined function name entry point, it executes scripts starting at the top of the file and for such reason
-						  Python programmers adopt convention naming and special variables. Thus in Python scripts, it happens to see <b>main</b> function definition and a conditional statement.
-						  Assuming that the script is executed on command line you can use the <code>if __name__ == "__main__"</code> idiom to determine the execution context and conditionally run </b>main()</b> only when <b>__name__</b> is equal to <b>"__main__"</b>.
-					  Simply put the <code>main()</code> function should reimain slim containing calls to others functions and minimum to no special logic you can delegate to other functions and modules.
+                </section>
+                <section id="py1.5">
+                  <h2>Variables</h2>
+				  <p>Python has five standard Data Types: Numbers, Strings, Lists, Tuples, and Dictionaries. The Python type system dynamically initilize the Data Type on its initialization.</p>
+				  <p>Within the Numbers data type there are subtypes: int, long, float, and complex.
+					<ul>
+					<li>int -> whole numbers (integers)</li>
+					<li>long -> really big integers</li>
+					<li>float -> decimal numbers</li>
+					<li>complex -> complex numbers</li>
+					</ul>
 					</p>
-					<div data-datacamp-exercise data-lang="python">
-					  <code data-type="sample-code">
-						def main():
+                  <div data-datacamp-exercise data-lang="python">
+					<code data-type="sample-code">
+					# single or double quotes declare string data type
+					s = 'String Constant'
+					# to define one or more number variables use assignment syntax
+					a = 0
+					b, c = 3, 4
+					</code>
+				  </div>
+                </section>
+                <section id="py1.6">
+                  <h2>Strings concatenation</h2>
+                  <div data-datacamp-exercise data-lang="python">
+					<code data-type="sample-code">
+					x = 1
+					y = 2
+					print("x+y=" + str(x+y))
+					s1 = "1"
+					s2 = "2"
+					print("s1+s2=" + str(s1+s2))
+					</code>
+				  </div>
+                </section>
+                <section id="py1.7">
+                  <h2>Strings multiplication</h2>
+				  <p>As core language feature, mimicking what PERL language has to offers, Python language has string multiplication offered at your disposal too.</p>
+                  <div data-datacamp-exercise data-lang="python">					
+					<code data-type="sample-code">
+					print(2*"string")
+					</code>
+				  </div>
+                </section>
+                <section id="py1.8">
+                  <h2>Python main function</h2>
+				  <p>The Python interpreter does not make assumptions about predefined function name entry point, it executes scripts starting at the top of the file and for such reason
+				  Python programmers adopt convention naming and special variables. Thus in Python scripts, it happens to see <b>main</b> function definition and a conditional statement.
+				  Assuming that the script is executed on command line you can use the <code>if __name__ == "__main__"</code> idiom to determine the execution context and conditionally run </b>main()</b> only when <b>__name__</b> is equal to <b>"__main__"</b>.
+				  Simply put the <code>main()</code> function should reimain slim containing calls to others functions and minimum to no special logic you can delegate to other functions and modules.
+				  </p>
+                  <div data-datacamp-exercise data-lang="python">					
+					<code data-type="sample-code">
+					def main():
 						print("Hello World!")
-						if __name__ == "__main__":
+					if __name__ == "__main__":
 						main()
-					  </code>
-					</div>
-				  </section>
-				  <section id="py1.9">
-					<h2>Python pieces of code</h2>
-					<p>Python interpreter differentiates among three type of pieces of code. Thus, <b>__name__</b> idiom takes on different values depending on how you executed your Python file.</p>
-					<ul>
-					  <li>
-						<b>File:</b> Typically, a Python file is any file that contains code. Most Python files have the extension <b>.py</b>.</li>
-					  <li>
-						<b>Script:</b> A Python script is a file that you intend to execute from the command line to accomplish a task. "__main__" when the file is executed from the command line or with python -m (to execute a package's <b>__main__.py</b> file)</li>
-					  <li>
-						<b>Module:</b> A Python module is a file that you intend to import from within another module or a script, or from the interactive interpreter. "__main__" when the module is imported contains name of the module</li>
-					</ul>
-				  </section>
-				  <section id="py1.10">
-					<h2>Math module</h2>
-					<p>Python language offers a built-in standard module that you can use for mathematical tasks, which gives you access to the underlying C library functions.
-					  Anyway this module does not support <b>complex</b> datatypes. The <a href="https://docs.python.org/3.0/library/cmath.html">cmath module</a> is for the <b>complex</b> counterpart.</p>
-					<div data-datacamp-exercise data-lang="python">
-					  <code data-type="sample-code">
-						import math
-						radius = 3
-						print("The area of the circle is ", radius * radius * math.pi)
-						print("The circumference of the circle is ", 2 * radius * math.pi)
-					  </code>
-					</div>
-				  </section>
-				  <section id="py1.11">
-					<h2>Sys module</h2>
-					<p>Oftenly, when you develop command line Python programs, you need basic <a href="https://docs.python.org/2/library/sys.html">System-specific parameters and functions</a>.</p>
-					<div data-datacamp-exercise data-lang="python">
-					  <code data-type="sample-code">
-						import sys
-						print( sys.executable )
-						print( sys.platform )
-						print( sys.argv[0] )
-						print( sys.version_info.major )
-					  </code>
-					</div>
-				  </section>
-				</div>
-			  </article>
-			</div>
-		  </div>
-		</div>
-	</div>
-	<script type="text/javascript" src="./scripts.js"/>
+					</code>
+				  </div>
+                </section>
+                <section id="py1.9">
+                  <h2>Python pieces of code</h2>
+				  <p>Python interpreter differentiates among three type of pieces of code. Thus, <b>__name__</b> idiom takes on different values depending on how you executed your Python file.</p>
+				  <ul>
+				  <li><b>File:</b> Typically, a Python file is any file that contains code. Most Python files have the extension <b>.py</b>.</li>
+				  <li><b>Script:</b> A Python script is a file that you intend to execute from the command line to accomplish a task. "__main__" when the file is executed from the command line or with python -m (to execute a package's <b>__main__.py</b> file)</li>
+				  <li><b>Module:</b> A Python module is a file that you intend to import from within another module or a script, or from the interactive interpreter. "__main__" when the module is imported contains name of the module</li>
+				  </ul>
+                </section>
+                <section id="py1.10">
+                  <h2>Math module</h2>
+				  <p>Python language offers a built-in standard module that you can use for mathematical tasks, which gives you access to the underlying C library functions.
+				  Anyway this module does not support <b>complex</b> datatypes. The <a href="https://docs.python.org/3.0/library/cmath.html">cmath module</a> is for the <b>complex</b> counterpart.</p>
+                  <div data-datacamp-exercise data-lang="python">					
+					<code data-type="sample-code">
+					import math
+					radius = 3
+					print("The area of the circle is ", radius * radius * math.pi)
+					print("The circumference of the circle is ", 2 * radius * math.pi) 
+					</code>
+				  </div>
+                </section>
+                <section id="py1.11">
+                  <h2>Sys module</h2>
+				  <p>Oftenly, when you develop command line Python programs, you need basic <a href="https://docs.python.org/2/library/sys.html">System-specific parameters and functions</a>.</p>
+                  <div data-datacamp-exercise data-lang="python">					
+					<code data-type="sample-code">
+					import sys
+					print( sys.executable )
+					print( sys.platform )
+					print( sys.argv[0] ) 
+					print( sys.version_info.major ) 
+					</code>
+				  </div>
+                </section>
+              </div>
+            </article>
+          </div>
+		  
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./scripts.js"></script>
   </body>
 </html>

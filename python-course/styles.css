@@ -4061,7 +4061,7 @@ select.py-form-width-xsmall {
 .py-article-title {
   font-size: 2.125rem;
   line-height: 1.4;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 /* Tablet landscape and bigger */

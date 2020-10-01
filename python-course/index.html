@@ -57,130 +57,129 @@
             </div>
           </div>
           <div class="py-width-1-1 py-width-expand@m">
-            <article class="py-article">
-              <h1 class="py-article-title">Python Newby Rants</h1>
-              <p class="py-text-lead py-text-muted">This section covers the setup and options available for Python language first timers</p>
-              <div class="py-article-meta py-margin-top py-margin-medium-bottom py-flex py-flex-middle">
-	  		<svg width="45px" height="45px" style="margin: 0.33rem"><use xlink:href="#py-logo"></use></svg>
-                <div>
-                  Written by
-                  <span>Giorgio Arata</span><br>
-                  Last update on <time datetime="2020-09-30">September 30 of 2020</time>
-                </div>
+          <article class="py-article">
+            <h1 class="py-article-title">Python Newby Rants</h1>
+            <p class="py-text-lead py-text-muted">This section covers the setup and options available for Python language first timers</p>
+            <div class="py-article-meta py-margin-top py-margin-medium-bottom py-flex py-flex-middle">
+	  		  <svg width="45px" height="45px" style="margin: 0.33rem"><use xlink:href="#py-logo"></use></svg>
+              <div>
+                Written by
+                <span>Giorgio Arata</span><br>
+                Last update on <time datetime="2020-09-30">September 30 of 2020</time>
               </div>
-              <div class="article-content link-primary">
-                <section id="py0.1">
-                  <h2>Monty Python heritage</h2>
-                  <p>A part from referring to to the very famous british comedy group, when people say they Python in relation to programming they either mean the Python programming language
-                    or they mean the tool that can translate some text (code) written in the Python programming language to the language a computer can actually understand. On Microsoft
-                    Windows this is the <b>python.exe</b> you need to install. On Linux/Mac it is usally called <b>python</b> or <b>python3</b>. CPython is the tool that translates
-                    a programming language for the computer is eiter called a compiler or an interpreter.
-                  </p>
-                </section>
-                <section id="py0.2">
-                  <h2>Newby minimal requirements</h2>
-                  <p>The bare minimum requirements for this course are two pieces of software: A text editor in which you can write the program and a compiler or interpreter that can translate this program to the computer.</p>
-                  <p>Basically you can use any text editor to write Python code, but, in order to obtain a good syntax highlighting, the IDE program should provide intellisense as well and, in most
-                    cases, they should be able to understand what kind of objects are instantiated in source code showing the available methods and their parameters.
-                    Even better, they provide powerful debuggers.
-                  </p>
-                  <ul>
-                    <li>A complete list of code editor where we can write programs in Python language can be found here <a href="https://wiki.python.org/moin/IntegratedDevelopmentEnvironments">IntegratedDevelopmentEnvironments - Python WiKi</a></li>
-                    <li>A Python 3 compiler or interpreter that can translate sources text to the language of the computer is the best way to go. In fact, Python has two major lines the version 2.x
-                      and the version 3.x, but withou further ado the latter should always be used if possible. A good piece of skill for a daily Python programmer is the ability to be able
-                      to recognize that the code was originally written for Python 2 and you need to be able to make the adjustments.
-                    </li>
-                  </ul>
-                </section>
-                <section id="py0.3">
-                  <h2>Installing Python 3 on Linux</h2>
-                  <p>On Linux you usually have Python 2 installed in /usr/bin/python and Python 3 installed in /usr/bin/python3. Depending on your distribution you can use yum or apt-get
-                    package manager to update your Linux distribution.
-                  </p>
-                  <div class="language-bash highlighter-rouge">
-                    <div class="highlight">
-                      <pre class="highlight"><code>which python3 # check where python3 executable is located</code></pre>
-                    </div>
+            </div>
+            <div class="article-content link-primary">
+              <section id="py0.1">
+                <h2>Monty Python heritage</h2>
+                <p>A part from referring to to the very famous british comedy group, when people say they Python in relation to programming they either mean the Python programming language
+                  or they mean the tool that can translate some text (code) written in the Python programming language to the language a computer can actually understand. On Microsoft
+                  Windows this is the <b>python.exe</b> you need to install. On Linux/Mac it is usally called <b>python</b> or <b>python3</b>. CPython is the tool that translates
+                  a programming language for the computer is eiter called a compiler or an interpreter.
+                </p>
+              </section>
+              <section id="py0.2">
+                <h2>Newby minimal requirements</h2>
+                <p>The bare minimum requirements for this course are two pieces of software: A text editor in which you can write the program and a compiler or interpreter that can translate this program to the computer.</p>
+                <p>Basically you can use any text editor to write Python code, but, in order to obtain a good syntax highlighting, the IDE program should provide intellisense as well and, in most cases, they should be able to understand what kind of objects are instantiated in source code showing the available methods and their parameters. Even better, they provide powerful debuggers.
+                </p>
+                <ul>
+                  <li>A complete list of code editor where we can write programs in Python language can be found here <a href="https://wiki.python.org/moin/IntegratedDevelopmentEnvironments">IntegratedDevelopmentEnvironments - Python WiKi</a></li>
+                  <li>A Python 3 compiler or interpreter that can translate sources text to the language of the computer is the best way to go. In fact, Python has two major lines the version 2.x
+                  and the version 3.x, but withou further ado the latter should always be used if possible. A good piece of skill for a daily Python programmer is the ability to be able
+                  to recognize that the code was originally written for Python 2 and you need to be able to make the adjustments.
+                  </li>
+                </ul>
+              </section>
+              <section id="py0.3">
+                <h2>Installing Python 3 on Linux</h2>
+                <p>On Linux you usually have Python 2 installed in /usr/bin/python and Python 3 installed in /usr/bin/python3. Depending on your distribution you can use yum or apt-get
+                  package manager to update your Linux distribution.
+                </p>
+                <div class="language-bash highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>which python3 # check where python3 executable is located</code></pre>
                   </div>
-                  <div class="language-bash highlighter-rouge">
-                    <div class="highlight">
-                      <pre class="highlight"><code>sudo apt-get install python3 # python3 linux debian style installation</code></pre>
-                    </div>
-                  </div>
-                  <div class="language-bash highlighter-rouge">
-                    <div class="highlight">
-                      <pre class="highlight"><code>sudo yum install python3 # python3 linux redhat style installation</code></pre>
-                    </div>
-                  </div>
-                </section>
-                <section id="py0.4">
-                  <h2>Installing Python 3 on Apple Mac OSX</h2>
-                  <p>On Mac OSX to check if Python 2 is installed in <b>/usr/bin/python</b> and Python 3 is installed in <b>/usr/bin/python3</b></p>
-                  <div class="language-bash highlighter-rouge">
-                    <div class="highlight">
-                      <pre class="highlight"><code>which python2 # check where python2 executable is located</code></pre>
-                    </div>
-                  </div>
-                  <div class="language-bash highlighter-rouge">
-                    <div class="highlight">
-                      <pre class="highlight"><code>which python3 # check where python3 executable is located</code></pre>
-                    </div>
-                  </div>
-                </section>
-                <section id="py0.5">
-                  <h2>Installing Python 3 on Microsoft Windows</h2>
-                  <p>Microsoft Windows system generally does not offer pre-installed Python, but this situation may be easily fixed using an up to date <b>MSI</b> installer took from
-                    <a href="https://docs.python.org/3/using/windows.html">Using Python on Windows</a> official Python documentation page. Nowaday, Microsoft offers another interesting
-                    approach named as <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux"><b>Windows Subsystem for Linux</b></a>.
-                  </p>
-                </section>
-                <section id="py0.6">
-                  <h2>Python Program Types</h2>
-                  <p>Python programmer does make a blurring distinction among scripts and programs and, in most cases, is able to develop different kind of applications as listed below.</p>
-                  <ul>
-                    <li>Desktop application</li>
-                    <li>Mobile applications</li>
-                    <li>Embedded applications</li>
-                    <li>Embedded applications</li>
-                    <li>Web applications</li>
-                    <li>Command line applications</li>
-                  </ul>
-                </section>
-                <section id="py0.7">
-                  <h2>Which Python version is installed on my system?</h2>
-                  <p>When you starts to use Python from command line or shell, in order to check the version number installed on system, we should pass the appropriate flag to its executale.</p>
-                  <div class="language-bash highlighter-rouge">
-                    <div class="highlight">
-                      <pre class="highlight"><code>python -V</code></pre>
-                    </div>
-                  </div>
-                  <div class="language-bash highlighter-rouge">
-                    <div class="highlight">
-                      <pre class="highlight"><code>python --version</code></pre>
-                    </div>
-                  </div>
-                  <div class="language-bash highlighter-rouge">
-                    <div class="highlight">
-                      <pre class="highlight"><code>man python # first stop for a detailed Python features explanation</code></pre>
-                    </div>
-                  </div>
-                  <div class="language-bash highlighter-rouge">
-                    <div class="highlight">
-                      <pre class="highlight"><code>python -c "print 1956" # Guido van Rossum year of birth</code></pre>
-                    </div>
-                  </div>
-                </section>
-                <div class="py-margin-large-top">
-                  <h3>Related Docs</h3>
-                  <ul class="py-list link-secondary">
-                    <li><a href="doc.html">Creating a changelog</a></li>
-                    <li><a href="doc.html">Contact form</a></li>
-                    <li><a href="doc.html">Creating docs posts</a></li>
-                    <li><a href="doc.html">Footer options</a></li>
-                  </ul>
                 </div>
-            </article>
-            <article class="py-article">
+                <div class="language-bash highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>sudo apt-get install python3 # python3 linux debian style installation</code></pre>
+                  </div>
+                </div>
+                <div class="language-bash highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>sudo yum install python3 # python3 linux redhat style installation</code></pre>
+                  </div>
+                </div>
+              </section>
+              <section id="py0.4">
+                <h2>Installing Python 3 on Apple Mac OSX</h2>
+                <p>On Mac OSX to check if Python 2 is installed in <b>/usr/bin/python</b> and Python 3 is installed in <b>/usr/bin/python3</b></p>
+                <div class="language-bash highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>which python2 # check where python2 executable is located</code></pre>
+                  </div>
+                </div>
+                <div class="language-bash highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>which python3 # check where python3 executable is located</code></pre>
+                  </div>
+                </div>
+              </section>
+              <section id="py0.5">
+                <h2>Installing Python 3 on Microsoft Windows</h2>
+                <p>Microsoft Windows system generally does not offer pre-installed Python, but this situation may be easily fixed using an up to date <b>MSI</b> installer took from
+                <a href="https://docs.python.org/3/using/windows.html">Using Python on Windows</a> official Python documentation page. Nowaday, Microsoft offers another interesting
+                approach named as <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux"><b>Windows Subsystem for Linux</b></a>.
+                </p>
+              </section>
+              <section id="py0.6">
+                <h2>Python Program Types</h2>
+                <p>Python programmer does make a blurring distinction among scripts and programs and, in most cases, is able to develop different kind of applications as listed below.</p>
+                <ul>
+                  <li>Desktop application</li>
+                  <li>Mobile applications</li>
+                  <li>Embedded applications</li>
+                  <li>Embedded applications</li>
+                  <li>Web applications</li>
+                  <li>Command line applications</li>
+                </ul>
+              </section>
+              <section id="py0.7">
+                <h2>Which Python version is installed on my system?</h2>
+                <p>When you starts to use Python from command line or shell, in order to check the version number installed on system, we should pass the appropriate flag to its executale.</p>
+                <div class="language-bash highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>python -V</code></pre>
+                  </div>
+                </div>
+                <div class="language-bash highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>python --version</code></pre>
+                  </div>
+                </div>
+                <div class="language-bash highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>man python # first stop for a detailed Python features explanation</code></pre>
+                  </div>
+                </div>
+                <div class="language-bash highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>python -c "print 1956" # Guido van Rossum year of birth</code></pre>
+                  </div>
+                </div>
+              </section>
+              <div class="py-margin-large-top">
+                <h3>Related Docs</h3>
+                <ul class="py-list link-secondary">
+                  <li><a href="doc.html">Creating a changelog</a></li>
+                  <li><a href="doc.html">Contact form</a></li>
+                  <li><a href="doc.html">Creating docs posts</a></li>
+                  <li><a href="doc.html">Footer options</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="py-article">
             <h1 class="py-article-title">Python Programming Baby Steps</h1>
             <p class="py-text-lead py-text-muted">This section consolidate self taught Python developers basis</p>
             <div class="py-article-meta py-margin-top py-margin-medium-bottom py-flex py-flex-middle">
@@ -349,7 +348,7 @@ main()
               </div>
             </section>
             </div>
-            </article>
+          </article>
             </div>
         </div>
       </div>

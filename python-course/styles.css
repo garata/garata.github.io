@@ -12751,14 +12751,13 @@ pre.highlight {
 /* Literal.String.Symbol */
 
 .top-navigation {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
-    height: 7em;
+    height: 6.66em;
     background: rgba(68, 115, 197, 1);
     z-index: 100;
     box-shadow: 0 0.4em 0.4em #ccc;
-	
 }
 
 .top-navigation:after {
@@ -12782,5 +12781,5 @@ pre.highlight {
 }
 
 .top-navigation.slide-down {
-    max-height: 7em;
+    max-height: 6.66em;
 }

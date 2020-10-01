@@ -30,7 +30,10 @@
                 <li><a href="#py1.5">Variables</a></li>
                 <li><a href="#py1.6">String concatenation</a></li>
                 <li><a href="#py1.7">String multiplication</a></li>
-                <li><a href="#py1.8">Math module</a></li>
+                <li><a href="#py1.8">Python main function</a></li>
+                <li><a href="#py1.9">Math module</a></li>
+                <li><a href="#py1.10">Math module</a></li>
+                <li><a href="#py1.11">Sys module</a></li>
               </ul>
             </div>
           </div>
@@ -234,7 +237,7 @@
             </article>
 			<article class="py-article">
               <h1 class="py-article-title">Python Programming Baby Steps</h1>
-              <p class="py-text-lead py-text-muted">Selft taught Python developers basis consolidation</p>
+              <p class="py-text-lead py-text-muted">This section consolidate self taught Python developers basis</p>
               <div class="py-article-meta py-margin-top py-margin-medium-bottom py-flex py-flex-middle">
                 <svg width="45px" height="45px" viewBox="0 0 256 255" style="margin: 0.33rem" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
                   <defs>
@@ -267,7 +270,7 @@
                 </section>
                 <section id="py1.2">
                   <h2>Python programs indentation</h2>
-				  <p>Python uses indentations rather than curly brackets, <b>{}</b>. But differently from others language, to signify blocks of code no semi colons are needed to signify the end of a line.</p>
+				  <p>Python uses indentations rather than curly brackets, <b>{}</b>. But differently from others language, to signify blocks of code no semi colons are needed to signify the end of a line. Python standard recommends: 4 spaces on every level.</p>
                   <div class="language-bash highlighter-rouge">
                     <div class="highlight">
                       <pre class="highlight"><code># Remeber that parentheses after print() instruction are required in Python 3</code></pre>
@@ -351,6 +354,30 @@
 				  </div>
                 </section>
                 <section id="py1.8">
+                  <h2>Python main function</h2>
+				  <p>The Python interpreter does not make assumptions about predefined function name entry point, it executes scripts starting at the top of the file and for such reason
+				  Python programmers adopt convention naming and special variables. Thus in Python scripts, it happens to see <b>main</b> function definition and a conditional statement.
+				  Assuming that the script is executed on command line you can use the <b>if __name__ == "__main__"</b> idiom to determine the execution context and conditionally run </b>main()</b> only when <em>__name__</em> is equal to <em>"__main__"</em>.				  
+				  </p>
+                  <div data-datacamp-exercise data-lang="python">					
+					<code data-type="sample-code">
+					def main():
+						print("Hello World!")
+					if __name__ == "__main__":
+						main()
+					</code>
+				  </div>
+                </section>
+                <section id="py1.9">
+                  <h2>Python pieces of code</h2>
+				  <p>Python interpreter differentiates among three type of pieces of code.</p>
+				  <ul>
+				  <li><b>File:</b> Typically, a Python file is any file that contains code. Most Python files have the extension <b>.py</b>.</li>
+				  <li><b>Script:</b> A Python script is a file that you intend to execute from the command line to accomplish a task.</li>
+				  <li><b>Module:</b> A Python module is a file that you intend to import from within another module or a script, or from the interactive interpreter.</li>
+				  </ul>
+                </section>
+                <section id="py1.10">
                   <h2>Math module</h2>
 				  <p>Python language offers a built-in standard module that you can use for mathematical tasks, which gives you access to the underlying C library functions.
 				  Anyway this module does not support <b>complex</b> datatypes. The <a href="https://docs.python.org/3.0/library/cmath.html">cmath module</a> is for the <b>complex</b> counterpart.</p>
@@ -360,6 +387,19 @@
 					radius = 3
 					print("The area of the circle is ", radius * radius * math.pi)
 					print("The circumference of the circle is ", 2 * radius * math.pi) 
+					</code>
+				  </div>
+                </section>
+                <section id="py1.11">
+                  <h2>Sys module</h2>
+				  <p>Oftenly, when you develop command line Python programs, you need basic <a href="https://docs.python.org/2/library/sys.html">System-specific parameters and functions</a>.</p>
+                  <div data-datacamp-exercise data-lang="python">					
+					<code data-type="sample-code">
+					import sys
+					print( sys.executable )
+					print( sys.platform )
+					print( sys.argv[0] ) 
+					print( sys.version_info.major ) 
 					</code>
 				  </div>
                 </section>

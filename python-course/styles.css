@@ -12754,8 +12754,21 @@ pre.highlight {
     position: sticky;
     top: 0;
     width: 100%;
-    padding: 2.5em 0;
+    height: 5em;
     background: red;
     z-index: 10000;
     box-shadow: 0 0.4em 0.4em #ccc;
+}
+
+.top-navigation.slide-up, .top-navigation.slide-down {
+    max-height: 0;            
+    overflow-y: hidden;
+    -webkit-transition: max-height 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out;
+    -o-transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.top-navigation.slide-down {
+    max-height: 5em;
 }

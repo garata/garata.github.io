@@ -338,13 +338,13 @@
               <div data-datacamp-exercise data-lang="python">					
               <code data-type="sample-code">
 				def main():
-				  try:
-					  a = int(input("Enter the first input : ") or "1")
-					  b = int(input("Enter the second input : ") or "2")
-					  print(int(a) + int(b))
-				  except EOFError:
-					  break
-					  print("This console is that it does not support input")
+				    try:
+				        a = int(input("Enter the first input : ") or "1")
+				        b = int(input("Enter the second input : ") or "2")
+				        print(int(a) + int(b))
+                    except EOFError:
+				        break
+				        print("This console is that it does not support input")
 				main()
               </code>
               </div>

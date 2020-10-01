@@ -71,7 +71,7 @@ function highlightNavigation() {
 	// get the current vertical position of the scroll bar
 	var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-	$topNavigationBar[0].className = '.top-navigation' + ((scrollPosition !== 0) ? '.slide-up' : '.slide-down');
+	$topNavigationBar[0].className = 'top-navigation ' + ((scrollPosition !== 0) ? ' slide-up' : ' slide-down');
 
 	// remove (preventively) .py-active class from all the links
 	for (var i = 0; i < $navigationLinks.length; i++) {

@@ -20,6 +20,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				el.webkitRequestFullscreen ||
 				el.msRequestFullscreen
 			);
+			console.log(requestFullscreen);
 			if (typeof requestFullscreen === "function") {
 				requestFullscreen();
 			}

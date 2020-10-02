@@ -8,7 +8,7 @@ var $sections = document.getElementsByTagName('section');
 var $ideBoxes = document.querySelectorAll('.datacamp-exercise');
 
 for (var i = 0; i < $ideBoxes.length; i++) {
-	$ideBoxes.className = $ideBoxes.className.concat(' py-screenfull');
+	$ideBoxes[i].className = $ideBoxes[i].className.concat(' py-screenfull');
 }
 
 // map each section id to their corresponding navigation link

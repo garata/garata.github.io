@@ -16,7 +16,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 		return function(event) {
 			if (typeof picoModal === 'function') {
                 var textareaEl = el.querySelectorAll('textarea');
-				var code = textareaEl && textareaEl.value;
+				var code = textareaEl[0] && textareaEl[0].value;
 console.log(code);
 				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(

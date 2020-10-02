@@ -28,12 +28,12 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 						'</div>' +
 						'</div>'
 					).afterCreate(function(modal) {
-						var lines = code.split(/\r\n|\r|\n/);
+						//var lines = code.split(/\r\n|\r|\n/);
 						//for (var j = 0; j < lines.length; j++)
 						//	modal.modalElem().getElementsByTagName("code")[0]
 						//		.appendChild(document.createTextNode(lines[j]));
 						//initAddedDCLightExercises();
-						modal.modalElem().getElementsByTagName("code")[0].appendChild(document.createTextNode(code));
+						//modal.modalElem().getElementsByTagName("code")[0].appendChild(document.createTextNode(code));
 					}).show();
 				}
 			}

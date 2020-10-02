@@ -22,7 +22,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
 						'<div data-datacamp-exercise data-lang="python">' +
-						'<code data-type="sample-code">' + code + '</code></div>'
+						'<code data-type="sample-code">\n' + code + '</code></div>'
 					).afterCreate(function(modal) {
 						//modal.modalElem().getElementsByClassName("dismiss")[0]
 						//	.addEventListener('click', modal.close);

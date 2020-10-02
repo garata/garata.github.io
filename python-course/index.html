@@ -54,6 +54,7 @@
                 <li><a href="#py1.10">Math module</a></li>
                 <li><a href="#py1.11">Sys module</a></li>
                 <li><a href="#py1.12">Handling User Input</a></li>
+                <li><a href="#py1.13">Arithmetic Operators</a></li>
               </ul>
             </div>
           </div>
@@ -335,6 +336,7 @@ print( sys.version_info.major )
               </section>
               <section id="py1.12">
                 <h2>Handling user input</h2>
+                <p>When the Python interpreter exeute a command line script you can interact with standard input to acquire values from the user, and you run into an exception error you can leave this occurence unhandled or wrap it into <code>try ... except: ... [else:]</code> block. As shown into the example, the <code>try</code> and <code>except</code> block in this Python snippet is used to catch and handle exceptions. Python interpreter executes code following the try statement as a monitored for run time errors part of the program. The code that follows the except statement is how the program should for example response to a <a href="https://docs.python.org/3/library/exceptions.html">Python Standard Library</a> in the preceding try clause.</p>
                 <div data-datacamp-exercise data-lang="python">					
                 <code data-type="sample-code">
 def main():
@@ -343,8 +345,33 @@ def main():
         b = int(input("Enter the second input : ") or "2")
         print(int(a) + int(b))
     except EOFError:
-        print("This console is that it does not support input")
+        print("This console does not support input")
 main()
+                </code>
+                </div>
+                </section>
+              <section id="py1.13">
+                <h2>Arithmetic Operators</h2>
+				<p>In order to perform calculations on data Python language offers these arithmetic operators: +, -, *, /, %, **, and //</p>
+                <div data-datacamp-exercise data-lang="python">					
+                <code data-type="sample-code">
+sum = 4+2
+difference = 4-2
+quotient = 4/2
+product = 4*2
+power = 4**2 # 4^2
+round_down = 4//3 # this is floor division, this will round down
+mod = 4%2 # this is the modulus, it returns the remainder of division
+concatenate = "Hello" + " World!"
+print("sum: %d" % (sum)) # %d is a place holder for an integer
+# we will see more place holders to come
+print("difference: %d" % (difference))
+print("quotient: %d" % (quotient))
+print("product: %d" % (product))
+print("power: %d" % (power))
+print("round_down: %d" % (round_down))
+print("mod: %d" % (mod))
+print("concatenate: %s" % (concatenate)) # %s->place holder for string
                 </code>
                 </div>
                 </section>

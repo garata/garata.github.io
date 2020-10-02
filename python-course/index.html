@@ -387,9 +387,9 @@ try:
 except EOFError:
     val = "-1"
 finally:
-    if val.isdecimal():
+    if val.isnumeric():
         num = int(val)
-        print(num)
+        print("num=" + str(num))
                 </code>
                 </div>
                 </section>

@@ -17,8 +17,9 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 			if (typeof picoModal === 'function') {
                 var ace = el.querySelectorAll('[id^="ace-code-editor-"]');
 				var id = ace[0].id || '';
+				console.log(id);
 				var editor = ace.edit(id);
-				var code = '';
+				var code = ''; // editor.getSession().getValue()
 				console.log(editor);
 				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(

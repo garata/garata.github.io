@@ -40,7 +40,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 						var lines = code.split(/\r\n|\r|\n/);
 						for (var j = 0; j < lines.length; j++)
 							modal.modalElem().getElementsByTagName("code")[0]
-							.appendChild(document.createTextNode(lines[j]));
+							.appendChild(document.createTextNode(lines[j] + '\n'));
 						initAddedDCLightExercises();
 						window.scrollTo(window.pageXOffset, window.pageYOffset - 1);
 						window.scrollTo(window.pageXOffset, window.pageYOffset + 1);

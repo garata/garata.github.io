@@ -498,7 +498,7 @@ for val in values:
     if val:
         print("True value: %s" % (val))
     else:
-        print("False value: ", val)
+        print("False " + ("(str)" if isinstance(val, str) else "") + " value: %s" % (val))
                 </code>
                 </div>
               </section>

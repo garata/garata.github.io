@@ -17,7 +17,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 			if (typeof picoModal === 'function') {
                 var textareaEl = el.querySelectorAll('textarea');
 				var code = textareaEl && textareaEl.value;
-
+console.log(code);
 				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
 						'<div data-datacamp-exercise data-lang="python">' +

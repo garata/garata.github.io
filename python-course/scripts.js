@@ -18,7 +18,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 		$ideBoxes[i].insertBefore($ideFullscreenLnk, $ideBoxes[i].firstChild);
 	else
 		$ideBoxes[i].appendChild($ideFullscreenLnk);
-	console.log($ideFullscreenLnk);
+	console.log($ideBoxes[i]);
 }
 
 // map each section id to their corresponding navigation link

@@ -21,7 +21,6 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				var code = editor.getSession().getValue();
 				var $div = document.createElement('div');
 				var $code = document.createElement('code');
-				$div.style.textIndent = "-999px";
 				$div.setAttribute('data-datacamp-exercise', '1');
 				$div.setAttribute('data-lang', 'python');
 				$div.setAttribute('data-height', '300');
@@ -29,7 +28,8 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				$div.appendChild($code);
 				el.parentNode.insertBefore($div, el);
 				initAddedDCLightExercises();
-				document.body.scrollTo(window.scrollX, window.scrollY + 1);
+				window.scrollTo(window.pageXOffset, window.pageYOffset - 1);
+				window.scrollTo(window.pageXOffset, window.pageYOffset + 1);
 				/*if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
 						'<div style="width: 50rem">' +

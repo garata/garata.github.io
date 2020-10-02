@@ -19,6 +19,8 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				var id = ed[0].id || '';
 				var editor = ace.edit(id);
 				var code = editor.getSession().getValue();
+				var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+				var height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
 				/*var $div = document.createElement('div');
 				var $code = document.createElement('code');
 				$div.setAttribute('data-datacamp-exercise', '1');
@@ -30,7 +32,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				initAddedDCLightExercises();*/
 				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
-						'<div style="width: 80%; height: 60%">' +
+						'<div style="width: ' + (width * 0.90) + 'px; height: ' + (height * 0.90) + 'px">' +
 						'<div data-datacamp-exercise data-lang="python">' +
 						'<code data-type="sample-code">' +
 						'</code>' +

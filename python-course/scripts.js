@@ -7,21 +7,20 @@ var $sections = document.getElementsByTagName('section');
 // cache datacamp IDE boxes
 var $ideBoxes = document.querySelectorAll('[data-datacamp-exercise]');
 
-var $ideWrapper = document.createElement('div');
 var $ideFullscreenLnk = document.createElement('a');
 $ideFullscreenLnk.appendChild(document.createTextNode('fullscreen'));
 $ideFullscreenLnk.title = 'fullscreen';
 $ideFullscreenLnk.className = 'py-screenfull';
 for (var i = 0; i < $ideBoxes.length; i++) {
 	//$ideBoxes[i].className = $ideBoxes[i].className.concat(' py-screenfull');
-	$ideWrapper = $ideWrapper.cloneNode(true);
+	var $ideWrapper = document.createElement('div');
 	$ideFullscreenLnk = $ideFullscreenLnk.cloneNode(true);
 	$ideBoxes[i].parentNode.insertBefore($ideWrapper, $ideBoxes[i]);
     $ideWrapper.appendChild($ideBoxes[i]);
-	if ($ideWrapper.firstChild)
-		$ideWrapper.insertBefore($ideFullscreenLnk, $ideWrapper.firstChild);
-	else
-		$ideWrapper.appendChild($ideFullscreenLnk);
+	//if ($ideWrapper.firstChild)
+	//	$ideWrapper.insertBefore($ideFullscreenLnk, $ideWrapper.firstChild);
+	//else
+	//	$ideWrapper.appendChild($ideFullscreenLnk);
 }
 
 // map each section id to their corresponding navigation link

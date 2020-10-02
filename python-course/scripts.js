@@ -7,6 +7,8 @@ var $sections = document.getElementsByTagName('section');
 // cache datacamp IDE boxes
 var $ideBoxes = document.querySelectorAll('.datacamp-exercise');
 
+console.log($ideBoxes);
+
 for (var i = 0; i < $ideBoxes.length; i++) {
 	$ideBoxes[i].className = $ideBoxes[i].className.concat(' py-screenfull');
 }

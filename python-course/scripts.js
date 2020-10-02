@@ -12,6 +12,19 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 	$ideFullscreenLnk.appendChild(document.createTextNode('fullscreen'));
 	$ideFullscreenLnk.title = 'fullscreen';
 	$ideFullscreenLnk.className = 'py-screenfull';
+	$ideFullscreenLnk.onclick = (function(el) {
+		return function(event) {
+			var requestFullscreen = (
+				el.requestFullscreen ||
+				el.mozRequestFullScreen ||
+				el.webkitRequestFullscreen ||
+				el.msRequestFullscreen
+			);
+			if (typeof requestFullscreen === "function") {
+				requestFullscreen();
+			}
+		};
+	})($ideBoxes[i]);
 	var $ideWrapper = document.createElement('div');
 	$ideFullscreenLnk = $ideFullscreenLnk.cloneNode(true);
 	$ideBoxes[i].parentNode.insertBefore($ideWrapper, $ideBoxes[i]);

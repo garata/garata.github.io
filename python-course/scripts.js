@@ -7,6 +7,7 @@ var $sections = document.getElementsByTagName('section');
 // cache datacamp IDE boxes
 var $ideBoxes = document.querySelectorAll('[data-datacamp-exercise]');
 
+// iterate all ide boxes pre-pending fullscreen view link button for each code block
 for (var i = 0; i < $ideBoxes.length; i++) {
 	var $ideFullscreenLnk = document.createElement('a');
 	$ideFullscreenLnk.appendChild(document.createTextNode('fullscreen'));
@@ -21,16 +22,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				var code = editor.getSession().getValue();
 				var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 				var height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
-				/*var $div = document.createElement('div');
-				var $code = document.createElement('code');
-				$div.setAttribute('data-datacamp-exercise', '1');
-				$div.setAttribute('data-lang', 'python');
-				$div.setAttribute('data-height', '300');
-				$code.appendChild(document.createTextNode(code));
-				$div.appendChild($code);
-				el.parentNode.insertBefore($div, el);
-				initAddedDCLightExercises();*/
-				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
+				if (typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
 						'<div style="width: ' + Math.floor(width * 0.90) + 'px; padding: 1% 0">' +
 						'<div data-datacamp-exercise data-lang="python">' +
@@ -39,7 +31,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 						'</div>' +
 						'</div>'
 					).afterCreate(function(modal) {
-						var lines = code.split(/\r\n|\r|\n/);
+						var lines = (code || '').split(/\r\n|\r|\n/);
 						for (var j = 0; j < lines.length; j++)
 							modal.modalElem().getElementsByTagName("code")[0]
 							.appendChild(document.createTextNode(lines[j] + '\n'));

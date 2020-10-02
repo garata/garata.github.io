@@ -23,7 +23,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 					picoModal(
 						'<div style="width: 50rem">' +
 						'<div data-datacamp-exercise data-lang="python">' +
-						'<code data-type="sample-code">\n' + code + '</code>' +
+						'<code data-type="sample-code">\n' + code + '\n</code>' +
 						'</div></div>'
 					).afterCreate(function(modal) {
 						//modal.modalElem().getElementsByClassName("dismiss")[0]

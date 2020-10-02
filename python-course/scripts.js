@@ -22,13 +22,14 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
 						'<div style="width: 50rem">' +
-						'<div data-datacamp-exercise data-lang="python">' +
-						'<code data-type="sample-code">\n' + code + '\n</code>' +
-						'</div></div>'
+						'<div data-datacamp-exercise data-lang="python" data-height="300"><code data-type="sample-code"></div></div>' +
+						'</div>'
 					).afterCreate(function(modal) {
-						//modal.modalElem().getElementsByClassName("dismiss")[0]
-						//	.addEventListener('click', modal.close);
-						initAddedDCLightExercises();
+						var lines = code.split(/\r\n|\r|\n/);
+						for (var j = 0; j < lines.length; j++)
+							modal.modalElem().getElementsByTagName("code")[0]
+								.appendChild(document.createTextNode(lines[j]));
+						//initAddedDCLightExercises();
 					}).show();
 				}
 			}

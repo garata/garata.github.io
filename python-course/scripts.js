@@ -16,8 +16,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 		return function(event) {
 			if (typeof picoModal === "function") {
 				picoModal("<div></div>").afterCreate(function(modal) {
-					modal.modalElem().getElementsByClassName("dismiss")[0]
-						.addEventListener('click', modal.close);
+					var modalEl = modal.modalElem();
 				}).show();
 			}
 		};

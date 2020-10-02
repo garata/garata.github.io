@@ -29,7 +29,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				$div.appendChild($code);
 				el.parentNode.insertBefore($div, el);
 				initAddedDCLightExercises();
-				$div.style.textIndent = "0px";
+				document.body.scrollTo(window.scrollX, window.scrollY + 1);
 				/*if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
 						'<div style="width: 50rem">' +

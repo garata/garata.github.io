@@ -15,9 +15,8 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 	$ideFullscreenLnk.onclick = (function(el) {
 		return function(event) {
 			if (typeof picoModal === 'function') {
-				var modalEl = modal.modalElem();
                 var textareaEl = el.querySelectorAll('textarea');
-				var code = textareaEl.value;
+				var code = textareaEl && textareaEl.value;
 
 				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(

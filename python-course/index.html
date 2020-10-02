@@ -385,7 +385,7 @@ val = None
 try:
     val = input("Type in a number: ")
 except EOFError:
-    val = "-1"
+    val = "0"
 finally:
     if val.isnumeric():
         num = int(val)

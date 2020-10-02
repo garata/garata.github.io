@@ -58,6 +58,7 @@
                 <li><a href="#py1.14">Arithmetic operations</a></li>
                 <li><a href="#py1.15">Comparision Operators</a></li>
                 <li><a href="#py1.16">Conditional structures</a></li>
+                <li><a href="#py1.17">Command line arguments</a></li>
               </ul>
             </div>
           </div>
@@ -433,11 +434,28 @@ def console_input(message):
 def main():
     num1 = console_input("First number: ")
     num2 = console_input("Second number: ")
-    if int(num1) == 0:
+    if int(num2) == 0:
         print("Cannot divide by 0")
+    elif int(num1) == 0:
+        print("The result will be always 0")
     else:
         print("Dividing", num1, "by", num2)
         print(int(num1) / int(num2))
+main()
+                </code>
+                </div>
+              </section>
+              <section id="py1.17">
+                <h2>Command line arguments</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+# Try to set "In [1]:" value to whatever you want to pass as command line argument
+import sys
+
+def main():
+    print(sys.argv)
+    print(sys.argv[0])
+
 main()
                 </code>
                 </div>

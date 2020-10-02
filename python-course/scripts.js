@@ -32,7 +32,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				initAddedDCLightExercises();*/
 				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
-						'<div style="width: ' + Math.floor(width * 0.90) + 'px;>' +
+						'<div style="width: ' + Math.floor(width * 0.90) + 'px; height: ' + Math.floor(height * 0.50) + '">' +
 						'<div data-datacamp-exercise data-lang="python">' +
 						'<code data-type="sample-code">' +
 						'</code>' +

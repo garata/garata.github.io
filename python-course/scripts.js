@@ -24,7 +24,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				var height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
 				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
-						'<div style="width: ' + Math.floor(width * 0.90) + 'px; padding: 1% 0">' +
+						'<div style="width: ' + Math.floor(width * 0.90) + 'px; padding: 2% 0">' +
 						'<div data-datacamp-exercise data-lang="python">' +
 						'<code data-type="sample-code">' +
 						'</code>' +

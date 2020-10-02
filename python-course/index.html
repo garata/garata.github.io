@@ -60,6 +60,7 @@
                 <li><a href="#py1.16">Conditional structures</a></li>
                 <li><a href="#py1.17">Command line arguments</a></li>
                 <li><a href="#py1.18">Random number</a></li>
+                <li><a href="#py1.19">False expressions</a></li>
               </ul>
             </div>
           </div>
@@ -446,8 +447,8 @@ main()
                 </code>
                 </div>
               </section>
-              <section id="py1.18">
-                <h2>Random numbers</h2>
+              <section id="py1.17">
+                <h2>Command line arguments</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
 import sys
@@ -466,8 +467,9 @@ main()
                 </code>
                 </div>
               </section>
-              <section id="py1.17">
-                <h2>Command line arguments</h2>
+              <section id="py1.18">
+                <h2>Random numbers</h2>
+				<p><a href="http://docs.python.org/library/random.html">Python Random</a> official documentation</p>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
 import random
@@ -483,6 +485,20 @@ print(choiceRnd2)
 random.seed(37)
 fixedRnd = random.random() # Fixed random numbers
 print(fixedRnd)
+                </code>
+                </div>
+              </section>
+              <section id="py1.19">
+                <h2>False expressions</h2>
+				<p>In Python <code>None</code>, <code>0</code>, <code>""</code> (empty string), <code>False</code>, <code>[]</code>,  <code>{}</code> and <code>()</code> values resolve to false.</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+values = [None, 0, "", False, [], (), {}, "0", True]
+for val in values:
+    if val:
+        print("True value: ", val)
+    else:
+        print("False value: ", val)
                 </code>
                 </div>
               </section>

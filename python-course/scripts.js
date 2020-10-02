@@ -19,7 +19,15 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				var id = ed[0].id || '';
 				var editor = ace.edit(id);
 				var code = editor.getSession().getValue();
-				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
+				var $div = document.createElement('div');
+				var $code = document.createElement('code');
+				$div.setAttribute('data-datacamp-exercise', '1');
+				$div.setAttribute('data-lang', 'python');
+				$div.setAttribute('data-height', '300');
+				$code.appendChild(document.createTextNode(code));
+				$div.appendChild($code);
+				el.parentNode.insertBefore($div, el);
+				/*if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
 						'<div style="width: 50rem">' +
 						'<div data-datacamp-exercise data-lang="python" data-height="300">' +
@@ -35,7 +43,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 						//initAddedDCLightExercises();
 						//modal.modalElem().getElementsByTagName("code")[0].appendChild(document.createTextNode(code));
 					}).show();
-				}
+				}*/
 			}
 		};
 	})($ideBoxes[i]);

@@ -5,7 +5,7 @@ var $navigationLinks = document.querySelectorAll('ul.py-nav > li > a');
 // cache (in reversed order) the sections
 var $sections = document.getElementsByTagName('section');
 // cache datacamp IDE boxes
-var $ideBoxes = document.querySelectorAll('.datacamp-exercise');
+var $ideBoxes = document.querySelectorAll('[data-datacamp-exercise]');
 
 console.log($ideBoxes);
 

@@ -26,7 +26,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 					).afterCreate(function(modal) {
 						//modal.modalElem().getElementsByClassName("dismiss")[0]
 						//	.addEventListener('click', modal.close);
-						initAddedDCLightExercises();
+						//initAddedDCLightExercises();
 					}).show();
 				}
 			}

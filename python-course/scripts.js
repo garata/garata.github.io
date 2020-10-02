@@ -28,6 +28,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 						//	.addEventListener('click', modal.close);
 						//initAddedDCLightExercises();
 					}).show();
+					initAddedDCLightExercises();
 				}
 			}
 		};

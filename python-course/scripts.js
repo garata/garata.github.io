@@ -27,6 +27,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				$code.appendChild(document.createTextNode(code));
 				$div.appendChild($code);
 				el.parentNode.insertBefore($div, el);
+				initAddedDCLightExercises();
 				/*if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
 						'<div style="width: 50rem">' +

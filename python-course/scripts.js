@@ -30,7 +30,6 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 		console.log(event);
 	};
 	var $ideWrapper = document.createElement('div');
-	$ideFullscreenLnk = $ideFullscreenLnk.cloneNode(true);
 	$ideBoxes[i].parentNode.insertBefore($ideWrapper, $ideBoxes[i]);
     $ideWrapper.appendChild($ideBoxes[i]);
 	if ($ideWrapper.firstChild)

@@ -56,6 +56,8 @@
                 <li><a href="#py1.12">Handling User Input</a></li>
                 <li><a href="#py1.13">Arithmetic Operators</a></li>
                 <li><a href="#py1.14">Arithmetic operations</a></li>
+                <li><a href="#py1.15">Comparision Operators</a></li>
+                <li><a href="#py1.16">Conditional structures</a></li>
               </ul>
             </div>
           </div>
@@ -392,7 +394,62 @@ finally:
         print("num=" + str(num))
                 </code>
                 </div>
-                </section>
+              </section>
+              <section id="py1.15">
+                <h2>Comparision Operators</h2>
+                <p>Comparision operators compare two values. Python offers these operators: <code>==</code>, <code>!=</code>, <code>></code>, <code><</code>, <code>>=</code> and <code><=</code></p>
+				<div data-datacamp-exercise data-lang="python">					
+                <code data-type="sample-code">
+salutation1 = 'hi'
+salutation2 = 'hallo'
+print(salutation1==salutation2)
+print(salutation1!=salutation2)
+n1 = 100
+n2 = 200
+print(n1==n2)
+print(n1!=n2)
+n3 = 100
+n4 = 99
+n5 = 100
+print(n3 < n4)
+print(n3 > n4)
+print(n3 <= n5)
+                </code>
+                </div>
+              </section>
+            </div>
+          </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./scripts.js"></script>
+  </body>
+              <section id="py1.16">
+                <h2>Conditional structures</h2>                
+				<div data-datacamp-exercise data-lang="python">					
+                <code data-type="sample-code">
+def console_input(message):
+    while True:
+        try:
+            val = input(message)
+            return val
+        except (EOFError):
+            break
+    return 0
+
+def main():
+    num1 = console_input("First number: ")
+    num2 = console_input("Second number: ")
+    if int(num1) == 0:
+        print("Cannot divide by 0")
+    else:
+        print("Dividing", num1, "by", num2)
+        print(int(num1) / int(num2))
+main()
+                </code>
+                </div>
+              </section>
             </div>
           </article>
           </div>

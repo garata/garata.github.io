@@ -4,6 +4,12 @@ var $topNavigationBar = document.querySelectorAll('.top-navigation');
 var $navigationLinks = document.querySelectorAll('ul.py-nav > li > a');
 // cache (in reversed order) the sections
 var $sections = document.getElementsByTagName('section');
+// cache datacamp IDE boxes
+var $ideBoxes = document.querySelectorAll('.datacamp-exercise');
+
+for (var i = 0; i < $ideBoxes.length; i++) {
+	$ideBoxes.className = $ideBoxes.className.concat(' py-screenfull');
+}
 
 // map each section id to their corresponding navigation link
 var sectionIdTonavigationLink = {};

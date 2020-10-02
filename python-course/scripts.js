@@ -19,7 +19,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				var id = ed[0].id || '';
 				var editor = ace.edit(id);
 				var code = editor.getSession().getValue();
-				var $div = document.createElement('div');
+				/*var $div = document.createElement('div');
 				var $code = document.createElement('code');
 				$div.setAttribute('data-datacamp-exercise', '1');
 				$div.setAttribute('data-lang', 'python');
@@ -27,10 +27,8 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				$code.appendChild(document.createTextNode(code));
 				$div.appendChild($code);
 				el.parentNode.insertBefore($div, el);
-				initAddedDCLightExercises();
-				window.scrollTo(window.pageXOffset, window.pageYOffset - 1);
-				window.scrollTo(window.pageXOffset, window.pageYOffset + 1);
-				/*if (!!code && typeof(initAddedDCLightExercises) === 'function') {
+				initAddedDCLightExercises();*/
+				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
 						'<div style="width: 50rem">' +
 						'<div data-datacamp-exercise data-lang="python" data-height="300">' +
@@ -39,14 +37,16 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 						'</div>' +
 						'</div>'
 					).afterCreate(function(modal) {
-						//var lines = code.split(/\r\n|\r|\n/);
-						//for (var j = 0; j < lines.length; j++)
-						//	modal.modalElem().getElementsByTagName("code")[0]
-						//		.appendChild(document.createTextNode(lines[j]));
-						//initAddedDCLightExercises();
+						var lines = code.split(/\r\n|\r|\n/);
+						for (var j = 0; j < lines.length; j++)
+							modal.modalElem().getElementsByTagName("code")[0]
+							.appendChild(document.createTextNode(lines[j]));
+						initAddedDCLightExercises();
+						window.scrollTo(window.pageXOffset, window.pageYOffset - 1);
+						window.scrollTo(window.pageXOffset, window.pageYOffset + 1);
 						//modal.modalElem().getElementsByTagName("code")[0].appendChild(document.createTextNode(code));
 					}).show();
-				}*/
+				}
 			}
 		};
 	})($ideBoxes[i]);

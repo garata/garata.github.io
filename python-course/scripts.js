@@ -21,8 +21,10 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				var code = editor.getSession().getValue();
 				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
-						'<div style="width: 100%" data-datacamp-exercise data-lang="python">' +
-						'<code data-type="sample-code">\n' + code + '</code></div>'
+						'<div style="width: 100%">' +
+						'<div data-datacamp-exercise data-lang="python">' +
+						'<code data-type="sample-code">' + code + '</code>' +
+						'</div></div>'
 					).afterCreate(function(modal) {
 						//modal.modalElem().getElementsByClassName("dismiss")[0]
 						//	.addEventListener('click', modal.close);

@@ -59,6 +59,7 @@
                 <li><a href="#py1.15">Comparision Operators</a></li>
                 <li><a href="#py1.16">Conditional structures</a></li>
                 <li><a href="#py1.17">Command line arguments</a></li>
+                <li><a href="#py1.18">Random number</a></li>
               </ul>
             </div>
           </div>
@@ -80,7 +81,7 @@
                 <p>A part from referring to to the very famous british comedy group, when people say they Python in relation to programming they either mean the Python programming language
                   or they mean the tool that can translate some text (code) written in the Python programming language to the language a computer can actually understand. On Microsoft
                   Windows this is the <b>python.exe</b> you need to install. On Linux/Mac it is usally called <b>python</b> or <b>python3</b>. CPython is the tool that translates
-                  a programming language for the computer is eiter called a compiler or an interpreter.
+                  a programming language for the computer is eiter called a compiler or an interpreter. CPython is both the compiler and the interpreter.
                 </p>
               </section>
               <section id="py0.2">
@@ -445,8 +446,8 @@ main()
                 </code>
                 </div>
               </section>
-              <section id="py1.17">
-                <h2>Command line arguments</h2>
+              <section id="py1.18">
+                <h2>Random numbers</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
 import sys
@@ -457,10 +458,31 @@ def main():
     print(sys.argv)
     print(sys.argv[0])
 
+# shimming: python arguments-getopt.py -h
 if os.environ["HOME"] == "/home/repl":
-    sys.argv = ("console", "server", "add", "localhost")
+    sys.argv = ("-h")
 
 main()
+                </code>
+                </div>
+              </section>
+              <section id="py1.17">
+                <h2>Command line arguments</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+import random
+
+pseudoRnd = random.random() # Pseudo Random Number
+print(pseudoRnd)
+rollingRnd = random.randrange(1, 7) # Rolling Dice
+print(rollingRnd)
+choiceRnd1 = random.choice("abcdefg")
+print(choiceRnd1)
+choiceRnd2 = random.choice(["aaa", "bbb", "ccc", "ddd", "eee", "fff", "ggg"])
+print(choiceRnd2)
+random.seed(37)
+fixedRnd = random.random() # Fixed random numbers
+print(fixedRnd)
                 </code>
                 </div>
               </section>

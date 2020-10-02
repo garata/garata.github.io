@@ -14,11 +14,11 @@ $ideFullscreenLnk.className = 'py-screenfull';
 for (var i = 0; i < $ideBoxes.length; i++) {
 	//$ideBoxes[i].className = $ideBoxes[i].className.concat(' py-screenfull');
 	$ideFullscreenLnk = $ideFullscreenLnk.cloneNode(true);
+	console.log($ideBoxes[i], $ideFullscreenLnk);
 	if ($ideBoxes[i].firstChild)
 		$ideBoxes[i].insertBefore($ideFullscreenLnk, $ideBoxes[i].firstChild);
 	else
 		$ideBoxes[i].appendChild($ideFullscreenLnk);
-	console.log($ideBoxes[i]);
 }
 
 // map each section id to their corresponding navigation link

@@ -55,6 +55,7 @@
                 <li><a href="#py1.11">Sys module</a></li>
                 <li><a href="#py1.12">Handling User Input</a></li>
                 <li><a href="#py1.13">Arithmetic Operators</a></li>
+                <li><a href="#py1.14">Arithmetic operations</a></li>
               </ul>
             </div>
           </div>
@@ -336,7 +337,7 @@ print( sys.version_info.major )
               </section>
               <section id="py1.12">
                 <h2>Handling user input</h2>
-                <p>When the Python interpreter exeute a command line script you can interact with standard input to acquire values from the user, and you run into an exception error you can leave this occurence unhandled or wrap it into <code>try ... except: ... [else:]</code> block. As shown into the example, the <code>try</code> and <code>except</code> block in this Python snippet is used to catch and handle exceptions. Python interpreter executes code following the try statement as a monitored for run time errors part of the program. The code that follows the except statement is how the program should for example response to a <a href="https://docs.python.org/3/library/exceptions.html">Python Standard Library</a> in the preceding try clause.</p>
+                <p>When the Python interpreter exeute a command line script you can interact with standard input to acquire values from the user, and you run into an exception error you can leave this occurence unhandled or wrap it into <code>try ... except: ... [else:]</code> block. As shown into the example, the <code>try</code> and <code>except</code> block in this Python snippet is used to catch and handle exceptions. Python interpreter executes code following the try statement as a monitored for run time errors part of the program. The code that follows the <code>except</code> statement is how the program should for example response to a <a href="https://docs.python.org/3/library/exceptions.html">Python Standard Library</a> in the preceding try clause.</p>
                 <div data-datacamp-exercise data-lang="python">					
                 <code data-type="sample-code">
 def main():
@@ -352,7 +353,7 @@ main()
                 </section>
               <section id="py1.13">
                 <h2>Arithmetic Operators</h2>
-				<p>In order to perform calculations on data Python language offers these arithmetic operators: +, -, *, /, %, **, and //</p>
+				<p>In order to perform calculations on data Python language offers these arithmetic operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>**</code>, and <code>//</code></p>
                 <div data-datacamp-exercise data-lang="python">					
                 <code data-type="sample-code">
 sum = 4+2
@@ -372,6 +373,23 @@ print("power: %d" % (power))
 print("round_down: %d" % (round_down))
 print("mod: %d" % (mod))
 print("concatenate: %s" % (concatenate)) # %s->place holder for string
+                </code>
+                </div>
+                </section>
+              <section id="py1.14">
+                <h2>Arithmetic operations</h2>
+				<p>When acquiring input from the user, or in any case a string should be employed as arithmetic operand, the conversion to Numeric Type (int, float, complex) may be wrapped i a control structure apt to check conversion feasibilities.</p>
+                <div data-datacamp-exercise data-lang="python">					
+                <code data-type="sample-code">
+val = None
+try:
+    val = input("Type in a number: ")
+except EOFError:
+    val = "-1"
+finally:
+    if val.isdecimal():
+        num = int(val)
+        print(num)
                 </code>
                 </div>
                 </section>

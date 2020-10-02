@@ -15,9 +15,11 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 	$ideFullscreenLnk.onclick = (function(el) {
 		return function(event) {
 			if (typeof picoModal === 'function') {
-                var textareaEl = el.querySelectorAll('textarea');
-				var code = textareaEl[0] && textareaEl[0].value;
-console.log(el);
+                var ace = el.querySelectorAll('[id^="ace-code-editor-"]');
+				var id = ace[0].id || '';
+				var editor = ace.edit(id);
+				var code = '';
+				console.log(editor);
 				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
 						'<div data-datacamp-exercise data-lang="python">' +

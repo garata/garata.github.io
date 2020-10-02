@@ -15,12 +15,10 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 	$ideFullscreenLnk.onclick = (function(el) {
 		return function(event) {
 			if (typeof picoModal === 'function') {
-                var ace = el.querySelectorAll('[id^="ace-code-editor-"]');
-				var id = ace[0].id || '';
-				console.log(id);
+                var ed = el.querySelectorAll('[id^="ace-code-editor-"]');
+				var id = ed[0].id || '';
 				var editor = ace.edit(id);
-				var code = ''; // editor.getSession().getValue()
-				console.log(editor);
+				var code = editor.getSession().getValue();
 				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
 						'<div data-datacamp-exercise data-lang="python">' +

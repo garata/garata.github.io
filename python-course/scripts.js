@@ -14,15 +14,11 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 	$ideFullscreenLnk.className = 'py-screenfull';
 	$ideFullscreenLnk.onclick = (function(el) {
 		return function(event) {
-			var requestFullscreen = (
-				el.requestFullscreen ||
-				el.mozRequestFullScreen ||
-				el.webkitRequestFullscreen ||
-				el.msRequestFullscreen
-			);
-			console.log(requestFullscreen);
-			if (typeof requestFullscreen === "function") {
-				requestFullscreen();
+			if (typeof picoModal === "function") {
+				picoModal("<div></div>").afterCreate(function(modal) {
+					modal.modalElem().getElementsByClassName("dismiss")[0]
+						.addEventListener('click', modal.close);
+				}).show();
 			}
 		};
 	})($ideBoxes[i]);

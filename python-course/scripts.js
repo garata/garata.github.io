@@ -14,10 +14,21 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 	$ideFullscreenLnk.className = 'py-screenfull';
 	$ideFullscreenLnk.onclick = (function(el) {
 		return function(event) {
-			if (typeof picoModal === "function") {
-				picoModal("<div></div>").afterCreate(function(modal) {
-					var modalEl = modal.modalElem();
-				}).show();
+			if (typeof picoModal === 'function') {
+				var modalEl = modal.modalElem();
+                var textareaEl = el.querySelectorAll('textarea');
+				var code = textareaEl.value;
+
+				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
+					picoModal(
+						'<div data-datacamp-exercise data-lang="python">' +
+						'<code data-type="sample-code">' + code + '</code></div>'
+					).afterCreate(function(modal) {
+						//modal.modalElem().getElementsByClassName("dismiss")[0]
+						//	.addEventListener('click', modal.close);
+						initAddedDCLightExercises();
+					}).show();
+				}
 			}
 		};
 	})($ideBoxes[i]);

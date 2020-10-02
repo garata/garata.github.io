@@ -451,10 +451,14 @@ main()
                 <code data-type="sample-code">
 import sys
 import argparse
+import os
 
 def main():
     print(sys.argv)
     print(sys.argv[0])
+
+if os.environ["HOME"] == "/home/repl":
+    sys.argv = ("console", "server", "add", "localhost")
 
 main()
                 </code>

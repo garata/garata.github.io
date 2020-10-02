@@ -15,7 +15,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
   $ideFullscreenLnk.className = 'py-screenfull';
   $ideFullscreenLnk.onclick = (function(el) {
     return function(event) {
-      if (typeof picoModal === 'function' && typeof ace === 'function') {
+      if (typeof picoModal === 'function') {
         var ed = el.querySelectorAll('[id^="ace-code-editor-"]');
         var id = ed[0].id || '';
         var editor = ace.edit(id);
@@ -145,7 +145,7 @@ function highlightNavigation() {
       // return false to exit the each loop
       return false;
     } else {
-      var j = $navigationLinks.length - 1;
+       var j = $navigationLinks.length - 1;
       if ((window.innerHeight + scrollPosition) >= document.body.scrollHeight) {
         addActiveClass($navigationLinks[j]);
         // return false to exit the each loop

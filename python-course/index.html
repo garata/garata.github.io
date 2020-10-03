@@ -69,6 +69,7 @@
                 <li><a href="#py1.25">Reverse index in string</a></li>
                 <li><a href="#py1.26">Find in string</a></li>
                 <li><a href="#py1.27">Seek in string</a></li>
+                <li><a href="#py1.28">Index if in string</a></li>
               </ul>
             </div>
           </div>
@@ -652,10 +653,26 @@ print(text.find("am", 8, 23)) # -1
 text = "hallo world"
 if "wo" in text:
     print("found \"wo\"")
-if "?" in txt:
+if "?" in text:
     print("found \"?\"")
 else:
     print("NOT found \"?\"")
+                </code>
+                </div>
+              </section>
+              <section id="py1.28">
+                <h2>Index if in string</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+text = "Lorem ipsum dolor sit amet consectetuer"
+sub = "sit"
+if sub in txt:
+    loc = text.index(sub)
+print(sub + " is at " + str(loc))
+sub = "amet"
+if sub in txt:
+    loc = text.index(sub)
+print(sub + " is at " + str(loc))
                 </code>
                 </div>
               </section>

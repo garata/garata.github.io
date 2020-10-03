@@ -496,10 +496,10 @@ print(fixedRnd)
 values = [None, 0, "", False, [], (), {}, "0", True]
 for val in values:
     if val:
-        print("True value: %s" % (val))
+        print('True value: %(val)s %(typ)s' % {"val": val, "typ": ("(str)" if isinstance(val, str) else "")})
     else:
-        print("False " + ("(str)" if isinstance(val, str) else "") + " value: %s" % (val))
-                </code>
+        print('False value: %(val)s %(typ)s' % {"val": val, "typ": ("(str)" if isinstance(val, str) else "")})
+		        </code>
                 </div>
               </section>
             </div>

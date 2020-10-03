@@ -49,29 +49,30 @@
                 <li><a href="#py1.5">Variables</a></li>
                 <li><a href="#py1.6">String concatenation</a></li>
                 <li><a href="#py1.7">String multiplication</a></li>
-                <li><a href="#py1.8">Python main function</a></li>
-                <li><a href="#py1.9">Python pieces of code</a></li>
-                <li><a href="#py1.10">Math module</a></li>
-                <li><a href="#py1.11">Sys module</a></li>
-                <li><a href="#py1.12">Handling User Input</a></li>
-                <li><a href="#py1.13">Arithmetic Operators</a></li>
-                <li><a href="#py1.14">Arithmetic operations</a></li>
-                <li><a href="#py1.15">Comparision Operators</a></li>
-                <li><a href="#py1.16">Conditional structures</a></li>
-                <li><a href="#py1.17">Command line arguments</a></li>
-                <li><a href="#py1.18">Random number</a></li>
-                <li><a href="#py1.19">False expressions</a></li>
-                <li><a href="#py1.20">For loop</a></li>
-                <li><a href="#py1.21">Long string lines</a></li>
-                <li><a href="#py1.22">Immutable strings</a></li>
-                <li><a href="#py1.23">Change strings</a></li>
-                <li><a href="#py1.24">Index in string</a></li>
-                <li><a href="#py1.25">Reverse index in string</a></li>
-                <li><a href="#py1.26">Find in string</a></li>
-                <li><a href="#py1.27">Seek in string</a></li>
-                <li><a href="#py1.28">Index if in string</a></li>
-                <li><a href="#py1.29">Compare strings</a></li>
-                <li><a href="#py1.30">While loop</a></li>
+                <li><a href="#py1.8">String formatting</a></li>
+                <li><a href="#py1.9">Python main function</a></li>
+                <li><a href="#py1.10">Python pieces of code</a></li>
+                <li><a href="#py1.11">Math module</a></li>
+                <li><a href="#py1.12">Sys module</a></li>
+                <li><a href="#py1.13">Handling User Input</a></li>
+                <li><a href="#py1.14">Arithmetic Operators</a></li>
+                <li><a href="#py1.15">Arithmetic operations</a></li>
+                <li><a href="#py1.16">Comparision Operators</a></li>
+                <li><a href="#py1.17">Conditional structures</a></li>
+                <li><a href="#py1.18">Command line arguments</a></li>
+                <li><a href="#py1.19">Random number</a></li>
+                <li><a href="#py1.20">False expressions</a></li>
+                <li><a href="#py1.21">For loop</a></li>
+                <li><a href="#py1.22">Long string lines</a></li>
+                <li><a href="#py1.23">Immutable strings</a></li>
+                <li><a href="#py1.24">Change strings</a></li>
+                <li><a href="#py1.25">Index in string</a></li>
+                <li><a href="#py1.26">Reverse index in string</a></li>
+                <li><a href="#py1.27">Find in string</a></li>
+                <li><a href="#py1.28">Seek in string</a></li>
+                <li><a href="#py1.29">Index if in string</a></li>
+                <li><a href="#py1.30">Compare strings</a></li>
+                <li><a href="#py1.31">While loop</a></li>
               </ul>
             </div>
           </div>
@@ -301,6 +302,39 @@ print(2*"string")
                 </div>
               </section>
               <section id="py1.8">
+                <h2>Strings formatting</h2>
+                <p>When using <code>%</code> to print more than one values, put the values in parentheses forming a tuple. The string interpolation <code>f</code> prefixed string data-type is available from <b>Python 3.6</b>.</p>
+                <div data-datacamp-exercise data-lang="python">					
+                <code data-type="sample-code">
+yob = 1956 # Guido van Rossum year of birth
+name = "Guido van Rossum"
+concatenation = "The user " + name + " was born in " + str(yob) + "+"
+print(concatenation)
+percentage = "The user %s was born in %s." % (name, yob)
+print(percentage)
+format = "The user {} was born {} years ago.".format(name, yob)
+print(format)
+format = "The user {0} was born {1} years ago.".format(name, yob)
+print(format)
+format = "The user {1} was born {0} years ago.".format(yob, name)
+print(format)
+format = "The user {n} was born {y} years ago.".format(n = name, y = yob)
+print(format)
+fstr = f"The user {name} was born {yob} years ago."
+print(fstr)
+entries = [
+    ["AAA BBB", 42],
+    ["AAAA", 12345],
+    ["AAAA", 7],
+    ["AAAA BBBB CCCC", 3],
+    ["AAA", 12345677889],
+]
+for entry in entries:
+    print("{:<8}|{:>7}".format(entry[0], entry[1]))
+                </code>
+                </div>
+              </section>
+              <section id="py1.9">
                 <h2>Python main function</h2>
                 <p>The Python interpreter does not make assumptions about predefined function name entry point, it executes scripts starting at the top of the file and for such reason
                 Python programmers adopt convention naming and special variables. Thus in Python scripts, it happens to see <b>main</b> function definition and a conditional statement.
@@ -316,7 +350,7 @@ if __name__ == "__main__":
                 </code>
                 </div>
               </section>
-              <section id="py1.9">
+              <section id="py1.10">
                 <h2>Python pieces of code</h2>
                 <p>Python interpreter differentiates among three type of pieces of code. Thus, <b>__name__</b> idiom takes on different values depending on how you executed your Python file.</p>
                 <ul>
@@ -325,7 +359,7 @@ if __name__ == "__main__":
                 <li><b>Module:</b> A Python module is a file that you intend to import from within another module or a script, or from the interactive interpreter. "__main__" when the module is imported contains name of the module</li>
                 </ul>
               </section>
-              <section id="py1.10">
+              <section id="py1.11">
                 <h2>Math module</h2>
                 <p>Python language offers a built-in standard module that you can use for mathematical tasks, which gives you access to the underlying C library functions.
                 Anyway this module does not support <b>complex</b> datatypes. The <a href="https://docs.python.org/3.0/library/cmath.html">cmath module</a> is for the <b>complex</b> counterpart.</p>
@@ -338,7 +372,7 @@ print("The circumference of the circle is ", 2 * radius * math.pi)
                 </code>
                 </div>
               </section>
-              <section id="py1.11">
+              <section id="py1.12">
                 <h2>Sys module</h2>
                 <p>Oftenly, when you develop command line Python programs, you need basic <a href="https://docs.python.org/2/library/sys.html">System-specific parameters and functions</a>.</p>
                 <div data-datacamp-exercise data-lang="python">					
@@ -351,7 +385,7 @@ print( sys.version_info.major )
                 </code>
                 </div>
               </section>
-              <section id="py1.12">
+              <section id="py1.13">
                 <h2>Handling user input</h2>
                 <p>When the Python interpreter exeute a command line script you can interact with standard input to acquire values from the user, and you run into an exception error you can leave this occurence unhandled or wrap it into <code>try ... except: ... [else:]</code> block. As shown into the example, the <code>try</code> and <code>except</code> block in this Python snippet is used to catch and handle exceptions. Python interpreter executes code following the try statement as a monitored for run time errors part of the program. The code that follows the <code>except</code> statement is how the program should for example response to a <a href="https://docs.python.org/3/library/exceptions.html">Python Standard Library</a> in the preceding try clause.</p>
                 <div data-datacamp-exercise data-lang="python">					
@@ -367,7 +401,7 @@ main()
                 </code>
                 </div>
                 </section>
-              <section id="py1.13">
+              <section id="py1.14">
                 <h2>Arithmetic Operators</h2>
 				<p>In order to perform calculations on data Python language offers these arithmetic operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>**</code>, and <code>//</code></p>
                 <div data-datacamp-exercise data-lang="python">					
@@ -392,7 +426,7 @@ print("concatenate: %s" % (concatenate)) # %s->place holder for string
                 </code>
                 </div>
                 </section>
-              <section id="py1.14">
+              <section id="py1.15">
                 <h2>Arithmetic operations</h2>
 				<p>When acquiring input from the user, or in any case a string should be employed as arithmetic operand, the conversion to Numeric Type (int, float, complex) may be wrapped i a control structure apt to check conversion feasibilities.</p>
                 <div data-datacamp-exercise data-lang="python">					
@@ -409,7 +443,7 @@ finally:
                 </code>
                 </div>
               </section>
-              <section id="py1.15">
+              <section id="py1.16">
                 <h2>Comparision Operators</h2>
                 <p>Comparision operators compare two values. Python offers these operators: <code>==</code>, <code>!=</code>, <code>></code>, <code><</code>, <code>>=</code> and <code><=</code>. Here the important aspect to remember is that Python 3, despite being a dynamic language, disallow the comparision among two differently typed variables.</p>
 				<div data-datacamp-exercise data-lang="python">
@@ -438,7 +472,7 @@ print(n1 > n2)
                 </code>
                 </div>
               </section>
-              <section id="py1.16">
+              <section id="py1.17">
                 <h2>Conditional structures</h2>                
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -465,7 +499,7 @@ main()
                 </code>
                 </div>
               </section>
-              <section id="py1.17">
+              <section id="py1.18">
                 <h2>Command line arguments</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -485,7 +519,7 @@ main()
                 </code>
                 </div>
               </section>
-              <section id="py1.18">
+              <section id="py1.19">
                 <h2>Random numbers</h2>
 				<p><a href="http://docs.python.org/library/random.html">Python Random</a> official documentation</p>
 				<div data-datacamp-exercise data-lang="python">
@@ -506,7 +540,7 @@ print(fixedRnd)
                 </code>
                 </div>
               </section>
-              <section id="py1.19">
+              <section id="py1.20">
                 <h2>False expressions</h2>
 				<p>In Python <code>None</code>, <code>0</code>, <code>""</code> (empty string), <code>False</code>, <code>[]</code>,  <code>{}</code> and <code>()</code> values resolve to false.</p>
 				<div data-datacamp-exercise data-lang="python">
@@ -520,7 +554,7 @@ for val in values:
 		        </code>
                 </div>
               </section>
-              <section id="py1.20">
+              <section id="py1.21">
                 <h2>For loop</h2>
 				<p>
 				For loops are useful for iterating over a sequence of data. To iterate means to step through each element one at a time. For loops are also useful for repeating a process. 
@@ -560,7 +594,7 @@ for c in ["aaa", "bbb", "ccc", "ddd", "eee", "fff"]:
 		        </code>
                 </div>
               </section>
-              <section id="py1.21">
+              <section id="py1.22">
                 <h2>Long string lines</h2>
 				<p>String constant in Python employ specific syntax approaches in order to ease readability. Multiline strings, as shown in <code>short</code> and <code>short_rows</code>examples, should obeys to indentation for the latter. If you would like to create a string the spreads on multiple lines, there is a possibility to put the text between 3 quotes on both sides. Either 23 single-quotes or 23 double-quotes.</p>
 				<div data-datacamp-exercise data-lang="python">
@@ -589,7 +623,7 @@ print(triple)
 		        </code>
                 </div>
               </section>
-              <section id="py1.22">
+              <section id="py1.23">
                 <h2>Immutable strings</h2>
 				<p>In Python strings are "immutable", thus they never change, meaning you cannot change them. You can replace a whole string in a variable, but you cannot change it.</p>
 				<div data-datacamp-exercise data-lang="python">
@@ -602,7 +636,7 @@ print(text)
 		        </code>
                 </div>
               </section>
-              <section id="py1.23">
+              <section id="py1.24">
                 <h2>Change strings</h2>
 				<p>Python string indexers uses <code>:</code> as the delimiter of the slice syntax to "slice out" sub-parts in sequences.
 				With the syntax <code>[start:end]</code> you can slice a string starting from <code>start</code> index and ending at <code>end</code> index not included.</p>
@@ -617,7 +651,7 @@ print(text[len(text):]) #  from length of text to end
 		        </code>
                 </div>
               </section>
-              <section id="py1.24">
+              <section id="py1.25">
                 <h2>Index in string</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -630,7 +664,7 @@ print(text.index("con", 27, 0)) # 2nd arg is ok within the range going from -9 t
                 </code>
                 </div>
               </section>
-              <section id="py1.25">
+              <section id="py1.26">
                 <h2>Reverse index in string</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -643,7 +677,7 @@ print(text.rindex("i", 6, 20)) # 19
                 </code>
                 </div>
               </section>
-              <section id="py1.26">
+              <section id="py1.27">
                 <h2>Find in string</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -658,7 +692,7 @@ print(text.find("am", 8, 23)) # -1
                 </code>
                 </div>
               </section>
-              <section id="py1.27">
+              <section id="py1.28">
                 <h2>Seek in string</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -672,7 +706,7 @@ else:
                 </code>
                 </div>
               </section>
-              <section id="py1.28">
+              <section id="py1.29">
                 <h2>Index if in string</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -688,7 +722,7 @@ print(sub + " is at " + str(loc))
                 </code>
                 </div>
               </section>
-              <section id="py1.29">
+              <section id="py1.30">
                 <h2>Compare strings</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -701,7 +735,7 @@ print(str1 > str2)
                 </code>
                 </div>
               </section>
-              <section id="py1.30">
+              <section id="py1.31">
                 <h2>While loop</h2>
 				<p>Python <code>while</code> loop is a good alternative to <code>for</code> loop when you want to evaluate a complex or medium-complex condition constraining loop break. The <code>break</code> instruction is available in Python allowing to exit loops when break out condion applies. Thus, since in Python language <code>do ... while</code> is not avaliable, you have to implement the same logic with infinite loop and one or more break out conditions. But there's more, Break out from multi-level loops is not feasible in Python and you have to implement a similar solution refactoring your algorithms with functions call.</p>
 				<div data-datacamp-exercise data-lang="python">
@@ -716,7 +750,7 @@ while randNum is not 5: # as soon as randNum == 5 the loop will terminate
     randNum = random.randint(0, 10)
 
 # we’re outside of the for loop
-print("It took %s tries to get 5." % str(count))
+print("It took %s tries to get 5 as integer random value." % str(count))
                 </code>
                 </div>
               </section>

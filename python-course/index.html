@@ -706,16 +706,17 @@ print(str1 > str2)
 				<p>Python <code>while</code> loop is a good alternative to <code>for</code> loop when you want to evaluate a complex or medium-complex condition constraining loop break. The <code>break</code> instruction is available in Python allowing to exit loops when break out condion applies. Thus, since in Python language <code>do ... while</code> is not avaliable, you have to implement the same logic with infinite loop and one or more break out conditions. But there's more, Break out from multi-level loops is not feasible in Python and you have to implement a similar solution refactoring your algorithms with functions call.</p>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
+import random
 count = 1
-randNum = rand(0,10) # range random count value
-while randNum is not 5: # as soon as randNum == 50 the loop will terminate    
+randNum = random.randint(0, 10) # range random count value
+while randNum is not 5: # as soon as randNum == 5 the loop will terminate    
     count += 1 # increment counter by one
 
     # in order to avoid an infinite loop randomly reinit sentinel value
-    randNum = rand(0,10)
+    randNum = random.randint(0, 10)
 
 # we’re outside of the for loop
-print("It took %s tries to get 50." % str(count))
+print("It took %s tries to get 5." % str(count))
                 </code>
                 </div>
               </section>

@@ -70,6 +70,7 @@
                 <li><a href="#py1.26">Find in string</a></li>
                 <li><a href="#py1.27">Seek in string</a></li>
                 <li><a href="#py1.28">Index if in string</a></li>
+                <li><a href="#py1.29">Compare strings</a></li>
               </ul>
             </div>
           </div>
@@ -666,13 +667,26 @@ else:
                 <code data-type="sample-code">
 text = "Lorem ipsum dolor sit amet consectetuer"
 sub = "sit"
-if sub in txt:
+if sub in text:
     loc = text.index(sub)
 print(sub + " is at " + str(loc))
 sub = "amet"
-if sub in txt:
+if sub in text:
     loc = text.index(sub)
 print(sub + " is at " + str(loc))
+                </code>
+                </div>
+              </section>
+              <section id="py1.29">
+                <h2>Compare strings</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+str1 = "abcd"
+str2 = "abc"
+print("length strings comparison")
+print(len(str1) > len(str2))
+print("ascii strings comparison")
+print(str1 > str2)
                 </code>
                 </div>
               </section>

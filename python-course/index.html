@@ -87,6 +87,10 @@
 				<li><a href="#py2.9">List for loop</a></li>
 				<li><a href="#py2.10">In list</a></li>
  				<li><a href="#py2.11">Where is the element in list</a></li>
+ 				<li><a href="#py2.12">Inser into list</a></li>
+ 				<li><a href="#py2.13">Append to list</a></li>
+ 				<li><a href="#py2.14">Remove from list</a></li>
+ 				<li><a href="#py2.15">Pop from from list</a></li>
               </ul>
             </div>
           </div>
@@ -989,11 +993,76 @@ val = None
 try:
     lst = ['aaa', 'bbb', 'ccc', 'ddd']
     val = 'bbb'
-    print("%s is located at %s index"  % (val, str(words.index(val))))
+    print("%s is located at %s index"  % (val, str(lst.index(val))))
     val = 'eee'
-    print("%s is located at %s index"  % (val, str(words.index(val))))
+    print("%s is located at %s index"  % (val, str(lst.index(val))))
 except ValueError:
-    print("%s is located at %s index"  % (val, str(-1))
+    print("%s is located at %s index"  % (val, str(-1)))
+                </code>
+                </div>
+              </section>
+              <section id="py2.12">
+                <h2>Insert into list</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+lst = ['aaa', 'bbb', 'ccc']
+print(lst) # ['aaa', 'bbb', 'ccc']
+lst.insert(2, 'zzz')
+print(lst) # ['aaa', 'bbb', 'zzz', 'ccc']
+lst.insert(0, '???')
+print(lst) # ['???', 'aaa', 'bbb', 'zzz', 'ccc']
+# Instead of appending insert at the end works too
+lst.insert(len(lst), '___')
+print(lst) # ['???', 'aaa', 'bbb', 'zzz', 'ccc', '___']
+                </code>
+                </div>
+              </section>
+              <section id="py2.13">
+                <h2>Append to list</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+lst = ['aaa', 'bbb', 'ccc', 'ddd']
+print(lst) # ['aaa', 'bbb', 'ccc', 'ddd']
+names.append('zzz')
+print(lst) # ['aaa', 'bbb', 'ccc', 'ddd', 'zzz']
+                </code>
+                </div>
+              </section>
+              <section id="py2.14">
+                <h2>Remove from list</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+val = None
+try:
+    lst = ['aaa', 'bbb', 'ccc', 'ddd', 'eee']
+    print(lst) # ['aaa', 'bbb', 'ccc', 'ddd', 'eee']
+    val = 'zzz'
+    print(lst.remove(val)) # None
+    print(lst) # ['aaa', 'ccc', 'ddd', 'eee']
+    val = 'zzz'
+    print(names.remove(val))
+except ValueError:
+    print("%s is contained into the list and cannot be removed"  % val)
+                </code>
+                </div>
+              </section>
+              <section id="py2.15">
+                <h2>Pop from from list</h2>
+                <p>When no argument is supplied, <code>pop()</code> remove and return the last element from list. <code>pop()</code> throws an exception if the list is empty.</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+lst = ['aaa', 'bbb', 'ccc', 'ddd', 'eee']
+print(lst) # ['aaa', 'bbb', 'ccc', 'ddd', 'eee']
+third = lst.pop(2)
+print(third) # ccc
+print(planets) # ['aaa', 'bbb', 'ddd', 'eee']
+last = planets.pop()
+print(last) # eee
+print(lst) # ['aaa', 'bbb', 'ddd']
+try:
+    planets.pop(4) # if index is not present, as per empty list, pop() raise IndexError
+except ValueError:
+    break
                 </code>
                 </div>
               </section>

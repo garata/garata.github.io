@@ -84,6 +84,9 @@
 				<li><a href="#py2.6">List join</a></li>
 				<li><a href="#py2.7">Cast list join</a></li>
 				<li><a href="#py2.8">Split string to list</a></li>
+				<li><a href="#py2.9">List for loop</a></li>
+				<li><a href="#py2.10">In list</a></li>
+ 				<li><a href="#py2.11">Where is the element in list</a></li>
               </ul>
             </div>
           </div>
@@ -955,6 +958,42 @@ print(lst1) # ['aaa', 'bbb', 'ccc']
 # split to characters
 lst2 = list("abcd")
 print(lst) # ['a', 'b', 'c', 'd']
+                </code>
+                </div>
+              </section>
+              <section id="py2.9">
+                <h2>List for loop</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+lst = ['aaa', 'bbb', 'ccc', 1]
+for val in lst:
+    print(val)
+                </code>
+                </div>
+              </section>
+              <section id="py2.10">
+                <h2>In list</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+lst = ['aaa', 'bbb', 'ccc', 'ddd']
+if 'ccc' in lst:
+    print('found ccc')
+                </code>
+                </div>
+              </section>
+              <section id="py2.11">
+                <h2>Where is the element in list</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+val = None
+try:
+    lst = ['aaa', 'bbb', 'ccc', 'ddd']
+    val = 'bbb'
+    print("%s is located at %s index"  % (val, str(words.index(val))))
+    val = 'eee'
+    print("%s is located at %s index"  % (val, str(words.index(val))))
+except ValueError:
+    print("%s is located at %s index"  % (val, str(-1))
                 </code>
                 </div>
               </section>

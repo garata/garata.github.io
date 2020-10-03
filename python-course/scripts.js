@@ -21,7 +21,7 @@ for (var i = 0; i < $ideBoxes.length; i++) {
 				var editor = ace.edit(id);
 				var code = editor.getSession().getValue();
 				var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-				var height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+				var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 				if (!!code && typeof(initAddedDCLightExercises) === 'function') {
 					picoModal(
 						'<div style="width: ' + Math.floor(width * 0.90) + 'px; padding: 2% 0">' +

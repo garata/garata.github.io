@@ -66,6 +66,7 @@
                 <li><a href="#py1.22">Immutable strings</a></li>
                 <li><a href="#py1.23">Change strings</a></li>
                 <li><a href="#py1.24">Index in string</a></li>
+                <li><a href="#py1.24">Reverse index in string</a></li>
               </ul>
             </div>
           </div>
@@ -603,14 +604,25 @@ print(text[len(text):]) #  from length of text to end
               </section>
               <section id="py1.24">
                 <h2>Index in string</h2>
-				With the syntax <code>[start:end]</code> you can slice a string starting from <code>start</code> index and ending at <code>end</code> index not included.</p>
-				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
 text = "Lorem ipsum dolor sit amet consectetuer"
-print(text.index("s")) # 7
-print(text.index("s", 28)) # 10
-print(text.index("sit", 9)) # 26
-print(text.index("con", 8, 28))
+print(text.index("s")) # 8
+print(text.index("s", 28)) # 30
+print(text.index("sit", 9)) # 18
+print(text.index("con", 27, 30)) # 2nd arg is at least 30
+print(text.index("con", 27, 0)) # 2nd arg is ok within the range going from -9 to -1
+                </code>
+                </div>
+              </section>
+              <section id="py1.25">
+                <h2>Reverse index in string</h2>
+                <code data-type="sample-code">
+text = "Lorem ipsum dolor sit amet consectetuer"
+print(text.rindex("d")) # 14
+print(text.rindex("d", 12)) # 14
+print(text.rindex("dolor", 12, 13)) # 10
+print(text.rindex("a", 8)) # 26
+print(text.rindex("a", 8, 16))
                 </code>
                 </div>
               </section>

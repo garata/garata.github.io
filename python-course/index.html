@@ -78,6 +78,7 @@
               <ul class="py-nav py-nav-default doc-nav">
                 <li><a href="#py2.1">Simple lists</a></li>
                 <li><a href="#py2.2">List slice with steps</a></li>
+                <li><a href="#py2.3">Change list</a></li>
               </ul>
             </div>
           </div>
@@ -789,7 +790,7 @@ while randNum is not 5: # as soon as randNum == 5 the loop will terminate
 # we’re outside of the for loop
 print("It took %s tries to get 5 as integer random value." % str(count))
                 </code>
-                </div>
+               </div>
               </section>
             </div>
           </article>		  
@@ -806,7 +807,7 @@ print("It took %s tries to get 5 as integer random value." % str(count))
             </div>
             <div class="article-content link-primary">
               <section id="py2.1">
-                <h2>Lists</h2>
+                <h2>Simple lists</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
 lst = ['aaa', 'bbb', 'ccc', 'ddd', 'eee', 'fff']
@@ -826,7 +827,7 @@ print(lst[:]) # ['aaa', 'bbb', 'ccc', 'ddd', 'eee', 'fff']
                 </div>
               </section>
               <section id="py2.2">
-                <h2>Lists</h2>
+                <h2>List slice with steps</h2>
 				<p>List slice with step: <code>[start:end:step]</code></p>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -837,6 +838,29 @@ print(letters[::2]) # ['aaa', 'ccc', 'eee', 'ggg', 'iii']
 print(letters[1::2]) # ['bbb', 'ddd', 'fff', 'hhh', 'jjj']
 print(letters[2:8:2]) # ['ccc', 'eee', 'ggg']
 print(letters[1:20:3]) # ['bbb', 'eee', 'hhh']
+                </code>
+                </div>
+              </section>
+              <section id="py2.3">
+                <h2>Change list</h2>
+                <ul>
+                  <li>Python allows to change the content of a list by assigning values to its elements.</li>
+                  <li>Python allows to use the slice notation to change several elements at once.</li>
+                  <li>Lists can have different number of elements in the slice and in the replacement. This will also change the length of the array.</li>
+                </ul>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+lst = ['aaa', 'bbb', 'ccc', 'ddd']
+lst[0] = 'aaaa'
+print(lst) # ['aaa', 'bbb', 'ccc', 'ddd']
+lst[1:3] = ['xxx', 'yyy']
+print(lst) # ['aaa', 'xxx', 'yyy', 'ddd']
+lst[1:3] = ['???']
+print(lst) # ['aaa', '???', 'ddd']
+lst[1:2] = ['eee', 'fff']
+print(lst) # ['aaa', 'eee', 'fff', 'ddd']
+lst[1] = ['eee', 'fff']
+print(lst) # ['aaa', ['eee', 'fff'], 'ddd']
                 </code>
                 </div>
               </section>

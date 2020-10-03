@@ -68,6 +68,7 @@
                 <li><a href="#py1.24">Index in string</a></li>
                 <li><a href="#py1.25">Reverse index in string</a></li>
                 <li><a href="#py1.26">Find in string</a></li>
+                <li><a href="#py1.27">Seek in string</a></li>
               </ul>
             </div>
           </div>
@@ -634,15 +635,27 @@ print(text.rindex("i", 6, 20)) # 19
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
 text = "Lorem ipsum dolor sit amet consectetuer"
-print(text.find("dolor")) # 4
-print(text.find("a")) # 0
+print(text.find("dolor")) # 12
+print(text.find("a")) # 22
 print(text.find("conz")) # -1
-
-print(text.find("d")) # 7
-print(text.find("d", 13)) # 10
-
-print(text.find("am", 8)) # 26
-print(text.find("am", 8, 16)) # -1
+print(text.find("d")) # 12
+print(text.find("d", 13)) # -1
+print(text.find("am", 8)) # 22
+print(text.find("am", 8, 23)) # -1
+                </code>
+                </div>
+              </section>
+              <section id="py1.27">
+                <h2>Seek in string</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+text = "hallo world"
+if "wo" in text:
+    print("found \"wo\"")
+if "?" in txt:
+    print("found \"?\"")
+else:
+    print("NOT found \"?\"")
                 </code>
                 </div>
               </section>

@@ -81,6 +81,7 @@
                 <li><a href="#py2.3">Change list</a></li>
                 <li><a href="#py2.4">Change list with steps</a></li>
 				<li><a href="#py2.5">List copy</a></li>
+				<li><a href="#py2.6">List join</a></li>
               </ul>
             </div>
           </div>
@@ -870,10 +871,10 @@ print(lst) # ['aaa', ['eee', 'fff'], 'fff', 'ddd']
                 <h2>Change list with steps</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-print(numbers) # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-numbers[1::2] = [0, 0, 0, 0, 0, 0]
-print(numbers) # [1, 0, 3, 0, 5, 0, 7, 0, 9, 0, 11, 0]
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+print(lst) # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+lst[1::2] = [0, 0, 0, 0, 0, 0]
+print(lst) # [1, 0, 3, 0, 5, 0, 7, 0, 9, 0, 11, 0]
                 </code>
                 </div>
               </section>
@@ -906,7 +907,21 @@ lst1 = ['aaa', 'bbb', 'ccc', 'ddd']
 lst2 = deepcopy(lst2)
 lst1[0] = 'zzz'
 print(lst1) # ['zzz', 'bbb', 'ccc', 'ddd']
-print(lst2) # ['apple', 'bbb', 'ccc', 'ddd']
+print(lst2) # ['aaa', 'bbb', 'ccc', 'ddd']
+                </code>
+                </div>
+              </section>
+              <section id="py2.6">
+                <h2>List join</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+lst = ['aaa', 'bbb', 'ccc', 'ddd']
+lst1 = ':'.join(lst)
+print(lst1) # aaa:bbb:ccc:ddd
+lst2 = ' ::: '.join(lst)
+print(mi) # aaa ::: bbb ::: ccc ::: ddd
+lst3 = ''.join(lst)
+print(lst3) # aaabbbcccddd
                 </code>
                 </div>
               </section>

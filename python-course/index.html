@@ -82,6 +82,8 @@
                 <li><a href="#py2.4">Change list with steps</a></li>
 				<li><a href="#py2.5">List copy</a></li>
 				<li><a href="#py2.6">List join</a></li>
+				<li><a href="#py2.7">Cast list join</a></li>
+				<li><a href="#py2.8">Split string to list</a></li>
               </ul>
             </div>
           </div>
@@ -919,9 +921,40 @@ lst = ['aaa', 'bbb', 'ccc', 'ddd']
 lst1 = ':'.join(lst)
 print(lst1) # aaa:bbb:ccc:ddd
 lst2 = ' ::: '.join(lst)
-print(mi) # aaa ::: bbb ::: ccc ::: ddd
+print(lst2) # aaa ::: bbb ::: ccc ::: ddd
 lst3 = ''.join(lst)
 print(lst3) # aaabbbcccddd
+                </code>
+                </div>
+              </section>
+              <section id="py2.7">
+                <h2>Cast list join</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+lst1 = ["1", "2", "3"]
+lst2 = ["1", 2, "3"]
+print(":".join(lst1)) # 1:2:3
+# print ":".join(lst2) # TypeError: sequence item 1: expected string, int found
+# convert elements to string using map
+print(":".join( map(str, lst2) )) # 1:2:3
+# convert (eg, cast to string) elements to string using list comprehension
+print(":".join( str(x) for x in lst2 )) # 1:2:3
+                </code>
+                </div>
+              </section>
+              <section id="py2.8">
+                <h2>Split string to list</h2>
+				<p>In order to split a string to list of characters use <code>list()</code> function, and resort to <code>re.split</code> splitting criteria is much complex.</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+lst = "aaa:bbb:ccc".split(':')
+print(lst) # ['aaa', 'bbb', 'ccc']
+# split by spaces
+lst1 = "aaa bbb ccc".split()
+print(lst1) # ['aaa', 'bbb', 'ccc']
+# split to characters
+lst2 = list("abcd")
+print(lst) # ['a', 'b', 'c', 'd']
                 </code>
                 </div>
               </section>

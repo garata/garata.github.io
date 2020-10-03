@@ -63,6 +63,8 @@
                 <li><a href="#py1.19">False expressions</a></li>
                 <li><a href="#py1.20">For loop</a></li>
                 <li><a href="#py1.21">Long string lines</a></li>
+                <li><a href="#py1.22">Immutable strings</a></li>
+                <li><a href="#py1.23">Change strings</a></li>
               </ul>
             </div>
           </div>
@@ -543,7 +545,7 @@ for i in range(start, stop, step):
               </section>
               <section id="py1.21">
                 <h2>Long string lines</h2>
-				<p>String constant in Python employ specific syntax approaches in order to ease readability.</p>
+				<p>String constant in Python employ specific syntax approaches in order to ease readability. Multiline strings, as shown in <code>short</code> and <code>short_rows</code>examples, should obeys to indentation for the latter. If you would like to create a string the spreads on multiple lines, there is a possibility to put the text between 3 quotes on both sides. Either 23 single-quotes or 23 double-quotes.</p>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
 text = "aaa" "bbb"
@@ -552,15 +554,47 @@ print(text)
 long_string = "aaa" "bbb" "ccc"
 print(long_string)
 
+short = "1st aaa \
+2nd bbb \
+3rd ccc"
+print(short)
+
 short_rows = "aaa" \
     "bbb" \
     "ccc"
 print(short_rows)
 
-shorter = "1st aaa \
-2nd bbb \
-3rd ccc"
-print(shorter)
+triple = """1st aaa
+2nd bbb
+3rd ccc"""
+
+print(triple)
+		        </code>
+                </div>
+              </section>
+              <section id="py1.22">
+                <h2>Immutable strings</h2>
+				<p>In Python strings are "immutable", thus they never change, meaning you cannot change them. You can replace a whole string in a variable, but you cannot change it.</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+text = "abc"
+print(text) # abc
+text[2] = '1'
+print("\n")
+print(text)
+		        </code>
+                </div>
+              </section>
+              <section id="py1.23">
+                <h2>Change strings</h2>
+				<p>...</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+text = "abcdef"
+print(text) # abc
+# 
+text = text[:2] + 'AAA' + text[3:]
+print(text) # abAAAdef
 		        </code>
                 </div>
               </section>

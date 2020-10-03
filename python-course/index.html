@@ -91,6 +91,10 @@
  				<li><a href="#py2.13">Append to list</a></li>
  				<li><a href="#py2.14">Remove from list</a></li>
  				<li><a href="#py2.15">Pop from from list</a></li>
+ 				<li><a href="#py2.16">Remove first element from list</a></li>
+ 				<li><a href="#py2.17">Remove more elements from list</a></li>
+ 				<li><a href="#py2.18">Collections dequeue</a></li>
+ 				<li><a href="#py2.19">Stack list</a></li>
               </ul>
             </div>
           </div>
@@ -1047,7 +1051,7 @@ except ValueError:
                 </div>
               </section>
               <section id="py2.15">
-                <h2>Pop from from list</h2>
+                <h2>Pop from list</h2>
                 <p>When no argument is supplied, <code>pop()</code> remove and return the last element from list. <code>pop()</code> throws an exception if the list is empty.</p>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -1062,7 +1066,96 @@ print(lst) # ['aaa', 'bbb', 'ddd']
 try:
     lst.pop(4) # if index is not present, as per empty list, pop() raise IndexError
 except ValueError:
-    break
+    raise
+                </code>
+                </div>
+              </section>
+              <section id="py2.16">
+                <h2>Reove first element from list</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+lst = ['aaa', 'bbb', 'ccc', 'ddd']
+first = lst.pop(0)
+print(first) # foo
+print(lst) # ['bbb', 'ccc', 'ddd']
+                </code>
+                </div>
+              </section>
+              <section id="py2.17">
+                <h2>Reove more elements from list</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+lst = ['aaa', 'bbb', 'ccc', 'ddd', 'eee']
+lst[2:4] = []
+print(lst) # ['aaa', 'bbb', 'eee']
+                </code>
+                </div>
+              </section>
+              <section id="py2.18">
+                <h2>Collections dequeue</h2>
+				<p><a href="https://docs.python.org/3/library/collections.html#collections.deque">Deque</a> (Doubly Ended Queue) in Python is implemented using the module "<b>collections</b>". <b>Deque</b> is preferred over list in the cases where we need quicker append and pop operations from both the ends of container, as deque provides an <em>O(1)</em> time complexity for append and pop operations as compared to list which provides <b>O(n)</b> time complexity. When required Deque could be of fixed size passing the second argument like in this example: <code>= deque([], maxlen = ?)
+</code></p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+from collections import deque
+
+lst = deque(['aaa', 'bbb'])
+
+print(type(lst)) # <type 'collections.deque'>
+print(lst) # deque(['bbb', 'aaa'])
+
+lst.append('zzz')
+print(lst) # deque(['aaa', 'bbb', 'zzz'])
+print(len(lst)) # 3
+
+lst.append('zzz')
+print(lst) # deque(['aaa', 'bbb', 'zzz', 'zzz'])
+
+nxt = lst.popleft()
+print(nxt) # 'aaa'
+print(lst) # deque(['bbb', 'zzz', 'zzz'])
+
+print(len(lst)) # 3
+
+if lst: # check in boolean context is list is empty
+    print("The queue has elements")
+else:
+    print("The queue is empty")
+	
+# define a fixed list Deque instance
+lst2 = deque([], maxlen = 3)
+print(len(lst2)) # 0
+print(lst2.maxlen) # 3
+
+lst2.append("aaa")
+lst2.append("bbb")
+lst2.append("ccc")
+print(lst2) # deque(['aaa', 'bbb', 'ccc'], maxlen=3)
+
+lst2.append("zzz") # Automatically removes the left-most (first) element
+print(lst2) # deque(['aaa', 'bbb', 'zzz'], maxlen=3)
+                </code>
+                </div>
+              </section>
+              <section id="py2.19">
+                <h2>List as stack</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+from collections import deque
+
+lst = deque()
+
+lst.append("aaa")
+lst.append("bbb")
+lst.append("ccc")
+
+while stack:
+    val = stack.pop()
+    print(val)
+	
+# ccc
+# bbb
+à aaa
                 </code>
                 </div>
               </section>

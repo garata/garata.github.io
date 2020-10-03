@@ -66,7 +66,8 @@
                 <li><a href="#py1.22">Immutable strings</a></li>
                 <li><a href="#py1.23">Change strings</a></li>
                 <li><a href="#py1.24">Index in string</a></li>
-                <li><a href="#py1.24">Reverse index in string</a></li>
+                <li><a href="#py1.25">Reverse index in string</a></li>
+                <li><a href="#py1.26">Find in string</a></li>
               </ul>
             </div>
           </div>
@@ -620,11 +621,28 @@ print(text.index("con", 27, 0)) # 2nd arg is ok within the range going from -9 t
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
 text = "Lorem ipsum dolor sit amet consectetuer"
-print(text.rindex("d")) # 14
-print(text.rindex("d", 12)) # 14
-print(text.rindex("dolor", 12, 13)) # 10
-print(text.rindex("a", 8)) # 26
-print(text.rindex("a", 8, 16))
+print(text.rindex("d")) # 12
+print(text.rindex("d", 12)) # 12
+print(text.rindex("dolor", 12, 17)) # 12
+print(text.rindex("a", 8)) # 22
+print(text.rindex("i", 6, 20)) # 19
+                </code>
+                </div>
+              </section>
+              <section id="py1.26">
+                <h2>Find in string</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+text = "Lorem ipsum dolor sit amet consectetuer"
+print(text.find("dolor")) # 4
+print(text.find("a")) # 0
+print(text.find("conz")) # -1
+
+print(text.find("d")) # 7
+print(text.find("d", 13)) # 10
+
+print(text.find("am", 8)) # 26
+print(text.find("am", 8, 16)) # -1
                 </code>
                 </div>
               </section>

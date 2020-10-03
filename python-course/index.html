@@ -1055,12 +1055,12 @@ lst = ['aaa', 'bbb', 'ccc', 'ddd', 'eee']
 print(lst) # ['aaa', 'bbb', 'ccc', 'ddd', 'eee']
 third = lst.pop(2)
 print(third) # ccc
-print(planets) # ['aaa', 'bbb', 'ddd', 'eee']
-last = planets.pop()
+print(lst) # ['aaa', 'bbb', 'ddd', 'eee']
+last = lst.pop()
 print(last) # eee
 print(lst) # ['aaa', 'bbb', 'ddd']
 try:
-    planets.pop(4) # if index is not present, as per empty list, pop() raise IndexError
+    lst.pop(4) # if index is not present, as per empty list, pop() raise IndexError
 except ValueError:
     break
                 </code>

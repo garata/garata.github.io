@@ -62,6 +62,7 @@
                 <li><a href="#py1.18">Random number</a></li>
                 <li><a href="#py1.19">False expressions</a></li>
                 <li><a href="#py1.20">For loop</a></li>
+                <li><a href="#py1.21">Long string lines</a></li>
               </ul>
             </div>
           </div>
@@ -537,6 +538,29 @@ step  = 1
 stop +=step #now stop is 6
 for i in range(start, stop, step):
     print(i, end=', ')
+		        </code>
+                </div>
+              </section>
+              <section id="py1.21">
+                <h2>Long string lines</h2>
+				<p>String constant in Python employ specific syntax approaches in order to ease readability.</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+text = "aaa" "bbb"
+print(text)
+
+long_string = "aaa" "bbb" "ccc"
+print(long_string)
+
+short_rows = "aaa" \
+    "bbb" \
+    "ccc"
+print(short_rows)
+
+shorter = "1st aaa \
+2nd bbb \
+3rd ccc"
+print(shorter)
 		        </code>
                 </div>
               </section>

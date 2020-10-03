@@ -71,6 +71,7 @@
                 <li><a href="#py1.27">Seek in string</a></li>
                 <li><a href="#py1.28">Index if in string</a></li>
                 <li><a href="#py1.29">Compare strings</a></li>
+                <li><a href="#py1.30">While loop</a></li>
               </ul>
             </div>
           </div>
@@ -548,6 +549,16 @@ for i in range(start, stop, step):
     print(i, end=', ')
 		        </code>
                 </div>
+                <p>For-in loop are also useful to iterate over a well defined list of element values. In python terminology <a href="https://docs.python.org/3/glossary.html#term-iterable">iterable</a> is the term used referring to data structure you ca go through elements looping.</p>
+                <div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+text = 'hallo world'
+for c in text:
+    print(c)
+for c in ["aaa", "bbb", "ccc", "ddd", "eee", "fff"]:
+    print(c)
+		        </code>
+                </div>
               </section>
               <section id="py1.21">
                 <h2>Long string lines</h2>
@@ -687,6 +698,24 @@ print("length strings comparison")
 print(len(str1) > len(str2))
 print("ascii strings comparison")
 print(str1 > str2)
+                </code>
+                </div>
+              </section>
+              <section id="py1.30">
+                <h2>While loop</h2>
+				<p>Python <code>while</code> loop is a good alternative to <code>for</code> loop when you want to evaluate a complex or medium-complex condition constraining loop break. The <code>break</code> instruction is available in Python allowing to exit loops when break out condion applies. Thus, since in Python language <code>do ... while</code> is not avaliable, you have to implement the same logic with infinite loop and one or more break out conditions. But there's more, Break out from multi-level loops is not feasible in Python and you have to implement a similar solution refactoring your algorithms with functions call.</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+count = 1
+randNum = rand(0,10) # range random count value
+while randNum is not 5: # as soon as randNum == 50 the loop will terminate    
+    count += 1 # increment counter by one
+
+    # in order to avoid an infinite loop randomly reinit sentinel value
+    randNum = rand(0,10)
+
+# we’re outside of the for loop
+print("It took %s tries to get 50." % str(count))
                 </code>
                 </div>
               </section>

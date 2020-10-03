@@ -65,6 +65,7 @@
                 <li><a href="#py1.21">Long string lines</a></li>
                 <li><a href="#py1.22">Immutable strings</a></li>
                 <li><a href="#py1.23">Change strings</a></li>
+                <li><a href="#py1.24">Index in string</a></li>
               </ul>
             </div>
           </div>
@@ -587,7 +588,8 @@ print(text)
               </section>
               <section id="py1.23">
                 <h2>Change strings</h2>
-				<p>...</p>
+				<p>Python string indexers uses <code>:</code> as the delimiter of the slice syntax to "slice out" sub-parts in sequences.
+				With the syntax <code>[start:end]</code> you can slice a string starting from <code>start</code> index and ending at <code>end</code> index not included.</p>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
 text = "abcdef"
@@ -595,7 +597,21 @@ print(text) # abc
 # 
 text = text[:2] + 'AAA' + text[3:]
 print(text) # abAAAdef
+print(text[len(text):]) #  from length of text to end
 		        </code>
+                </div>
+              </section>
+              <section id="py1.24">
+                <h2>Change strings</h2>
+				With the syntax <code>[start:end]</code> you can slice a string starting from <code>start</code> index and ending at <code>end</code> index not included.</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+text = "Lorem ipsum dolor sit amet consectetuer"
+print(text.index("s")) # 7
+print(text.index("s", 28)) # 10
+print(text.index("sit", 9)) # 26
+print(text.index("con", 8, 28))
+                </code>
                 </div>
               </section>
             </div>

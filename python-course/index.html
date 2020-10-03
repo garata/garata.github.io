@@ -322,6 +322,18 @@ format = "The user {n} was born {y} years ago.".format(n = name, y = yob)
 print(format)
 #fstr = f"The user {name} was born {yob} years ago."
 #print(fstr)
+
+"""
+String formatting offers parametrized options for white spaces allignment.
+A part c-style way of doing formatting Python language offers whitespace padding syntax.
+"""
+print("'{}'".format("unformatted"))
+print("'{:s}'".format("unformatted"))
+print("'{:12}'".format("left padded"))
+print("'{:<12}'".format("left padded"))
+print("'{:>12}'".format("right padded"))
+print("'{:^12}'".format("justified"))
+
 entries = [
     ["AAA BBB", 42],
     ["AAAA", 12345],
@@ -331,6 +343,27 @@ entries = [
 ]
 for entry in entries:
     print("{:<8}|{:>7}".format(entry[0], entry[1]))
+	
+print("{:b}".format(yob)) # binary: 101010
+print("{:c}".format(yob)) # character: *
+print("{:d}".format(yob)) # decimal: 1956 (default)
+print("{:08d}".format(yob)) # decimal: 00001956 (zero left padding)
+print("{:o}".format(yob)) # octal: 52
+print("{:x}".format(yob)) # hexa: 2a
+print("{:X}".format(yob)) # hexa: 2A
+print("{:n}".format(yob)) # number: 42
+
+x = 123.456789
+
+print("{:e}".format(x)) # exponent: 4.123457e+02
+print("{:E}".format(x)) # Exponent: 4.123457E+02
+print("{:f}".format(x)) # fixed point: 412.345679 (default precision is 6)
+print("{:.2f}".format(x)) # fixed point: 412.35 (set precision to 2)
+print("{:F}".format(x)) # same as f. 412.345679
+print("{:g}".format(x)) # generic: 412.346 (default precision is 6)
+print("{:G}".format(x)) # generic: 412.346
+print("{:n}".format(x)) # number: 4412.346
+
                 </code>
                 </div>
               </section>

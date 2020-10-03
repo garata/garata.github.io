@@ -61,6 +61,7 @@
                 <li><a href="#py1.17">Command line arguments</a></li>
                 <li><a href="#py1.18">Random number</a></li>
                 <li><a href="#py1.19">False expressions</a></li>
+                <li><a href="#py1.20">For loop</a></li>
               </ul>
             </div>
           </div>
@@ -423,7 +424,7 @@ print(n3 <= n5)
                 <code data-type="sample-code">
 n1 = 1
 n2 = "2"
-print(x > y)
+print(n1 > n2)
                 </code>
                 </div>
               </section>
@@ -506,6 +507,36 @@ for val in values:
         print('True value: %(val)s %(typ)s' % {"val": val, "typ": ("(str)" if isinstance(val, str) else "")})
     else:
         print('False value: %(val)s %(typ)s' % {"val": val, "typ": ("(str)" if isinstance(val, str) else "")})
+		        </code>
+                </div>
+              </section>
+              <section id="py1.20">
+                <h2>For loop</h2>
+				<p>
+				For loops are useful for iterating over a sequence of data. To iterate means to step through each element one at a time. For loops are also useful for repeating a process. 
+				The <code>range(start, stop[, step])</code> function works similarly to the <code>randrange</code> function in that the first number is inclusive and the second number is exclusive.
+                </p>
+                <ul>
+                <li>The <b>start</b> argument is a starting number of the sequence. By default, this lower limit, it starts with 0 if not specified.</li>
+                <li>The <b>stop</b> argument is an upper limit. The <b>range()</b> function considers <b>stop</b> as less than criteria and doesn't include this number in the result.</li>
+                <li>The <b>step</b> is a difference between each number in the result. The default value of the step is 1 if not specified.</li>
+                </ul>
+				<p>
+				<code>range()</code> does not generate all numbers at once. In every iteration of for loop, <code>range()</code> generates the next number and assigns it to the iterator variable of loop
+				</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+# range is from 0 to 4
+for i in range(5):
+    print(i, end=', ')
+print('\n')
+# range is from 1 to 6
+start = 1
+stop  = 5
+step  = 1
+stop +=step #now stop is 6
+for i in range(start, stop, step):
+    print(i, end=', ')
 		        </code>
                 </div>
               </section>

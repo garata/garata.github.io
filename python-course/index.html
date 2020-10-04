@@ -126,6 +126,10 @@
                 <li><a href="#py3.5">Append to file</a></li>
                 <li><a href="#py3.6">Encrypt file content</a></li>
               </ul>
+              <h5>Functions</h5>
+              <ul class="py-nav py-nav-default doc-nav">
+                <li><a href="#py4.1">Defining simple function</a></li>
+              </ul>
             </div>
           </div>
           <div class="py-width-1-1 py-width-expand@m">
@@ -1387,13 +1391,25 @@ for l in lst.keys():
               </section>
               <section id="py2.25">
                 <h2>Sets</h2>
-				<p><a href="http://docs.python.org/tutorial/datastructures.html">Sets</a> are unordered collections of unique elements.You can have a mutable set, or an immutable set. You need to have the import statement however. Sets contain no duplicate values.</p>
+				<p><a href="http://docs.python.org/tutorial/datastructures.html">Sets</a> are unordered collections of unique elements.You can have a mutable set, or an immutable set. You need to have the import statement however. <a href="http://docs.python.org/library/stdtypes.html#set">Sets</a> contain no duplicate values and provides these operations:</p>
+				<ul>
+				  <li>set</li>
+				  <li>issubset</li>
+				  <li>intersection</li>
+				  <li>symmetric difference</li>
+				  <li>union</li>
+				  <li>relative complement</li>
+				</ul>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
 '''
-#how you declare a set
+# Sets are declared using round brackets
 lst = ([1,2,3,4,5])
-print('lst: %s ' % str(numbers))
+print('lst: %s ' % str(lst))
+lst.add(6) # Add a single element to set
+lst.update(set([2, 4, 6, 7]))
+print('lst: %s ' % str(lst))
+lst0 = ([]) # empty set
 lst1 = [6,7,8,9,10,11,12,13]
 print('lst1 before set(): %s ' % str(lst1))
 print('lst1 after set(): %s ' % str(Set(lst1)))
@@ -1403,6 +1419,38 @@ print('after sort(): %s ' % str(lst1))
 # for ... in loop is feasible for sets too
 for ll in l:
     print(ll)
+# Sets `intersection`
+lst2 = set(['aaa', 'bbb', 'ccc', 'ddd'])
+lst3 = set(['eee', 'bbb', 'fff'])
+lst4 = lst2.intersection(lst3)
+print(lst4)
+# Sets `subset`
+lst5 = set(['aaa', 'bbb', 'ccc', 'ddd'])
+lst6 = set(['eee', 'bbb', 'fff'])
+lst_subset = set(['door', 'lunar'])
+print('issubset: ', lst_subset.issubset( lst5 ))
+print('issubset: ', lst_subset.issubset( lst6 ))
+# Sets `symmetric difference` - Symmetric difference means that all the elements in either one of the sets, but not in both.
+lst7 = set(['aaa', 'bbb', 'ccc', 'ddd'])
+lst8 = set(['ddd', 'ccc', 'eee'])
+lst_diff = lst7.symmetric_difference(lst8)
+print('symmetric_difference: ', lst_diff)
+# Sets `union`
+lst9 = set(['aaa', 'bbb', 'ccc', 'ddd'])
+lst10 = set(['ddd', 'ccc', 'eee'])
+lst_union = lst9.union(lst10)
+print(lst9)
+print(lst10)
+print(lst_union)
+# Sets `relative complement`
+lst11 = set(['aaa', 'bbb', 'ccc', 'ddd'])
+lst12 = set(['ddd', 'ccc', 'eee'])
+lst13 = lst11 - lst12
+lst14 = lst12 - lst11
+print(lst13)
+print(lst14)
+print(lst11)
+print(lst12)
                 </code>
                 </div>
               </section>
@@ -1866,8 +1914,7 @@ with open(filename, 'r') as fh:
                 </div>
               </section>
 			</div>
-          </article>
-		  
+          </article>		  
           </div>
         </div>
       </div>

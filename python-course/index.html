@@ -1424,16 +1424,24 @@ for l in lst:
                 <p></p>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
+import os
+
+filename = "{0}/{1}".format(os.environ["HOME"], "test.txt")
+
 # Create a file handle with the REPL environment
-fileHandler = open("{0}/{1}".format(os.environ["HOME"], "test.txt"), "w")
-à Initialize the file content
-lst = ["AAA\n", "BBB\n", "CCC\n"] 
+fh = open(filename, "w")
+# Initialize the file content
+lst = ["AAA\n", "BBB\n", "CCC\n"]
 
 # Writing multiple strings at a time
-fileHandler.writelines(lst)
+fh.writelines(lst)
   
 # Closing file 
-fileHandler.close()
+fh.close()
+
+with open(filename, 'r') as fh: # close is called when we leave the 'with'
+    for line in fh:
+    print(line.replace('\n', '').replace('\r', ''))
                 </code>
                 </div>
               </section>

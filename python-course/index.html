@@ -1203,7 +1203,12 @@ except Exception as e:
               </section>
               <section id="py2.21">
                 <h2>Dictionary</h2>
-				<p><a href="http://docs.python.org/tutorial/datastructures.html">Dictionary</a> associate a key with a value. They are extremely useful in python. They are not concerned with indices rather they are concerned with unique identifiers, the keys.</p>
+				<p><a href="http://docs.python.org/tutorial/datastructures.html">Dictionary</a> associate a key with a value. They are extremely useful in python. They are not concerned with indices rather they are concerned with unique identifiers, the keys. In summary Python dictionaris has these characteristics:</p>
+				<ul>
+				  <li>Unordered key-value pairs.</li>
+				  <li>Keys are immutables (numbers, strings, tuples).</li>
+				  <li>Values can be any object.</li>
+				</ul>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
 # declare a dictionary with curly brackets
@@ -1225,7 +1230,14 @@ print("lst1['fff'][0]: %s " % str(lst1['ddd'][0]))
 
 #you can iterate through a list much the same way as before
 for key in lst1:
-    print('Key: %s Value: %s ' % (key, str(zipcodes[key])))
+    print('Key: %s Value: %s ' % (key, str(lst1[key])))
+
+for key in lst.keys():
+    print("{} -> {}".format(key, str(lst[key])))
+
+for t in lst.items(): # returns tuples
+    print("{} -> {}".format(t[0], t[1]))
+    #print("{} -> {}".format(*t))
 
 """
 There are many functions to deal with dictionaries:
@@ -1518,7 +1530,7 @@ fh.close()
 # asap loop leaves 'with' scope the file handler is self released
 with open(filename, 'r') as fh:
     for line in fh:
-        print(line.replace('\n', '').replace('\r', ''))
+        print(linee.rstrip("\r").rstrip("\n"))
                 </code>
                 </div>
               </section>
@@ -1640,15 +1652,22 @@ with open(filename, 'a') as out:
                 <code data-type="sample-code">
 import os
 
+def rot13(clear):
+    CLEAR = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+    ROT13 = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
+    TABLE = {x: y for x, y in zip(CLEAR, ROT13)}
+
+    for c in clear:
+        yield TABLE.get(c, c)
+
 filename = "{0}/{1}".format(os.environ["HOME"], "test.txt")
 
 txt = "AAA"
-encrypted = rot13(txt)
 
 # Create a file handle with the REPL environment
 fh = open(filename, "w")
 # Initialize the file content
-lst = [rot13(val)]
+lst = rot13(txt)
 
 # Writing multiple strings at a time
 fh.writelines(lst)
@@ -1658,11 +1677,10 @@ fh.close()
 
 with open(filename, 'r') as fh:
     lines_list = fh.readlines() # reads all the lines into a list
-        if len(lines_list) > 0:
-            encrypted = rot13(lines_list[0])
-            decrypted = rot13(encrypted)
-            assert decrypted == txt
-                </code>
+    if (len(lines_list) > 0):
+        decrypted = ''.join(rot13(lines_list[0]))
+        assert (decrypted == txt)
+		        </code>
                 </div>
               </section>
 			</div>

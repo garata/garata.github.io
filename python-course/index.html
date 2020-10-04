@@ -129,6 +129,7 @@
               <h5>Functions</h5>
               <ul class="py-nav py-nav-default doc-nav">
                 <li><a href="#py4.1">Defining simple function</a></li>
+                <li><a href="#py4.2">Named arguments</a></li>
               </ul>
             </div>
           </div>
@@ -1915,7 +1916,8 @@ with open(filename, 'r') as fh:
 		  		  
           <article class="py-article">
             <h1 class="py-article-title">Functions</h1>
-            <p class="py-text-lead py-text-muted">...</p>
+            <p class="py-text-lead py-text-muted">The function definition starts with the instruction <code>def</code> followed by the name of the function, followed by the list of parameters in a pair of parentheses, followed by a colon <code>:</code>. Then the body of the function is indented to the right. The depth of indentation does not matter
+            but it must be the same for all the lines of the function. When we are going to diminish indentation depth, that's what tells Python that the function defintion has ended.</p>
             <div class="py-article-meta py-margin-top py-margin-medium-bottom py-flex py-flex-middle">
               <svg width="45px" height="45px" style="margin: 0.33rem"><use xlink:href="#py-logo"></use></svg>
               <div>
@@ -1926,6 +1928,44 @@ with open(filename, 'r') as fh:
             </div>
             <div class="article-content link-primary">
               <section id="py4.1">
+                <h2>Defining simple functions</h2>
+                <p>Function with positional arguments</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+def myfun(arg1, arg2, arg3):
+    print('arg1:', arg1)
+    print('arg2:', arg2)
+    print('arg3:', arg3)
+
+myfun('val1','val2','val3')
+                </code>
+                </div>
+              </section>
+              <section id="py4.2">
+                <h2>Defining simple functions</h2>
+                <p>Named arguments</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+def myfun(arg1, arg2, arg3):
+    print('arg1:', arg1)
+    print('arg2:', arg2)
+    print('arg3:', arg3)
+
+myfun(
+    arg1 = 'val1',
+    arg2 = 'val2',
+    arg3 = 'val3'
+)
+
+# Mixing positional and named parameters
+myfun(
+    arg1 = 'val1',
+    arg2 = 'val2',
+    'val3'
+)
+
+                </code>
+                </div>
               </section>
           </article>
 		  

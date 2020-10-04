@@ -132,7 +132,13 @@
                 <li><a href="#py4.2">Named arguments</a></li>
                 <li><a href="#py4.3">Default values</a></li>
                 <li><a href="#py4.4">Arbitrary number of arguments *</a></li>
-                <li><a href="#py4.5">Fixed arguments before the others</a></li>
+                <li><a href="#py4.5">Fixed arguments before arguments *</a></li>
+                <li><a href="#py4.6">Arbitrary key-value pairs in parameters **</a></li>
+                <li><a href="#py4.7">Extra key-value pairs in parameters</a></li>
+                <li><a href="#py4.8">Every arguments option</a></li>
+                <li><a href="#py4.9">Functions overloading</a></li>
+                <li><a href="#py4.10">Function recursion</a></li>
+                <li><a href="#py4.11">Passing by reference</a></li>
               </ul>
             </div>
           </div>
@@ -2005,7 +2011,7 @@ print(myfun(*x))
                 </div>
               </section>
               <section id="py4.5">
-                <h2>Fixed parmeters before the others</h2>
+                <h2>Fixed parmeters before arguments *</h2>
                 <p>The <code>tuple</code> argument can be preceded by any number of regular arguments.</p>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -2030,6 +2036,103 @@ print(myfun('+', 1))
 print(myfun('+', 1, 2))
 print(myfun('+', 1, 2, 3))
 print(myfun('*', 1, 2, 3))
+                </code>
+                </div>
+              </section>
+              <section id="py4.6">
+                <h2>Arbitrary key-value pairs in parameters **</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+def myfun(**kw):
+    print(kw)
+myfun(a = 23, b = 12)
+                </code>
+                </div>
+              </section>
+              <section id="py4.7">
+                <h2>Extra key-value pairs in parameters</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+def f(name, **kw):
+    print(name)
+    print(kw)
+
+f(name="Foo", a = 23, b = 12)
+                </code>
+                </div>
+              </section>
+              <section id="py4.8">
+                <h2>Every arguments option</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+def f(op, count = 0, *things, **kw):
+    print(op)
+    print(count)
+    print(things)
+    print(kw)
+
+f(2, 3, 4, 5, a = 23, b = 12)
+                </code>
+                </div>
+              </section>
+              <section id="py4.9">
+                <h2>Functions overloading</h2>
+				<p>The second declaration silently overrides the first declaration.</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+def add(x, y):
+    return x*y
+
+print(add(2, 3)) # 6
+
+def add(x):
+    return x+x
+
+try:
+    print(add(2, 3)) # `add()` declaration overloading silently overrides the first declaration
+except TypeError:
+    print(add(2)) # 4
+                </code>
+                </div>
+              </section>
+              <section id="py4.10">
+                <h2>Function recursion</h2>
+				<p>n! = n * (n-1) ... * 1</p>
+				<p>In order to protect us from unlimited recursion; anyway recursion is the way to go when it comes to implements simple algorithms.</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+def f(n):
+    if n == 0:
+        return 1
+    return n * f(n-1)
+
+print(f(1)) # 1
+print(f(2)) # 2
+print(f(3)) # 6
+print(f(4)) # 24
+                </code>
+                </div>
+              </section>
+              <section id="py4.11">
+                <h2>Passing by reference</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+lst = [1, 2, 3]
+lst0 = None
+
+def update(x):
+    if (type(x) in (tuple, list)):
+        x[0] = 23
+    else:
+        x = [5, 6]
+
+print(lst) # [1, 2, 3]
+
+update(lst)
+print(lst) # [23, 2, 3]
+
+print(update(lst0)) # [5, 6]
+print(lst0) # [23, 2, 3]
                 </code>
                 </div>
               </section>

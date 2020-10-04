@@ -4,7 +4,7 @@
     <link rel="stylesheet" media="all" href="./styles.css">
     <script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"></script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/picomodal/3.0.0/picoModal.js"></script>
-	<!--<title>Rookie Pythom programmer guide</title>-->
+	<title>Rookie Pythom programmer guide</title>
   </head>
   <body>  
     <div class="top-navigation">&nbsp;</div>
@@ -1282,6 +1282,12 @@ print("lst.values(): %s " % str(lst.values()))
 
 # check if value exists into dictionary
 print('aaa' in lst.values())
+
+# When changing dictionary elements do not rely on `for dict_key in dict:` loops
+# Python interpreter will raise an exeception expecting immutabe dictionary size
+for key in lst.keys(): # reference explicitly dictionary keys
+    if (key == 'bbb'):
+        lst['bbb'] = -1
 
 # remove element from dictionary
 del lst['aaa']

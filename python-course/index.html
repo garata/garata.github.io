@@ -1411,12 +1411,10 @@ print('lst: %s ' % str(lst))
 lst0 = ([]) # empty set
 lst1 = [6,7,8,9,10,11,12,13]
 print('lst1 before set(): %s ' % str(lst1))
-print('lst1 after set(): %s ' % str(Set(lst1)))
-# scramble so just throw it back into a list, and sort()
-l = list(lst1).sort()
+print('lst1 after set(): %s ' % str(set(lst1)))
 print('after sort(): %s ' % str(lst1))
 # for ... in loop is feasible for sets too
-for ll in l:
+for ll in set(lst1):
     print(ll)
 # Sets `intersection`
 lst2 = set(['aaa', 'bbb', 'ccc', 'ddd'])
@@ -1913,7 +1911,24 @@ with open(filename, 'r') as fh:
                 </div>
               </section>
 			</div>
-          </article>		  
+          </article>
+		  		  
+          <article class="py-article">
+            <h1 class="py-article-title">Functions</h1>
+            <p class="py-text-lead py-text-muted">...</p>
+            <div class="py-article-meta py-margin-top py-margin-medium-bottom py-flex py-flex-middle">
+              <svg width="45px" height="45px" style="margin: 0.33rem"><use xlink:href="#py-logo"></use></svg>
+              <div>
+                Written by
+                <span>Giorgio Arata</span><br>
+                Last update on <time datetime="2020-10-04">October 4 of 2020</time>
+              </div>
+            </div>
+            <div class="article-content link-primary">
+              <section id="py4.1">
+              </section>
+          </article>
+		  
           </div>
         </div>
       </div>

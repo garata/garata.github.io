@@ -2177,6 +2177,7 @@ print(f.__doc__)
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
 def is_palindrome(s):
+    if len(s) <= 1: return True
     if len(s) == 1: return True
     if s[0] != s[-1]: return False
     return is_palindrome(s[1:-1])

@@ -100,21 +100,22 @@
  				<li><a href="#py2.21">Dictionary</a></li>
  				<li><a href="#py2.22">Dictionary - Immutable Collection</a></li>
  				<li><a href="#py2.23">Dictionary order of keys - OrderedDict</a></li>
- 				<li><a href="#py2.24">Sets</a></li>
- 				<li><a href="#py2.25">Sort</a></li>
- 				<li><a href="#py2.26">Sort numbers</a></li>
- 				<li><a href="#py2.27">Sort mixed</a></li>
- 				<li><a href="#py2.28">Key sort</a></li>
- 				<li><a href="#py2.29">Sort tuples</a></li>
- 				<li><a href="#py2.30">Sort w/ sorted</a></li>
- 				<li><a href="#py2.31">String characters sort</a></li>
- 				<li><a href="#py2.32">Enumerate list</a></li>
- 				<li><a href="#py2.33">List operators</a></li>
- 				<li><a href="#py2.34">List of lists</a></li>
- 				<li><a href="#py2.35">List assignment</a></li>
- 				<li><a href="#py2.36">List extend</a></li>
- 				<li><a href="#py2.37">Sort dictionary by value</a></li>
- 				<li><a href="#py2.38">Sort dictionary keys by value</a></li>
+ 				<li><a href="#py2.24">Dictionary - collections.defaultdict</a></li>
+ 				<li><a href="#py2.25">Sets</a></li>
+ 				<li><a href="#py2.26">Sort</a></li>
+ 				<li><a href="#py2.27">Sort numbers</a></li>
+ 				<li><a href="#py2.28">Sort mixed</a></li>
+ 				<li><a href="#py2.29">Key sort</a></li>
+ 				<li><a href="#py2.30">Sort tuples</a></li>
+ 				<li><a href="#py2.31">Sort w/ sorted</a></li>
+ 				<li><a href="#py2.32">String characters sort</a></li>
+ 				<li><a href="#py2.33">Enumerate list</a></li>
+ 				<li><a href="#py2.34">List operators</a></li>
+ 				<li><a href="#py2.35">List of lists</a></li>
+ 				<li><a href="#py2.36">List assignment</a></li>
+ 				<li><a href="#py2.37">List extend</a></li>
+ 				<li><a href="#py2.38">Sort dictionary by value</a></li>
+ 				<li><a href="#py2.39">Sort dictionary keys by value</a></li>
               </ul>
               <h5>Files</h5>
               <ul class="py-nav py-nav-default doc-nav">
@@ -1335,7 +1336,7 @@ print(d1)
 for key in d1.keys():
     print(key)
 
-print(('-' * 16))
+print(('-' * 48))
 	
 d2 = {}
 d2['aaa'] = 1
@@ -1348,7 +1349,7 @@ wanted_order = ('bbb', 'ccc', 'ddd', 'aaa')
 e = OrderedDict(sorted(d2.items(), key=lambda x: wanted_order.index(x[0])))
 print(e)
 
-print(('-' * 16))
+print(('-' * 48))
 
 # Map dictionary from a list of values zipping to tuple
 wanted_order = ('bbb', 'ccc', 'ddd', 'aaa')
@@ -1361,6 +1362,24 @@ print(f)
                 </div>
               </section>
               <section id="py2.24">
+                <h2>Dictionary - collections.defaultdict</h2>
+				<p>In normal dictionaries you get an error (<code>KeyError</code>) if key has not been initialized (ie, key is not present into the dictionary). But in a <code>defaultdict</code>, it takes a function name as an argument, when you try to use a key that has not been initialized, it simply calls the function you passed in on dictionary instantiation time and assigns its return value as the value of the new key. The <code>defaultdict</code> tool is a container in the collections class of Python.</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+                </code>
+from collections import defaultdict
+lst0 = ['aaa', 'bbb', 'ccc', 'ddd', 'ccc', 'bbb', 'ccc']
+
+lst = defaultdict(lambda : 0)
+for l in lst0:
+    lst[l] += 1
+
+print(lst)
+for l in lst.keys():
+    print("{}:{}".format(l, lst[l]))
+                </div>
+              </section>
+              <section id="py2.25">
                 <h2>Sets</h2>
 				<p><a href="http://docs.python.org/tutorial/datastructures.html">Sets</a> are unordered collections of unique elements.You can have a mutable set, or an immutable set. You need to have the import statement however. Sets contain no duplicate values.</p>
 				<div data-datacamp-exercise data-lang="python">
@@ -1381,7 +1400,7 @@ for ll in l:
                 </code>
                 </div>
               </section>
-			  <section id="py2.25">
+			  <section id="py2.26">
                 <h2>Sort</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -1395,7 +1414,7 @@ print(lst) # ['fff', 'eee', 'ddd', 'ccc', 'bbb', 'aaa']
                 </code>
                 </div>
               </section>
-              <section id="py2.26">
+              <section id="py2.27">
                 <h2>Sort numbers</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -1410,7 +1429,7 @@ print(lst) # [4, 3, 2, -1, 0]
                 </code>
                 </div>
               </section>
-              <section id="py2.27">
+              <section id="py2.28">
                 <h2>Sort mixed</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -1424,7 +1443,7 @@ except TypeError:
                 </code>
                 </div>
               </section>
-              <section id="py2.28">
+              <section id="py2.29">
                 <h2>Key sort</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -1439,7 +1458,7 @@ print(lst)
                 </code>
                 </div>
               </section>
-              <section id="py2.29">
+              <section id="py2.30">
                 <h2>Sort tuples</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -1465,7 +1484,7 @@ print(sorted(lst, key=itemgetter(2))) # maybe this is more simple than the lambd
                 </code>
                 </div>
               </section>
-              <section id="py2.30">
+              <section id="py2.31">
                 <h2>Sort w/ sorted</h2>
                 <ul>
                 <li>The <code>sort()</code> method will sort a list in-place and return <code>None</code>.</li>
@@ -1486,7 +1505,7 @@ print(lst) # ['aaa', 'ddd', 'ccc', 'bbb']
                 </code>
                 </div>
               </section>
-              <section id="py2.31">
+              <section id="py2.32">
                 <h2>String charactes sort</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -1499,7 +1518,7 @@ r = ''.join(sorted(text))
 print(r) # abxz
                 </code>
               </section>
-              <section id="py2.32">
+              <section id="py2.33">
                 <h2>Enumerate list</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -1514,7 +1533,7 @@ print(e)
                 </code>
                 </div>
               </section>
-              <section id="py2.33">
+              <section id="py2.34">
                 <h2>List operators</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -1527,7 +1546,7 @@ print(lst1 + lst2) # ['aaa', 'bbb', 'ccc']
                 </code>
                 </div>
               </section>
-              <section id="py2.34">
+              <section id="py2.35">
                 <h2>List of lists</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -1541,7 +1560,7 @@ print(y[0][0]) # aaa
                 </code>
                 </div>
               </section>
-              <section id="py2.35">
+              <section id="py2.36">
                 <h2>List assignment</h2>
 				<p>List assignment works in "parallel" in Python.</p>
 				<div data-datacamp-exercise data-lang="python">
@@ -1555,7 +1574,7 @@ print(y) # 1
                 </code>
                 </div>
               </section>
-              <section id="py2.36">
+              <section id="py2.37">
                 <h2>List extend</h2>
 				<p>The <p>extend()</p> method gets a list and adds its content to the list.</p>
 				<div data-datacamp-exercise data-lang="python">
@@ -1591,7 +1610,7 @@ for l in lst:
                 </code>
                 </div>
               </section>
-              <section id="py2.37">
+              <section id="py2.38">
                 <h2>Sort dictionary by value</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -1624,7 +1643,7 @@ for k in sorted_names:
                 </code>
                 </div>
               </section>
-              <section id="py2.38">
+              <section id="py2.39">
                 <h2>Sort dictionary keys by value</h2>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -1636,7 +1655,7 @@ for key in lst.keys():
 print('')
 
 for key in sorted(lst.keys()):
-    print("{} {}".format(key, scores[key]))
+    print("{} {}".format(key, lst[key]))
 
 print('')
 

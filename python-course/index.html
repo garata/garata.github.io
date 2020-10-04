@@ -139,6 +139,8 @@
                 <li><a href="#py4.9">Functions overloading</a></li>
                 <li><a href="#py4.10">Function recursion</a></li>
                 <li><a href="#py4.11">Passing by reference</a></li>
+                <li><a href="#py4.12">Function comments</a></li>
+                <li><a href="#py4.13">Functional approach</a></li>
               </ul>
             </div>
           </div>
@@ -1994,6 +1996,8 @@ print(defaultValues("bbb", 1))
                 <p>Typing function arguments as <code>tuple</code>.</p>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
+import sys
+
 def myfun(*args):
     print(args)
     count = 0
@@ -2001,12 +2005,23 @@ def myfun(*args):
         count += 1
     return count
 
+def myfun2(*args):
+    print(args)
+    total = 0
+    for s in args:
+        total += s
+        return total
+
 print(myfun(1))
 print(myfun(1, 2))
 print(myfun(1, 2, 3))
 
 x = [1, 2, 3, 4]
 print(myfun(*x))
+
+v = [int(x) for x in sys.argv[1:]]
+r = myfun2( *v )
+print(r)
                 </code>
                 </div>
               </section>
@@ -2118,21 +2133,75 @@ print(f(4)) # 24
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
 lst = [1, 2, 3]
-lst0 = None
+lst0 = []
 
 def update(x):
     if (type(x) in (tuple, list)):
-        x[0] = 23
-    else:
-        x = [5, 6]
+        if len(x) > 0:
+            x[0] = 23
+        else:
+            x = [5, 6]
+    return x
 
 print(lst) # [1, 2, 3]
 
 update(lst)
 print(lst) # [23, 2, 3]
 
+# output arguments alike through return
 print(update(lst0)) # [5, 6]
+
 print(lst0) # [23, 2, 3]
+                </code>
+                </div>
+              </section>
+              <section id="py4.12">
+                <h2>Function comments</h2>
+				<p>Immediately after the definition of the function, you can add a string. The comment can be a """ string to spread multiple lines that will include the documentation of the function. This string can be accessed via the <code>__doc__</code> attribute of the function. Also, if you <code>import</code> the file through Python <b>module</b> the Python <b>repl</b>, you will be able to read this documentation executing the <code>help()</code> function. <code>help(mydocs)</code> or <code>help(mydocs.?)</code> replacing the question mark with your function name.</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+def f(name):
+    """
+    The documentation
+    should goes on more than one lines...
+    """
+    print(name)
+
+f("hello")
+print(f.__doc__)
+                </code>
+                </div>
+              </section>
+              <section id="py4.13">
+                <h2>Functional approach</h2>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+def is_palindrome(s):
+    if len(s) == 1: return True
+    if s[0] != s[-1]: return False
+    return is_palindrome(s[1:-1])
+	
+def iter_palindrome(s):
+    for i in range(0, int(len(s) / 2)):
+        if s[i] != s[-(i+1)]:
+            return False
+    return True
+	
+print(is_palindrome('')) # True
+print(is_palindrome('a')) # True
+print(is_palindrome('ab')) # False
+print(is_palindrome('aa')) # True
+print(is_palindrome('aba')) # True
+print(is_palindrome('abc')) # False
+
+print('')
+
+print(iter_palindrome('')) # True
+print(iter_palindrome('a')) # True
+print(iter_palindrome('ab')) # False
+print(iter_palindrome('aa')) # True
+print(iter_palindrome('aba')) # True
+print(iter_palindrome('abc')) # False
                 </code>
                 </div>
               </section>

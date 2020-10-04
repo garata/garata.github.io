@@ -119,6 +119,7 @@
                 <li><a href="#py3.3">Read all the characters into a string (slurp)</a></li>
                 <li><a href="#py3.4">Try to read from not existing file</a></li>
                 <li><a href="#py3.5">Append to file</a></li>
+                <li><a href="#py3.6">Encrypt file content</a></li>
               </ul>
             </div>
           </div>
@@ -1495,7 +1496,7 @@ for l in lst:
             </div>
             <div class="article-content link-primary">
               <section id="py3.1">
-                <h2>Open a file handler the second argument passed to <code>Open()</code> function is crucial if you want for example read a binary file. In this case the second argument is equal to <code>'rb'</code> and the returned bytes are more like a stream, so, assuming you call <code>fh.read(5000)</code> to read a 5000bytes chunk, the sentinel value in such a case is the length of the returned chunk itself checked like this <code>if len(binary_stream) == 0:</code>. </h2>
+                <h2>Open a file handler the second argument passed to <code>Open()</code> function is crucial if you want for example read a binary file. In this case the second argument is equal to <code>'rb'</code> and the returned bytes are more like a stream, so, assuming you call <code>fh.read(5000)</code> to read a 5000 bytes chunk, the sentinel value in such a case is the length of the returned chunk itself checked like this <code>if len(binary_stream) == 0:</code>. </h2>
                 <p></p>
 				<div data-datacamp-exercise data-lang="python">
                 <code data-type="sample-code">
@@ -1629,6 +1630,38 @@ fh.close()
 
 with open(filename, 'a') as out:
     out.write("DDD\n")
+                </code>
+                </div>
+              </section>
+              <section id="py3.6">
+                <h2>Encrypt file content</h2>
+                <p></p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+import os
+
+filename = "{0}/{1}".format(os.environ["HOME"], "test.txt")
+
+txt = "AAA"
+encrypted = rot13(txt)
+
+# Create a file handle with the REPL environment
+fh = open(filename, "w")
+# Initialize the file content
+lst = [rot13(val)]
+
+# Writing multiple strings at a time
+fh.writelines(lst)
+
+# Closing file 
+fh.close()
+
+with open(filename, 'r') as fh:
+    lines_list = fh.readlines() # reads all the lines into a list
+	if len(lines_list) > 0:
+        encrypted = rot13(lines_list[0])
+        decrypted = rot13(encrypted)
+        assert decrypted == txt
                 </code>
                 </div>
               </section>

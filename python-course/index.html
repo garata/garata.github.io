@@ -1226,18 +1226,7 @@ print("lst after: %s " % str(lst))
 #what about a list as a value, or a dict as a value?
 lst1 = {"ddd": 1, "eee": 2, "fff": [3, 4]}
 print("lst1['ddd']: %s " % str(lst1['ddd']))
-print("lst1['fff'][0]: %s " % str(lst1['ddd'][0]))
-
-#you can iterate through a list much the same way as before
-for key in lst1:
-    print('Key: %s Value: %s ' % (key, str(lst1[key])))
-
-for key in lst.keys():
-    print("{} -> {}".format(key, str(lst[key])))
-
-for t in lst.items(): # returns tuples
-    print("{} -> {}".format(t[0], t[1]))
-    #print("{} -> {}".format(*t))
+print("lst1['fff'][0]: %s " % str(lst1['fff'][0]))
 
 """
 There are many functions to deal with dictionaries:
@@ -1256,8 +1245,40 @@ There are many functions to deal with dictionaries:
   - update
   - values
 """
+
+# If we can use the get method to obtain value by key, but we get `None` if the key does not exist
+print(lst.get('???'))
+
+#you can iterate through a list much the same way as before
+for key in lst1:
+    print('Key: %s Value: %s ' % (key, str(lst1[key])))
+
+# random order dictionary keys
+for key in lst.keys():
+    print("{} -> {}".format(key, str(lst[key])))
+
+# random order dictionary values
+for val in lst.values():
+    print("{}".format(val))
+
+for k in ['aaa', 'bbb', 'ccc', 'ddd']:
+    if k in lst:
+        print("{} => {}".format(k, lst[k]))
+    else:
+        print("{} is not into dictionary ({})".format(k, str(lst)))
+
+# returns dictionary each item as a tuple
+for t in lst.items():
+    print("{} -> {}".format(t[0], t[1]))
+    #print("{} -> {}".format(*t))
+
 print("lst.items(): %s " % str(lst.items()))
 print("lst.values(): %s " % str(lst.values()))
+
+try:
+    print(lst['???']) # illegal operation -- key does not exist
+except KeyError:
+    raise # reraises the exception
                 </code>
                 </div>
               </section>

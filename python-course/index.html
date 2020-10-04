@@ -4,6 +4,7 @@
     <link rel="stylesheet" media="all" href="./styles.css">
     <script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"></script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/picomodal/3.0.0/picoModal.js"></script>
+	<!--<title>Rookie Pythom programmer guide</title>-->
   </head>
   <body>  
     <div class="top-navigation">&nbsp;</div>
@@ -107,6 +108,11 @@
  				<li><a href="#py2.29">List operators</a></li>
  				<li><a href="#py2.30">List of lists</a></li>
  				<li><a href="#py2.31">List assignment</a></li>
+ 				<li><a href="#py2.32">List extend</a></li>
+              </ul>
+              <h5>Files</h5>
+              <ul class="py-nav py-nav-default doc-nav">
+                <li><a href="#py3.1">Open and write/read file</a></li>
               </ul>
             </div>
           </div>
@@ -1362,8 +1368,65 @@ print(y) # 1
                 </code>
                 </div>
               </section>
+              <section id="py2.32">
+                <h2>List extend</h2>
+				<p>The <p>extend()</p> method gets a list and adds its content to the list.</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+lst1 = ['aaa', 'bbb']
+lst2 = ['ccc', 'ddd']
+lst1.extend(lst2)
+print(lst1) # ['aaa', 'bbb', 'ccc', 'ddd']
+
+lst1 = ['eee', 'fff']
+lst1.append(lst2)
+print(lst1) # ['aaa', 'bbb', ['ccc', 'ddd']]
+
+lst1 = ['aaa', 'bbb']
+lst1.append('zzz')
+print(lst1) # ['aaa', 'bbb', 'zzz']
+
+lst1 = ['aaa', 'bbb']
+lst1.extend('123')
+print(lst1) # ['aaa', 'bbb', '1', '2', '3']
+
+# split string and add elements through extend() method
+lst = [
+    'aaa bbb ccc',
+    'ddd eee',
+]
+
+list = []
+
+for l in lst:
+    list.extend(l.split())
+    print(list)
+                </code>
+                </div>
+              </section>
             </div>
-          </article>		  
+          </article>
+		  
+          <article class="py-article">
+            <h1 class="py-article-title">Files</h1>
+            <p class="py-text-lead py-text-muted">...</p>
+            <div class="py-article-meta py-margin-top py-margin-medium-bottom py-flex py-flex-middle">
+	  		  <svg width="45px" height="45px" style="margin: 0.33rem"><use xlink:href="#py-logo"></use></svg>
+              <div>
+                Written by
+                <span>Giorgio Arata</span><br>
+                Last update on <time datetime="2020-10-04">October 04 of 2020</time>
+              </div>
+            </div>
+            <div class="article-content link-primary">
+              <section id="py3.1">
+                <h2>Open and write/read file</h2>
+                <p>
+                </p>
+              </section>
+			</div>
+          </article>
+		  
           </div>
         </div>
       </div>

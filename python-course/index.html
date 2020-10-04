@@ -130,6 +130,9 @@
               <ul class="py-nav py-nav-default doc-nav">
                 <li><a href="#py4.1">Defining simple function</a></li>
                 <li><a href="#py4.2">Named arguments</a></li>
+                <li><a href="#py4.3">Default values</a></li>
+                <li><a href="#py4.4">Arbitrary number of arguments *</a></li>
+                <li><a href="#py4.5">Fixed arguments before the others</a></li>
               </ul>
             </div>
           </div>
@@ -1958,12 +1961,75 @@ myfun(
 )
 
 # Mixing positional and named parameters
-myfun(
-    arg1 = 'val1',
-    arg2 = 'val2',
-    'val3'
-)
+#myfun(
+#    arg1 = 'val1',
+#    arg2 = 'val2',
+#    'val3'
+#)
+                </code>
+                </div>
+              </section>
+              <section id="py4.3">
+                <h2>Default values</h2>
+                <p>Function parameters can have default values. In such case the parameters are optional. In the function declaration, the parameters with the default values must come last. In the call, the order among these arguments does not matter, and they are optional anyway. While parameters with defaults must come at the end of the parameters declaration, when calling such a function the order can be mixed and follow the developer preference.</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+def defaultValues(arg1, arg2=-1):
+    return False
 
+print(defaultValues("aaa"))
+print(defaultValues("bbb", 1))
+
+                </code>
+                </div>
+              </section>
+              <section id="py4.4">
+                <h2>Default values</h2>
+                <p>Typing function arguments as <code>tuple</code>.</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+def myfun(*args):
+    print(args)
+    count = 0
+    for s in args:
+        count += 1
+    return count
+
+print(myfun(1))
+print(myfun(1, 2))
+print(myfun(1, 2, 3))
+
+x = [1, 2, 3, 4]
+print(myfun(*x))
+                </code>
+                </div>
+              </section>
+              <section id="py4.5">
+                <h2>Fixed parmeters before the others</h2>
+                <p>The <code>tuple</code> argument can be preceded by any number of regular arguments.</p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+def myfun(op, *args):
+    print(args)
+    if op == '+':
+        total = 0
+    elif op == '*':
+        total = 1
+    else:
+        raise Exception('invalid operator {}'.format(op))
+
+    for s in args:
+        if op == '+':
+            total += s
+        elif op == '*':
+            total *= s
+
+    return total
+	
+print(myfun('+', 1))
+print(myfun('+', 1, 2))
+print(myfun('+', 1, 2, 3))
+print(myfun('*', 1, 2, 3))
                 </code>
                 </div>
               </section>

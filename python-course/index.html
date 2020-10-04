@@ -1421,8 +1421,21 @@ for l in lst:
             <div class="article-content link-primary">
               <section id="py3.1">
                 <h2>Open and write/read file</h2>
-                <p>
-                </p>
+                <p></p>
+				<div data-datacamp-exercise data-lang="python">
+                <code data-type="sample-code">
+# Create a file handle with the REPL environment
+fileHandler = open("{0}/{1}".format(os.environ["HOME"], "test.txt"), "w")
+à Initialize the file content
+lst = ["AAA\n", "BBB\n", "CCC\n"] 
+
+# Writing multiple strings at a time
+fileHandler.writelines(lst)
+  
+# Closing file 
+fileHandler.close()
+                </code>
+                </div>
               </section>
 			</div>
           </article>
